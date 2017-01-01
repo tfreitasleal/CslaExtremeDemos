@@ -2,7 +2,7 @@
 
 namespace CslaExtremeDemos.Business
 {
-    public enum Roles
+    public enum Roles : byte
     {
         [Description("<Select role>")]
         Empty = 0,

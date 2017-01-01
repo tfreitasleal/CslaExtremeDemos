@@ -77,29 +77,29 @@ namespace CslaExtremeDemos.Business
         /// <summary>
         /// Maintains metadata about <see cref="CivilState"/> property.
         /// </summary>
-        public static readonly PropertyInfo<CivilStates> CivilStateProperty = RegisterProperty<CivilStates>(p => p.CivilState, "Civil State");
+        public static readonly PropertyInfo<byte> CivilStateProperty = RegisterProperty<byte>(p => p.CivilState, "Civil State");
         /// <summary>
         /// Gets or sets the Civil State.
         /// </summary>
         /// <value>The Civil State.</value>
         public CivilStates CivilState
         {
-            get { return GetProperty(CivilStateProperty); }
-            set { SetProperty(CivilStateProperty, value); }
+            get { return GetPropertyConvert<byte, CivilStates>(CivilStateProperty); }
+            set { SetPropertyConvert(CivilStateProperty, value); }
         }
 
         /// <summary>
         /// Maintains metadata about <see cref="Role"/> property.
         /// </summary>
-        public static readonly PropertyInfo<Roles> RoleProperty = RegisterProperty<Roles>(p => p.Role, "Role");
+        public static readonly PropertyInfo<byte> RoleProperty = RegisterProperty<byte>(p => p.Role, "Role");
         /// <summary>
         /// Gets or sets the Role.
         /// </summary>
         /// <value>The Role.</value>
         public Roles Role
         {
-            get { return GetProperty(RoleProperty); }
-            set { SetProperty(RoleProperty, value); }
+            get { return GetPropertyConvert<byte,Roles>(RoleProperty); }
+            set { SetPropertyConvert(RoleProperty, value); }
         }
 
         /// <summary>
@@ -248,8 +248,8 @@ namespace CslaExtremeDemos.Business
             LoadProperty(FirstNameProperty, dr.GetString("FirstName"));
             LoadProperty(MiddleNameProperty, dr.IsDBNull("MiddleName") ? null : dr.GetString("MiddleName"));
             LoadProperty(LastNameProperty, dr.GetString("LastName"));
-            LoadProperty(CivilStateProperty, (CivilStates)dr.GetInt16("CivilStateId"));
-            LoadProperty(RoleProperty, (Roles)dr.GetInt16("RoleId"));
+            LoadProperty(CivilStateProperty, dr.GetByte("CivilStateId"));
+            LoadProperty(RoleProperty, dr.GetByte("RoleId"));// persisted null value defaults to enum value 0
             LoadProperty(DeptIdProperty, (short?)dr.GetValue("DeptId"));
             var args = new DataPortalHookArgs(dr);
             OnFetchRead(args);
@@ -270,8 +270,8 @@ namespace CslaExtremeDemos.Business
                     cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@CivilStateId", Convert.ToInt16(ReadProperty(CivilStateProperty))).DbType = DbType.Int16;
-                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : Convert.ToInt16(ReadProperty(RoleProperty))).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@CivilStateId", ReadProperty(CivilStateProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
                     cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
                     var args = new DataPortalHookArgs(cmd);
                     OnInsertPre(args);
@@ -297,8 +297,8 @@ namespace CslaExtremeDemos.Business
                     cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@CivilStateId", Convert.ToInt16(ReadProperty(CivilStateProperty))).DbType = DbType.Int16;
-                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : Convert.ToInt16(ReadProperty(RoleProperty))).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@CivilStateId", ReadProperty(CivilStateProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
                     cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
                     var args = new DataPortalHookArgs(cmd);
                     OnUpdatePre(args);
