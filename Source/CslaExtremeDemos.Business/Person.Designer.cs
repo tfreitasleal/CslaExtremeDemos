@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using Csla;
@@ -40,6 +41,7 @@ namespace CslaExtremeDemos.Business
         /// Gets or sets the First Name.
         /// </summary>
         /// <value>The First Name.</value>
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")]
         public string FirstName
         {
             get { return GetProperty(FirstNameProperty); }
@@ -68,6 +70,7 @@ namespace CslaExtremeDemos.Business
         /// Gets or sets the Last Name.
         /// </summary>
         /// <value>The Last Name.</value>
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")]
         public string LastName
         {
             get { return GetProperty(LastNameProperty); }

@@ -36,6 +36,7 @@
             System.Windows.Forms.Label roleLabel;
             System.Windows.Forms.Label deptIdLabel;
             this.civilStateLabel = new System.Windows.Forms.Label();
+            this.errorWarnInfoProvider = new CslaContrib.Windows.ErrorWarnInfoProvider(this.components);
             this.bindingSourceRefresh = new Csla.Windows.BindingSourceRefresh(this.components);
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deptNVLBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,6 +57,7 @@
             lastNameLabel = new System.Windows.Forms.Label();
             roleLabel = new System.Windows.Forms.Label();
             deptIdLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorWarnInfoProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).BeginInit();
@@ -68,7 +70,7 @@
             personIdLabel.AutoSize = true;
             personIdLabel.Location = new System.Drawing.Point(27, 18);
             personIdLabel.Name = "personIdLabel";
-            personIdLabel.Size = new System.Drawing.Size(44, 13);
+            personIdLabel.Size = new System.Drawing.Size(55, 13);
             personIdLabel.TabIndex = 0;
             personIdLabel.Text = "Person Id:";
             // 
@@ -125,6 +127,11 @@
             this.civilStateLabel.Size = new System.Drawing.Size(57, 13);
             this.civilStateLabel.TabIndex = 8;
             this.civilStateLabel.Text = "Civil State:";
+            // 
+            // errorWarnInfoProvider
+            // 
+            this.errorWarnInfoProvider.ContainerControl = this;
+            this.errorWarnInfoProvider.DataSource = this.personBindingSource;
             // 
             // personBindingSource
             // 
@@ -256,6 +263,7 @@
             this.Controls.Add(this.personId);
             this.Name = "PersonEdit";
             this.Size = new System.Drawing.Size(778, 259);
+            ((System.ComponentModel.ISupportInitialize)(this.errorWarnInfoProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).EndInit();
@@ -283,5 +291,6 @@
         private System.Windows.Forms.BindingSource civilStateBindingSource;
         private System.Windows.Forms.BindingSource rolesBindingSource;
         private System.Windows.Forms.Label civilStateLabel;
+        private CslaContrib.Windows.ErrorWarnInfoProvider errorWarnInfoProvider;
     }
 }

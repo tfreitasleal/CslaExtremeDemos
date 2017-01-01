@@ -24,6 +24,13 @@ namespace CslaExtremeDemos.WindowsForms
             workspace.Controls.Add(personList);
         }
 
+        private void personsLocalMenuItem_Click(object sender, EventArgs e)
+        {
+            ClearWorkspace();
+            var personListLocal = new PersonListEditLocal();
+            workspace.Controls.Add(personListLocal);
+        }
+
         private void departmentsMenuItem_Click(object sender, EventArgs e)
         {
             using (var depts = new DepartmentListEdit())

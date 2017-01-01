@@ -42,6 +42,10 @@
       <HintPath>..\packages\CSLA-WindowsForms.4.6.500\lib\net45\Csla.Windows.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CslaContrib.Windows, Version=4.6.400.0, Culture=neutral, PublicKeyToken=eafe756dec3874e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\CslaContrib-Windows.4.6.400\lib\net45\CslaContrib.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CslaContrib.Windows\BindingSourceExtensions.cs" />
+    <Compile Include="BindingSourceExtensions.cs" />
     <Compile Include="DepartmentListEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +78,23 @@
     <Compile Include="PersonEdit.Designer.cs">
       <DependentUpon>PersonEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonEditLocal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonEditLocal.Designer.cs">
+      <DependentUpon>PersonEditLocal.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonListEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PersonListEdit.Designer.cs">
       <DependentUpon>PersonListEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonListEditLocal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PersonListEditLocal.Designer.cs">
+      <DependentUpon>PersonListEditLocal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,8 +120,14 @@
     <EmbeddedResource Include="PersonEdit.resx">
       <DependentUpon>PersonEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonEditLocal.resx">
+      <DependentUpon>PersonEditLocal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PersonListEdit.resx">
       <DependentUpon>PersonListEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonListEditLocal.resx">
+      <DependentUpon>PersonListEditLocal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
 using Csla;
-using CslaContrib.Windows;
 using CslaExtremeDemos.Business;
 
 namespace CslaExtremeDemos.WindowsForms
 {
-    public partial class PersonEdit : UserControl
+    public partial class PersonEditLocal : UserControl
     {
         private Person _person;
 
-        private PersonEdit()
+        private PersonEditLocal()
         {
             InitializeComponent();
         }
 
-        public PersonEdit(int personId) : this()
+        public PersonEditLocal(int personId) : this()
         {
             _person = Person.GetPerson(personId);
 
@@ -30,7 +29,7 @@ namespace CslaExtremeDemos.WindowsForms
             role.DisplayMember = "Description";
             role.ValueMember = "Key";
 
-            deptNVLBindingSource.Rebind(DeptNVL.GetDeptNVL());
+            deptNVLBindingSource.LocalRebind(DeptNVL.GetDeptNVL());
             deptId.DataSource = deptNVLBindingSource;
             deptId.DisplayMember = "Value";
             deptId.ValueMember = "Key";
@@ -41,13 +40,13 @@ namespace CslaExtremeDemos.WindowsForms
         private void BindUI()
         {
             // Bind dataobjects - starting with root object, child, grandchild and so on...
-            personBindingSource.Rebind(_person, true);
+            personBindingSource.LocalRebind(_person, true);
         }
 
         private void UnbindUI(bool cancel)
         {
             // Unbind in the opposite sequence of BindUI
-            personBindingSource.Unbind(cancel, true);
+            personBindingSource.LocalUnbind(cancel, true);
         }
 
         private void undo_Click(object sender, EventArgs e)

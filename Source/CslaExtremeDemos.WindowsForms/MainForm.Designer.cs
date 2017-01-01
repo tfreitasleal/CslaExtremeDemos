@@ -31,6 +31,7 @@
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.usersMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personsLocalMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departmentsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workspace = new System.Windows.Forms.Panel();
             this.mainMenu.SuspendLayout();
@@ -41,6 +42,7 @@
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usersMenuItem,
             this.personsMenuItem,
+            this.personsLocalMenuItem,
             this.departmentsMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
@@ -58,9 +60,16 @@
             // personsMenuItem
             // 
             this.personsMenuItem.Name = "personsMenuItem";
-            this.personsMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.personsMenuItem.Text = "Persons";
+            this.personsMenuItem.Size = new System.Drawing.Size(133, 20);
+            this.personsMenuItem.Text = "Persons (CslaContrib)";
             this.personsMenuItem.Click += new System.EventHandler(this.personsMenuItem_Click);
+            // 
+            // personsLocalMenuItem
+            // 
+            this.personsLocalMenuItem.Name = "personsLocalMenuItem";
+            this.personsLocalMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.personsLocalMenuItem.Text = "Persons (local)";
+            this.personsLocalMenuItem.Click += new System.EventHandler(this.personsLocalMenuItem_Click);
             // 
             // departmentsMenuItem
             // 
@@ -101,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem personsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem departmentsMenuItem;
         private System.Windows.Forms.Panel workspace;
+        private System.Windows.Forms.ToolStripMenuItem personsLocalMenuItem;
     }
 }
 
