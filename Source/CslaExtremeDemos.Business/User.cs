@@ -30,16 +30,6 @@ namespace CslaExtremeDemos.Business
         //    throw new NotImplementedException();
         //}
 
-        //partial void OnDeletePre(DataPortalHookArgs args)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //partial void OnDeletePost(DataPortalHookArgs args)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         //partial void OnFetchPre(DataPortalHookArgs args)
         //{
         //    throw new NotImplementedException();

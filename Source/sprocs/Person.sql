@@ -32,12 +32,12 @@ IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[AddPer
 GO
 
 CREATE PROCEDURE [dbo].[AddPerson]
-    @PersonId int,
+    @PersonId int OUTPUT,
     @FirstName varchar(50),
     @MiddleName varchar(50),
     @LastName varchar(50),
-    @CivilStateId smallint,
-    @RoleId smallint,
+    @CivilStateId tinyint,
+    @RoleId tinyint,
     @DeptId smallint
 AS
     BEGIN
@@ -47,7 +47,6 @@ AS
         /* Insert object into dbo.Persons */
         INSERT INTO [dbo].[Persons]
         (
-            [PersonId],
             [FirstName],
             [MiddleName],
             [LastName],
@@ -57,7 +56,6 @@ AS
         )
         VALUES
         (
-            @PersonId,
             @FirstName,
             @MiddleName,
             @LastName,
@@ -65,6 +63,9 @@ AS
             @RoleId,
             @DeptId
         )
+
+        /* Return new primary key */
+        SET @PersonId = SCOPE_IDENTITY()
 
     END
 GO
@@ -79,8 +80,8 @@ CREATE PROCEDURE [dbo].[UpdatePerson]
     @FirstName varchar(50),
     @MiddleName varchar(50),
     @LastName varchar(50),
-    @CivilStateId smallint,
-    @RoleId smallint,
+    @CivilStateId tinyint,
+    @RoleId tinyint,
     @DeptId smallint
 AS
     BEGIN
@@ -114,35 +115,3 @@ AS
     END
 GO
 
-/****** Object:  StoredProcedure [dbo].[DeletePerson] ******/
-IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DeletePerson]') AND type in (N'P', N'PC'))
-    DROP PROCEDURE [dbo].[DeletePerson]
-GO
-
-CREATE PROCEDURE [dbo].[DeletePerson]
-    @PersonId int
-AS
-    BEGIN
-
-        SET NOCOUNT ON
-
-        /* Check for object existence */
-        IF NOT EXISTS
-        (
-            SELECT [PersonId] FROM [dbo].[Persons]
-            WHERE
-                [PersonId] = @PersonId
-        )
-        BEGIN
-            RAISERROR ('''dbo.Person'' object not found. It was probably removed by another user.', 16, 1)
-            RETURN
-        END
-
-        /* Delete Person object from Persons */
-        DELETE
-        FROM [dbo].[Persons]
-        WHERE
-            [dbo].[Persons].[PersonId] = @PersonId
-
-    END
-GO
