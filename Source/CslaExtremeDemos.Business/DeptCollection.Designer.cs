@@ -25,7 +25,7 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         /// <param name="deptId">The DeptId of the item to search for.</param>
         /// <returns><c>true</c> if the DeptItem is a collection item; otherwise, <c>false</c>.</returns>
-        public bool Contains(Int16 deptId)
+        public bool Contains(short deptId)
         {
             foreach (var deptItem in this)
             {

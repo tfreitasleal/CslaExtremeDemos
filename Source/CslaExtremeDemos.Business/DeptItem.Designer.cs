@@ -24,12 +24,12 @@ namespace CslaExtremeDemos.Business
         /// Maintains metadata about <see cref="DeptId"/> property.
         /// </summary>
         [NotUndoable]
-        public static readonly PropertyInfo<Int16> DeptIdProperty = RegisterProperty<Int16>(p => p.DeptId, "Dept Id");
+        public static readonly PropertyInfo<short> DeptIdProperty = RegisterProperty<short>(p => p.DeptId, "Dept Id");
         /// <summary>
         /// Gets or sets the Dept Id.
         /// </summary>
         /// <value>The Dept Id.</value>
-        public Int16 DeptId
+        public short DeptId
         {
             get { return GetProperty(DeptIdProperty); }
             set { SetProperty(DeptIdProperty, value); }
@@ -194,7 +194,7 @@ namespace CslaExtremeDemos.Business
         /// Deletes the <see cref="DeptItem"/> object from database.
         /// </summary>
         /// <param name="deptId">The delete criteria.</param>
-        protected void DataPortal_Delete(Int16 deptId)
+        protected void DataPortal_Delete(short deptId)
         {
             using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
             {

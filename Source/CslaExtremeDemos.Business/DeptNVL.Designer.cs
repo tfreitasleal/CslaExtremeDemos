@@ -12,7 +12,7 @@ namespace CslaExtremeDemos.Business
     /// This is a generated base class of <see cref="DeptNVL"/> business object.
     /// </summary>
     [Serializable]
-    public partial class DeptNVL : NameValueListBase<Int16, string>
+    public partial class DeptNVL : NameValueListBase<short, string>
     {
 
         #region Private Fields
