@@ -1815,7 +1815,9 @@
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
-      <Namespaces />
+      <Namespaces>
+        <string>System.ComponentModel.DataAnnotations</string>
+      </Namespaces>
       <Attributes />
       <Interfaces />
       <InheritedType>
@@ -1872,7 +1874,7 @@
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
-          <DefaultValue>_lastID</DefaultValue>
+          <DefaultValue>_lastId</DefaultValue>
           <Attributes />
           <Interfaces />
           <BusinessRules />
@@ -1933,7 +1935,9 @@
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
-          <Attributes />
+          <Attributes>
+            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+          </Attributes>
           <Interfaces />
           <BusinessRules />
           <AuthzProvider>IsInRole</AuthzProvider>
@@ -2053,7 +2057,9 @@
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
-          <Attributes />
+          <Attributes>
+            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+          </Attributes>
           <Interfaces />
           <BusinessRules />
           <AuthzProvider>IsInRole</AuthzProvider>
@@ -2085,8 +2091,8 @@
         </ValueProperty>
         <ValueProperty>
           <ParameterName>CivilStateId</ParameterName>
-          <Name>CivilStateId</Name>
-          <PropertyType>Byte</PropertyType>
+          <Name>CivilState</Name>
+          <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
@@ -2108,10 +2114,10 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Civil State Id</FriendlyName>
-          <CustomPropertyType />
-          <DeclarationMode>Managed</DeclarationMode>
-          <BackingFieldType>Empty</BackingFieldType>
+          <FriendlyName>Civil State</FriendlyName>
+          <CustomPropertyType>CivilStates</CustomPropertyType>
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>Byte</BackingFieldType>
           <DefaultValue />
           <Attributes />
           <Interfaces />
@@ -2145,10 +2151,10 @@
         </ValueProperty>
         <ValueProperty>
           <ParameterName>RoleId</ParameterName>
-          <Name>RoleId</Name>
-          <PropertyType>Byte</PropertyType>
+          <Name>Role</Name>
+          <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
-          <Nullable>true</Nullable>
+          <Nullable>false</Nullable>
           <Summary />
           <Remarks />
           <DbBindColumn>
@@ -2168,10 +2174,10 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Role Id</FriendlyName>
-          <CustomPropertyType />
-          <DeclarationMode>Managed</DeclarationMode>
-          <BackingFieldType>Empty</BackingFieldType>
+          <FriendlyName>Role</FriendlyName>
+          <CustomPropertyType>Roles</CustomPropertyType>
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>Byte</BackingFieldType>
           <DefaultValue />
           <Attributes />
           <Interfaces />
@@ -2228,7 +2234,7 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Dept Id</FriendlyName>
+          <FriendlyName>Dept</FriendlyName>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3174,7 +3180,9 @@
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
-      <Namespaces />
+      <Namespaces>
+        <string>System.ComponentModel.DataAnnotations</string>
+      </Namespaces>
       <Attributes />
       <Interfaces />
       <InheritedType>
@@ -3206,7 +3214,7 @@
           <ParameterName>UserId</ParameterName>
           <Name>UserId</Name>
           <PropertyType>Int32</PropertyType>
-          <ReadOnly>false</ReadOnly>
+          <ReadOnly>true</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
           <Remarks />
@@ -3231,7 +3239,7 @@
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
-          <DefaultValue />
+          <DefaultValue>_lastId</DefaultValue>
           <Attributes />
           <Interfaces />
           <BusinessRules />
@@ -3292,7 +3300,9 @@
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
-          <Attributes />
+          <Attributes>
+            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+          </Attributes>
           <Interfaces />
           <BusinessRules />
           <AuthzProvider>IsInRole</AuthzProvider>
@@ -3412,7 +3422,9 @@
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
-          <Attributes />
+          <Attributes>
+            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+          </Attributes>
           <Interfaces />
           <BusinessRules />
           <AuthzProvider>IsInRole</AuthzProvider>
@@ -3444,8 +3456,8 @@
         </ValueProperty>
         <ValueProperty>
           <ParameterName>CivilStateId</ParameterName>
-          <Name>CivilStateId</Name>
-          <PropertyType>Byte</PropertyType>
+          <Name>CivilState</Name>
+          <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
@@ -3467,10 +3479,10 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Civil State Id</FriendlyName>
-          <CustomPropertyType />
-          <DeclarationMode>Managed</DeclarationMode>
-          <BackingFieldType>Empty</BackingFieldType>
+          <FriendlyName>Civil State</FriendlyName>
+          <CustomPropertyType>CivilStates</CustomPropertyType>
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>Byte</BackingFieldType>
           <DefaultValue />
           <Attributes />
           <Interfaces />
@@ -3504,10 +3516,10 @@
         </ValueProperty>
         <ValueProperty>
           <ParameterName>RoleId</ParameterName>
-          <Name>RoleId</Name>
-          <PropertyType>Byte</PropertyType>
+          <Name>Role</Name>
+          <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
-          <Nullable>true</Nullable>
+          <Nullable>false</Nullable>
           <Summary />
           <Remarks />
           <DbBindColumn>
@@ -3527,10 +3539,10 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Role Id</FriendlyName>
-          <CustomPropertyType />
-          <DeclarationMode>Managed</DeclarationMode>
-          <BackingFieldType>Empty</BackingFieldType>
+          <FriendlyName>Role</FriendlyName>
+          <CustomPropertyType>Roles</CustomPropertyType>
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>Byte</BackingFieldType>
           <DefaultValue />
           <Attributes />
           <Interfaces />
@@ -3587,7 +3599,7 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Dept Id</FriendlyName>
+          <FriendlyName>Dept</FriendlyName>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>

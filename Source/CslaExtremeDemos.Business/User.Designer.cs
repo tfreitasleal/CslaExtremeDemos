@@ -1,9 +1,9 @@
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace CslaExtremeDemos.Business
 {
@@ -16,6 +16,12 @@ namespace CslaExtremeDemos.Business
     public partial class User : BusinessBase<User>
     {
 
+        #region Static Fields
+
+        private static int _lastId;
+
+        #endregion
+
         #region Business Properties
 
         /// <summary>
@@ -24,13 +30,12 @@ namespace CslaExtremeDemos.Business
         [NotUndoable]
         public static readonly PropertyInfo<int> UserIdProperty = RegisterProperty<int>(p => p.UserId, "User Id");
         /// <summary>
-        /// Gets or sets the User Id.
+        /// Gets the User Id.
         /// </summary>
         /// <value>The User Id.</value>
         public int UserId
         {
             get { return GetProperty(UserIdProperty); }
-            set { SetProperty(UserIdProperty, value); }
         }
 
         /// <summary>
@@ -88,7 +93,7 @@ namespace CslaExtremeDemos.Business
         public CivilStates CivilState
         {
             get { return GetPropertyConvert<byte, CivilStates>(CivilStateProperty); }
-            set { SetPropertyConvert(CivilStateProperty, value); }
+            set { SetPropertyConvert<byte, CivilStates>(CivilStateProperty, value); }
         }
 
         /// <summary>
@@ -101,8 +106,8 @@ namespace CslaExtremeDemos.Business
         /// <value>The Role.</value>
         public Roles Role
         {
-            get { return GetPropertyConvert<byte,Roles>(RoleProperty); }
-            set { SetPropertyConvert(RoleProperty, value); }
+            get { return GetPropertyConvert<byte, Roles>(RoleProperty); }
+            set { SetPropertyConvert<byte, Roles>(RoleProperty, value); }
         }
 
         /// <summary>
@@ -110,9 +115,9 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         public static readonly PropertyInfo<short?> DeptIdProperty = RegisterProperty<short?>(p => p.DeptId, "Dept");
         /// <summary>
-        /// Gets or sets the Dept Id.
+        /// Gets or sets the Dept.
         /// </summary>
-        /// <value>The Dept Id.</value>
+        /// <value>The Dept.</value>
         public short? DeptId
         {
             get { return GetProperty(DeptIdProperty); }
@@ -140,15 +145,6 @@ namespace CslaExtremeDemos.Business
         public static User GetUser(int userId)
         {
             return DataPortal.Fetch<User>(userId);
-        }
-
-        /// <summary>
-        /// Factory method. Deletes a <see cref="User"/> object, based on given parameters.
-        /// </summary>
-        /// <param name="userId">The UserId of the User to delete.</param>
-        public static void DeleteUser(int userId)
-        {
-            DataPortal.Delete<User>(userId);
         }
 
         #endregion
@@ -201,6 +197,7 @@ namespace CslaExtremeDemos.Business
         [Csla.RunLocal]
         protected override void DataPortal_Create()
         {
+            LoadProperty(UserIdProperty, System.Threading.Interlocked.Decrement(ref _lastId));
             LoadProperty(MiddleNameProperty, null);
             var args = new DataPortalHookArgs();
             OnCreate(args);
@@ -269,7 +266,7 @@ namespace CslaExtremeDemos.Business
                 {
                     cmd.Transaction = ctx.Transaction;
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@UserId", ReadProperty(UserIdProperty)).DbType = DbType.Int32;
+                    cmd.Parameters.AddWithValue("@UserId", ReadProperty(UserIdProperty)).Direction = ParameterDirection.Output;
                     cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
@@ -280,6 +277,7 @@ namespace CslaExtremeDemos.Business
                     OnInsertPre(args);
                     cmd.ExecuteNonQuery();
                     OnInsertPost(args);
+                    LoadProperty(UserIdProperty, (int) cmd.Parameters["@UserId"].Value);
                 }
                 ctx.Commit();
             }
@@ -333,16 +331,6 @@ namespace CslaExtremeDemos.Business
         /// Occurs after setting all defaults for object creation.
         /// </summary>
         partial void OnCreate(DataPortalHookArgs args);
-
-        /// <summary>
-        /// Occurs in DataPortal_Delete, after setting query parameters and before the delete operation.
-        /// </summary>
-        partial void OnDeletePre(DataPortalHookArgs args);
-
-        /// <summary>
-        /// Occurs in DataPortal_Delete, after the delete operation, before Commit().
-        /// </summary>
-        partial void OnDeletePost(DataPortalHookArgs args);
 
         /// <summary>
         /// Occurs after setting query parameters and before the fetch operation.
