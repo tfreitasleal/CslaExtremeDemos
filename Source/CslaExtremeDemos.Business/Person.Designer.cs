@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
+using Csla.Rules.CommonRules;
 using System.ComponentModel.DataAnnotations;
 
 namespace CslaExtremeDemos.Business
@@ -189,6 +190,38 @@ namespace CslaExtremeDemos.Business
 
         #endregion
 
+        #region Business Rules and Property Authorization
+
+        /// <summary>
+        /// Override this method in your business class to be notified when you need to set up shared business rules.
+        /// </summary>
+        /// <remarks>
+        /// This method is automatically called by CSLA.NET when your object should associate
+        /// per-type validation rules with its properties.
+        /// </remarks>
+        protected override void AddBusinessRules()
+        {
+            base.AddBusinessRules();
+
+            // Property Business Rules
+
+            // FirstName
+            BusinessRules.AddRule(new MaxLength(FirstNameProperty, 50));
+            // MiddleName
+            BusinessRules.AddRule(new MaxLength(MiddleNameProperty, 50));
+            // LastName
+            BusinessRules.AddRule(new MaxLength(LastNameProperty, 50));
+
+            AddBusinessRulesExtend();
+        }
+
+        /// <summary>
+        /// Allows the set up of custom shared business rules.
+        /// </summary>
+        partial void AddBusinessRulesExtend();
+
+        #endregion
+
         #region Data Access
 
         /// <summary>
@@ -249,7 +282,7 @@ namespace CslaExtremeDemos.Business
             LoadProperty(MiddleNameProperty, dr.IsDBNull("MiddleName") ? null : dr.GetString("MiddleName"));
             LoadProperty(LastNameProperty, dr.GetString("LastName"));
             LoadProperty(CivilStateProperty, dr.GetByte("CivilStateId"));
-            LoadProperty(RoleProperty, dr.GetByte("RoleId"));// persisted null value defaults to enum value 0
+            LoadProperty(RoleProperty, dr.GetByte("RoleId"));
             LoadProperty(DeptIdProperty, (short?)dr.GetValue("DeptId"));
             var args = new DataPortalHookArgs(dr);
             OnFetchRead(args);
@@ -271,6 +304,7 @@ namespace CslaExtremeDemos.Business
                     cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@CivilStateId", ReadProperty(CivilStateProperty)).DbType = DbType.Byte;
+                    // For nullable PropertyConvert, null is persisted if the backing field is zero
                     cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
                     cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
                     var args = new DataPortalHookArgs(cmd);
@@ -299,6 +333,7 @@ namespace CslaExtremeDemos.Business
                     cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@CivilStateId", ReadProperty(CivilStateProperty)).DbType = DbType.Byte;
+                    // For nullable PropertyConvert, null is persisted if the backing field is zero
                     cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
                     cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
                     var args = new DataPortalHookArgs(cmd);

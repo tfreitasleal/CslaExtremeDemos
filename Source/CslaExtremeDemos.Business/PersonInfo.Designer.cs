@@ -124,7 +124,7 @@ namespace CslaExtremeDemos.Business
             // Value properties
             LoadProperty(PersonIdProperty, dr.GetInt32("PersonId"));
             LoadProperty(FirstNameProperty, dr.GetString("FirstName"));
-            LoadProperty(MiddleNameProperty, dr.GetString("MiddleName"));
+            LoadProperty(MiddleNameProperty, dr.IsDBNull("MiddleName") ? null : dr.GetString("MiddleName"));
             LoadProperty(LastNameProperty, dr.GetString("LastName"));
             var args = new DataPortalHookArgs(dr);
             OnFetchRead(args);

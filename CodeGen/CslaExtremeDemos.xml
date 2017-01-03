@@ -394,7 +394,7 @@
     <CslaObjectInfo>
       <Generate>true</Generate>
       <GenerateConstructor>true</GenerateConstructor>
-      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateFactoryMethods>false</GenerateFactoryMethods>
       <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
       <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
       <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
@@ -412,7 +412,10 @@
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
-      <Namespaces />
+      <Namespaces>
+        <string>System.ComponentModel.DataAnnotations</string>
+        <string>Csla.Rules.CommonRules</string>
+      </Namespaces>
       <Attributes />
       <Interfaces />
       <InheritedType>
@@ -530,9 +533,131 @@
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
-          <Attributes />
+          <Attributes>
+            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+          </Attributes>
           <Interfaces />
-          <BusinessRules />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">DeptName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">DeptName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">DeptName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -1817,6 +1942,7 @@
       <ClassRemarks />
       <Namespaces>
         <string>System.ComponentModel.DataAnnotations</string>
+        <string>Csla.Rules.CommonRules</string>
       </Namespaces>
       <Attributes />
       <Interfaces />
@@ -1939,7 +2065,127 @@
             <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
-          <BusinessRules />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">FirstName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">FirstName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">FirstName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -1999,7 +2245,127 @@
           <DefaultValue />
           <Attributes />
           <Interfaces />
-          <BusinessRules />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">MiddleName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">MiddleName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">MiddleName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -2061,7 +2427,127 @@
             <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
-          <BusinessRules />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">LastName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">LastName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">LastName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -2154,7 +2640,7 @@
           <Name>Role</Name>
           <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
-          <Nullable>false</Nullable>
+          <Nullable>true</Nullable>
           <Summary />
           <Remarks />
           <DbBindColumn>
@@ -3182,6 +3668,7 @@
       <ClassRemarks />
       <Namespaces>
         <string>System.ComponentModel.DataAnnotations</string>
+        <string>Csla.Rules.CommonRules</string>
       </Namespaces>
       <Attributes />
       <Interfaces />
@@ -3304,7 +3791,127 @@
             <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
-          <BusinessRules />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">FirstName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">FirstName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">FirstName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -3364,7 +3971,127 @@
           <DefaultValue />
           <Attributes />
           <Interfaces />
-          <BusinessRules />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">MiddleName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">MiddleName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">MiddleName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -3426,7 +4153,127 @@
             <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
-          <BusinessRules />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">LastName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">LastName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">LastName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -3519,7 +4366,7 @@
           <Name>Role</Name>
           <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
-          <Nullable>false</Nullable>
+          <Nullable>true</Nullable>
           <Summary />
           <Remarks />
           <DbBindColumn>

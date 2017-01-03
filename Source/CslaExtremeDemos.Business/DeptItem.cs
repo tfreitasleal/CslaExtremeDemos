@@ -23,6 +23,15 @@ namespace CslaExtremeDemos.Business
 
         #endregion
 
+        #region Custom Business Rules and Property Authorization
+
+        //partial void AddBusinessRulesExtend()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        #endregion
+
         #region Implementation of DataPortal Hooks
 
         //partial void OnCreate(DataPortalHookArgs args)

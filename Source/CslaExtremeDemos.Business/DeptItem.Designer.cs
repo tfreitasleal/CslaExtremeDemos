@@ -3,6 +3,8 @@ using System.Data;
 using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
+using Csla.Rules.CommonRules;
+using System.ComponentModel.DataAnnotations;
 
 namespace CslaExtremeDemos.Business
 {
@@ -43,6 +45,7 @@ namespace CslaExtremeDemos.Business
         /// Gets or sets the Dept Name.
         /// </summary>
         /// <value>The Dept Name.</value>
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")]
         public string DeptName
         {
             get { return GetProperty(DeptNameProperty); }
@@ -102,6 +105,34 @@ namespace CslaExtremeDemos.Business
                 DeptNVL.InvalidateCache();
             }
         }
+
+        #endregion
+
+        #region Business Rules and Property Authorization
+
+        /// <summary>
+        /// Override this method in your business class to be notified when you need to set up shared business rules.
+        /// </summary>
+        /// <remarks>
+        /// This method is automatically called by CSLA.NET when your object should associate
+        /// per-type validation rules with its properties.
+        /// </remarks>
+        protected override void AddBusinessRules()
+        {
+            base.AddBusinessRules();
+
+            // Property Business Rules
+
+            // DeptName
+            BusinessRules.AddRule(new MaxLength(DeptNameProperty, 50));
+
+            AddBusinessRulesExtend();
+        }
+
+        /// <summary>
+        /// Allows the set up of custom shared business rules.
+        /// </summary>
+        partial void AddBusinessRulesExtend();
 
         #endregion
 
