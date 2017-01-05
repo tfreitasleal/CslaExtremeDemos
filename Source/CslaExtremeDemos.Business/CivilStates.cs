@@ -7,7 +7,7 @@ namespace CslaExtremeDemos.Business
         [Description("<Select state>")]
         Empty = 0,
         [Description("Single")]
-        Single,
+        Singleton,
         [Description("Maried")]
         Maried,
         [Description("Divorced")]

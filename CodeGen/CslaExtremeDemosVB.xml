@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <CslaGeneratorUnit xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Params>
-    <DefaultNamespace>CslaExtremeDemos.Business</DefaultNamespace>
+    <DefaultNamespace>CslaExtremeDemos.BusinessVB</DefaultNamespace>
     <DefaultFolder />
     <SmartDateDefault>true</SmartDateDefault>
     <AutoCriteria>true</AutoCriteria>
@@ -56,7 +56,7 @@
     <SeparateNamespaces>true</SeparateNamespaces>
     <SeparateBaseClasses>false</SeparateBaseClasses>
     <UseDotDesignerFileNameConvention>true</UseDotDesignerFileNameConvention>
-    <OutputLanguage>CSharp</OutputLanguage>
+    <OutputLanguage>VB</OutputLanguage>
     <UpdateOnlyDirtyChildren>true</UpdateOnlyDirtyChildren>
     <PropertyMode>Default</PropertyMode>
     <GenerateAuthorization>None</GenerateAuthorization>
@@ -70,8 +70,8 @@
     <ExtendedFilenameSuffix />
     <ClassCommentFilenameSuffix />
     <SeparateClassComment>false</SeparateClassComment>
-    <BaseNamespace>CslaExtremeDemos.Business</BaseNamespace>
-    <UtilitiesNamespace>CslaExtremeDemos.Business</UtilitiesNamespace>
+    <BaseNamespace>CslaExtremeDemos.BusinessVB</BaseNamespace>
+    <UtilitiesNamespace>CslaExtremeDemos.BusinessVB</UtilitiesNamespace>
     <UtilitiesFolder />
     <DalInterfaceNamespace>CslaExtremeDemos.DataAccess</DalInterfaceNamespace>
     <DalObjectNamespace>CslaExtremeDemos.DataAccess.Sql</DalObjectNamespace>
@@ -112,7 +112,7 @@
       <ObjectName>- - - Departments - - -</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -241,7 +241,7 @@
       <ObjectName>DeptCollection</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -408,7 +408,7 @@
       <ObjectName>DeptItem</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -534,7 +534,7 @@
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
           <Attributes>
-            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+            <string>Required(AllowEmptyStrings := false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
           <BusinessRules>
@@ -941,7 +941,7 @@
       <ObjectName>DeptNVL</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -1227,7 +1227,7 @@
       <ObjectName>- - - Persons - - -</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -1356,7 +1356,7 @@
       <ObjectName>PersonList</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -1521,7 +1521,7 @@
       <ObjectName>PersonInfo</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -1936,7 +1936,7 @@
       <ObjectName>Person</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -2062,7 +2062,7 @@
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
           <Attributes>
-            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+            <string>Required(AllowEmptyStrings := false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
           <BusinessRules>
@@ -2424,7 +2424,7 @@
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
           <Attributes>
-            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+            <string>Required(AllowEmptyStrings := false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
           <BusinessRules>
@@ -2953,7 +2953,7 @@
       <ObjectName>- - - Users - - -</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -3082,7 +3082,7 @@
       <ObjectName>UserList</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -3247,7 +3247,7 @@
       <ObjectName>UserInfo</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -3662,7 +3662,7 @@
       <ObjectName>User</ObjectName>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
-      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ObjectNamespace>CslaExtremeDemos.BusinessVB</ObjectNamespace>
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
@@ -3788,7 +3788,7 @@
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
           <Attributes>
-            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+            <string>Required(AllowEmptyStrings := false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
           <BusinessRules>
@@ -4150,7 +4150,7 @@
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
           <Attributes>
-            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+            <string>Required(AllowEmptyStrings := false, ErrorMessage = "Must fill.")</string>
           </Attributes>
           <Interfaces />
           <BusinessRules>
@@ -4665,7 +4665,7 @@
   </CslaObjects>
   <AssociativeEntities />
   <ConnectionString>Server=(local);Database=CslaExtremeDemos;persist security info=False;user id=sa;password=password_1234;packet size=4096</ConnectionString>
-  <ProjectName>CslaExtremeDemos</ProjectName>
+  <ProjectName>CslaExtremeDemos-VB</ProjectName>
   <TargetDirectory>C:\VS GitHub\CslaExtremeDemos\Source</TargetDirectory>
   <FileVersion>4.0.4</FileVersion>
 </CslaGeneratorUnit>
