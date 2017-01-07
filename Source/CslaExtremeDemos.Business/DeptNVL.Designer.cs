@@ -90,7 +90,7 @@ namespace CslaExtremeDemos.Business
                 return;
             }
 
-            using (var ctx = ConnectionManager<SqlConnection>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = ConnectionManager<SqlConnection>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.GetDeptNVL", ctx.Connection))
                 {

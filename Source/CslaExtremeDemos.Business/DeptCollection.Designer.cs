@@ -89,7 +89,7 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         protected void DataPortal_Fetch()
         {
-            using (var ctx = ConnectionManager<SqlConnection>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = ConnectionManager<SqlConnection>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.GetDeptCollection", ctx.Connection))
                 {

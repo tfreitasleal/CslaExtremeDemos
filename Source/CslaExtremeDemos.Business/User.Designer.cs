@@ -84,17 +84,17 @@ namespace CslaExtremeDemos.Business
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="CivilState"/> property.
+        /// Maintains metadata about <see cref="MaritalStatus"/> property.
         /// </summary>
-        public static readonly PropertyInfo<byte> CivilStateProperty = RegisterProperty<byte>(p => p.CivilState, "Civil State");
+        public static readonly PropertyInfo<byte> MaritalStatusProperty = RegisterProperty<byte>(p => p.MaritalStatus, "Marital Status");
         /// <summary>
-        /// Gets or sets the Civil State.
+        /// Gets or sets the Marital Status.
         /// </summary>
-        /// <value>The Civil State.</value>
-        public CivilStates CivilState
+        /// <value>The Marital Status.</value>
+        public CivilStatus MaritalStatus
         {
-            get { return GetPropertyConvert<byte, CivilStates>(CivilStateProperty); }
-            set { SetPropertyConvert<byte, CivilStates>(CivilStateProperty, value); }
+            get { return GetPropertyConvert<byte, CivilStatus>(MaritalStatusProperty); }
+            set { SetPropertyConvert<byte, CivilStatus>(MaritalStatusProperty, value); }
         }
 
         /// <summary>
@@ -243,7 +243,7 @@ namespace CslaExtremeDemos.Business
         /// <param name="userId">The User Id.</param>
         protected void DataPortal_Fetch(int userId)
         {
-            using (var ctx = ConnectionManager<SqlConnection>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = ConnectionManager<SqlConnection>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.GetUser", ctx.Connection))
                 {
@@ -281,7 +281,7 @@ namespace CslaExtremeDemos.Business
             LoadProperty(FirstNameProperty, dr.GetString("FirstName"));
             LoadProperty(MiddleNameProperty, dr.IsDBNull("MiddleName") ? null : dr.GetString("MiddleName"));
             LoadProperty(LastNameProperty, dr.GetString("LastName"));
-            LoadProperty(CivilStateProperty, dr.GetByte("CivilStateId"));
+            LoadProperty(MaritalStatusProperty, dr.GetByte("MaritalStatusId"));
             LoadProperty(RoleProperty, dr.GetByte("RoleId"));
             LoadProperty(DeptIdProperty, (short?)dr.GetValue("DeptId"));
             var args = new DataPortalHookArgs(dr);
@@ -293,7 +293,7 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         protected override void DataPortal_Insert()
         {
-            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.AddUser", ctx.Connection))
                 {
@@ -303,7 +303,7 @@ namespace CslaExtremeDemos.Business
                     cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@CivilStateId", ReadProperty(CivilStateProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte;
                     // For nullable PropertyConvert, null is persisted if the backing field is zero
                     cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
                     cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
@@ -322,7 +322,7 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         protected override void DataPortal_Update()
         {
-            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.UpdateUser", ctx.Connection))
                 {
@@ -332,7 +332,7 @@ namespace CslaExtremeDemos.Business
                     cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@CivilStateId", ReadProperty(CivilStateProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte;
                     // For nullable PropertyConvert, null is persisted if the backing field is zero
                     cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
                     cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;

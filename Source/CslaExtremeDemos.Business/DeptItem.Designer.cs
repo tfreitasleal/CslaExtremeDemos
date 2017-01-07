@@ -171,7 +171,7 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         protected override void DataPortal_Insert()
         {
-            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.AddDeptItem", ctx.Connection))
                 {
@@ -195,7 +195,7 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         protected override void DataPortal_Update()
         {
-            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.UpdateDeptItem", ctx.Connection))
                 {
@@ -227,7 +227,7 @@ namespace CslaExtremeDemos.Business
         /// <param name="deptId">The delete criteria.</param>
         protected void DataPortal_Delete(short deptId)
         {
-            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosDatabaseConnection, false))
+            using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
                 using (var cmd = new SqlCommand("dbo.DeleteDeptItem", ctx.Connection))
                 {

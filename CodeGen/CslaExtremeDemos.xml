@@ -2600,7 +2600,7 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Civil State</FriendlyName>
+          <FriendlyName>Marital Status</FriendlyName>
           <CustomPropertyType>CivilStatus</CustomPropertyType>
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>Byte</BackingFieldType>
@@ -4326,7 +4326,7 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Civil State</FriendlyName>
+          <FriendlyName>Marital Status</FriendlyName>
           <CustomPropertyType>CivilStatus</CustomPropertyType>
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>Byte</BackingFieldType>

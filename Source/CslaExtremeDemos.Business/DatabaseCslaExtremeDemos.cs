@@ -6,10 +6,10 @@ namespace CslaExtremeDemos.Business
     /// strings used by the application.</summary>
     internal static partial class Database
     {
-        /// <summary>Connection string to the CslaExtremeDemosDatabase database.</summary>
-        internal static string CslaExtremeDemosDatabaseConnection
+        /// <summary>Connection string to the CslaExtremeDemos database.</summary>
+        internal static string CslaExtremeDemosConnection
         {
-            get { return ConfigurationManager.ConnectionStrings["CslaExtremeDemosDatabase"].ConnectionString; }
+            get { return ConfigurationManager.ConnectionStrings["CslaExtremeDemos"].ConnectionString; }
         }
     }
 }
