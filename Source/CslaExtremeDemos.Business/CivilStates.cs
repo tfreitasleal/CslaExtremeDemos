@@ -12,7 +12,7 @@ namespace CslaExtremeDemos.Business
         Maried,
         [Description("Divorced")]
         Divorced,
-        [Description("Widower")]
-        Widower
+        [Description("Widowed")]
+        Widowed
     }
 }

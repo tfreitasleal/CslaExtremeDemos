@@ -10,6 +10,6 @@ Public Enum CivilStates As Byte
     Maried
     <Description("Divorced")>
     Divorced
-    <Description("Widower")>
-    Widower
+    <Description("Widowed")>
+    Widowed
 End Enum
