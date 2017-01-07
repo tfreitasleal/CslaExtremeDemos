@@ -53,7 +53,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' <returns>A reference to the fetched <see cref="DeptNVL"/> object.</returns>
         Public Shared Function GetDeptNVL() As DeptNVL
             If _list Is Nothing Then
-            _list = DataPortal.Fetch(Of DeptNVL)
+                _list = DataPortal.Fetch(Of DeptNVL)()
             End If
 
             Return _list
