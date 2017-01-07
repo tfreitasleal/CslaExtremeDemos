@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessRules.cs" />
-    <Compile Include="CivilStates.cs" />
+    <Compile Include="CivilStatus.cs" />
     <Compile Include="DatabaseCslaExtremeDemos.cs" />
     <Compile Include="DataPortalHookArgs.cs" />
     <Compile Include="DeptCollection.cs" />

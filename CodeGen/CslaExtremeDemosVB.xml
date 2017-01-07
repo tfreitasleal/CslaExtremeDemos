@@ -2576,8 +2576,8 @@
           <Undoable>true</Undoable>
         </ValueProperty>
         <ValueProperty>
-          <ParameterName>CivilStateId</ParameterName>
-          <Name>CivilState</Name>
+          <ParameterName>MaritalStatusId</ParameterName>
+          <Name>MaritalStatus</Name>
           <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
@@ -2589,7 +2589,7 @@
             <NativeType>tinyint</NativeType>
             <Size>3</Size>
             <SpResultIndex>0</SpResultIndex>
-            <ColumnName>CivilStateId</ColumnName>
+            <ColumnName>MaritalStatusId</ColumnName>
             <IsPrimaryKey>false</IsPrimaryKey>
             <ObjectName>Persons</ObjectName>
             <CatalogName>CslaExtremeDemos</CatalogName>
@@ -2601,7 +2601,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Civil State</FriendlyName>
-          <CustomPropertyType>CivilStates</CustomPropertyType>
+          <CustomPropertyType>CivilStatus</CustomPropertyType>
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>Byte</BackingFieldType>
           <DefaultValue />
@@ -4302,8 +4302,8 @@
           <Undoable>true</Undoable>
         </ValueProperty>
         <ValueProperty>
-          <ParameterName>CivilStateId</ParameterName>
-          <Name>CivilState</Name>
+          <ParameterName>MaritalStatusId</ParameterName>
+          <Name>MaritalStatus</Name>
           <PropertyType>CustomType</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
@@ -4315,7 +4315,7 @@
             <NativeType>tinyint</NativeType>
             <Size>3</Size>
             <SpResultIndex>0</SpResultIndex>
-            <ColumnName>CivilStateId</ColumnName>
+            <ColumnName>MaritalStatusId</ColumnName>
             <IsPrimaryKey>false</IsPrimaryKey>
             <ObjectName>Users</ObjectName>
             <CatalogName>CslaExtremeDemos</CatalogName>
@@ -4327,7 +4327,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Civil State</FriendlyName>
-          <CustomPropertyType>CivilStates</CustomPropertyType>
+          <CustomPropertyType>CivilStatus</CustomPropertyType>
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>Byte</BackingFieldType>
           <DefaultValue />

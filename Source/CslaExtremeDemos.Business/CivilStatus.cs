@@ -2,7 +2,7 @@
 
 namespace CslaExtremeDemos.Business
 {
-    public enum CivilStates : byte
+    public enum CivilStatus : byte
     {
         [Description("<Select state>")]
         Empty = 0,

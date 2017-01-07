@@ -6,7 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CC3EFF17-E1D4-4477-832F-F8CACA9A66C2}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>CslaExtremeDemos.BusinessVB</RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>CslaExtremeDemos.BusinessVB</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
@@ -67,7 +68,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CivilStates.vb" />
+    <Compile Include="CivilStatus.vb" />
     <Compile Include="DatabaseCslaExtremeDemos.vb" />
     <Compile Include="DataPortalHookArgs.vb" />
     <Compile Include="DeptCollection.Designer.vb">

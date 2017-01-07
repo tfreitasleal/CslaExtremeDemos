@@ -16,7 +16,7 @@ AS
             [Users].[FirstName],
             [Users].[MiddleName],
             [Users].[LastName],
-            [Users].[CivilStateId],
+            [Users].[MaritalStatusId],
             [Users].[RoleId],
             [Users].[DeptId]
         FROM [dbo].[Users]
@@ -36,7 +36,7 @@ CREATE PROCEDURE [dbo].[AddUser]
     @FirstName varchar(50),
     @MiddleName varchar(50),
     @LastName varchar(50),
-    @CivilStateId tinyint,
+    @MaritalStatusId tinyint,
     @RoleId tinyint,
     @DeptId smallint
 AS
@@ -50,7 +50,7 @@ AS
             [FirstName],
             [MiddleName],
             [LastName],
-            [CivilStateId],
+            [MaritalStatusId],
             [RoleId],
             [DeptId]
         )
@@ -59,7 +59,7 @@ AS
             @FirstName,
             @MiddleName,
             @LastName,
-            @CivilStateId,
+            @MaritalStatusId,
             @RoleId,
             @DeptId
         )
@@ -80,7 +80,7 @@ CREATE PROCEDURE [dbo].[UpdateUser]
     @FirstName varchar(50),
     @MiddleName varchar(50),
     @LastName varchar(50),
-    @CivilStateId tinyint,
+    @MaritalStatusId tinyint,
     @RoleId tinyint,
     @DeptId smallint
 AS
@@ -106,7 +106,7 @@ AS
             [FirstName] = @FirstName,
             [MiddleName] = @MiddleName,
             [LastName] = @LastName,
-            [CivilStateId] = @CivilStateId,
+            [MaritalStatusId] = @MaritalStatusId,
             [RoleId] = @RoleId,
             [DeptId] = @DeptId
         WHERE
