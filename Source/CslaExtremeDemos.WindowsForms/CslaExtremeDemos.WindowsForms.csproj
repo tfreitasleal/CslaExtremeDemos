@@ -168,9 +168,9 @@
     <Analyzer Include="..\packages\CSLA-Core.4.6.500\analyzers\c#\Csla.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CslaExtremeDemos.BusinessVB\CslaExtremeDemos.BusinessVB.vbproj">
-      <Project>{cc3eff17-e1d4-4477-832f-f8caca9a66c2}</Project>
-      <Name>CslaExtremeDemos.BusinessVB</Name>
+    <ProjectReference Include="..\CslaExtremeDemos.Business\CslaExtremeDemos.Business.csproj">
+      <Project>{6e954878-da34-488e-b517-65e60df90046}</Project>
+      <Name>CslaExtremeDemos.Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

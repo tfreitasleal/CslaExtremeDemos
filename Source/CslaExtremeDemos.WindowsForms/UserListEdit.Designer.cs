@@ -45,7 +45,7 @@
             // userListBindingSource
             // 
             this.userListBindingSource.AllowNew = false;
-            this.userListBindingSource.DataSource = typeof(CslaExtremeDemos.BusinessVB.UserInfo);
+            this.userListBindingSource.DataSource = typeof(CslaExtremeDemos.Business.UserInfo);
             this.bindingSourceRefresh.SetReadValuesOnChange(this.userListBindingSource, true);
             // 
             // userListDataGridView

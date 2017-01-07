@@ -20,10 +20,10 @@ namespace CslaExtremeDemos.WindowsForms
             _user = User.GetUser(userId);
 
             // Bind ComboBox list datasources first
-            civilStateBindingSource.EnumToDataSource(typeof(CivilStates));
-            civilState.DataSource = civilStateBindingSource;
-            civilState.DisplayMember = "Description";
-            civilState.ValueMember = "Key";
+            maritalStatusBindingSource.EnumToDataSource(typeof(CivilStatus));
+            maritalStatus.DataSource = maritalStatusBindingSource;
+            maritalStatus.DisplayMember = "Description";
+            maritalStatus.ValueMember = "Key";
 
             rolesBindingSource.EnumToDataSource(typeof(Roles));
             role.DataSource = rolesBindingSource;

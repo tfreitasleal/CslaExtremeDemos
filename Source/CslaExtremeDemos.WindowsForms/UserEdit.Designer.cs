@@ -35,18 +35,18 @@
             System.Windows.Forms.Label lastNameLabel;
             System.Windows.Forms.Label roleLabel;
             System.Windows.Forms.Label deptIdLabel;
-            this.civilStateLabel = new System.Windows.Forms.Label();
+            this.maritalStatusLabel = new System.Windows.Forms.Label();
             this.errorWarnInfoProvider = new CslaContrib.Windows.ErrorWarnInfoProvider(this.components);
             this.bindingSourceRefresh = new Csla.Windows.BindingSourceRefresh(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deptNVLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.civilStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maritalStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userId = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
             this.middleName = new System.Windows.Forms.TextBox();
             this.lastName = new System.Windows.Forms.TextBox();
-            this.civilState = new System.Windows.Forms.ComboBox();
+            this.maritalStatus = new System.Windows.Forms.ComboBox();
             this.role = new System.Windows.Forms.ComboBox();
             this.deptId = new System.Windows.Forms.ComboBox();
             this.undo = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.civilStateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,14 +119,14 @@
             deptIdLabel.TabIndex = 12;
             deptIdLabel.Text = "Dept:";
             // 
-            // civilStateLabel
+            // maritalStatusLabel
             // 
-            this.civilStateLabel.AutoSize = true;
-            this.civilStateLabel.Location = new System.Drawing.Point(27, 118);
-            this.civilStateLabel.Name = "civilStateLabel";
-            this.civilStateLabel.Size = new System.Drawing.Size(57, 13);
-            this.civilStateLabel.TabIndex = 8;
-            this.civilStateLabel.Text = "Civil State:";
+            this.maritalStatusLabel.AutoSize = true;
+            this.maritalStatusLabel.Location = new System.Drawing.Point(27, 118);
+            this.maritalStatusLabel.Name = "maritalStatusLabel";
+            this.maritalStatusLabel.Size = new System.Drawing.Size(57, 13);
+            this.maritalStatusLabel.TabIndex = 8;
+            this.maritalStatusLabel.Text = "Marital Status:";
             // 
             // errorWarnInfoProvider
             // 
@@ -144,11 +144,11 @@
             this.deptNVLBindingSource.DataSource = typeof(CslaExtremeDemos.Business.DeptNVL);
             this.bindingSourceRefresh.SetReadValuesOnChange(this.deptNVLBindingSource, true);
             // 
-            // civilStateBindingSource
+            // maritalStatusBindingSource
             // 
-            this.civilStateBindingSource.AllowNew = false;
-            this.civilStateBindingSource.DataSource = typeof(CslaExtremeDemos.Business.Roles);
-            this.bindingSourceRefresh.SetReadValuesOnChange(this.civilStateBindingSource, true);
+            this.maritalStatusBindingSource.AllowNew = false;
+            this.maritalStatusBindingSource.DataSource = typeof(CslaExtremeDemos.Business.Roles);
+            this.bindingSourceRefresh.SetReadValuesOnChange(this.maritalStatusBindingSource, true);
             // 
             // rolesBindingSource
             // 
@@ -192,14 +192,14 @@
             this.lastName.Size = new System.Drawing.Size(350, 20);
             this.lastName.TabIndex = 7;
             // 
-            // civilState
+            // maritalStatus
             // 
-            this.civilState.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "CivilState", true));
-            this.civilState.FormattingEnabled = true;
-            this.civilState.Location = new System.Drawing.Point(115, 114);
-            this.civilState.Name = "civilState";
-            this.civilState.Size = new System.Drawing.Size(200, 21);
-            this.civilState.TabIndex = 9;
+            this.maritalStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "MaritalStatus", true));
+            this.maritalStatus.FormattingEnabled = true;
+            this.maritalStatus.Location = new System.Drawing.Point(115, 114);
+            this.maritalStatus.Name = "maritalStatus";
+            this.maritalStatus.Size = new System.Drawing.Size(200, 21);
+            this.maritalStatus.TabIndex = 9;
             // 
             // role
             // 
@@ -249,8 +249,8 @@
             this.Controls.Add(this.undo);
             this.Controls.Add(deptIdLabel);
             this.Controls.Add(this.deptId);
-            this.Controls.Add(this.civilStateLabel);
-            this.Controls.Add(this.civilState);
+            this.Controls.Add(this.maritalStatusLabel);
+            this.Controls.Add(this.maritalStatus);
             this.Controls.Add(roleLabel);
             this.Controls.Add(this.role);
             this.Controls.Add(lastNameLabel);
@@ -267,7 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.civilStateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maritalStatusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,15 +282,15 @@
         private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.TextBox middleName;
         private System.Windows.Forms.TextBox lastName;
-        private System.Windows.Forms.ComboBox civilState;
+        private System.Windows.Forms.ComboBox maritalStatus;
         private System.Windows.Forms.ComboBox role;
         private System.Windows.Forms.ComboBox deptId;
         private System.Windows.Forms.Button undo;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.BindingSource deptNVLBindingSource;
-        private System.Windows.Forms.BindingSource civilStateBindingSource;
+        private System.Windows.Forms.BindingSource maritalStatusBindingSource;
         private System.Windows.Forms.BindingSource rolesBindingSource;
-        private System.Windows.Forms.Label civilStateLabel;
+        private System.Windows.Forms.Label maritalStatusLabel;
         private CslaContrib.Windows.ErrorWarnInfoProvider errorWarnInfoProvider;
     }
 }
