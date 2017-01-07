@@ -9,7 +9,7 @@
     <DatesDefaultStringWithTypeConversion>true</DatesDefaultStringWithTypeConversion>
     <ReadOnlyObjectsCopyAuditing>false</ReadOnlyObjectsCopyAuditing>
     <ReadOnlyObjectsCopyTimestamp>false</ReadOnlyObjectsCopyTimestamp>
-    <DefaultDataBase>CslaExtremeDemosDatabase</DefaultDataBase>
+    <DefaultDataBase>CslaExtremeDemos</DefaultDataBase>
     <DefaultTransactionType>ADO</DefaultTransactionType>
     <DefaultPersistenceType>SqlConnectionManager</DefaultPersistenceType>
     <DefaultDatabaseContextObject />
@@ -87,7 +87,7 @@
     <GenerateWPF>false</GenerateWPF>
     <GenerateSilverlight4>false</GenerateSilverlight4>
     <SilverlightUsingServices>false</SilverlightUsingServices>
-    <DatabaseConnection>CslaExtremeDemosDatabase</DatabaseConnection>
+    <DatabaseConnection>CslaExtremeDemos</DatabaseConnection>
     <GenerateDTO>true</GenerateDTO>
     <GenerateDalInterface>false</GenerateDalInterface>
     <GenerateDalObject>false</GenerateDalObject>
