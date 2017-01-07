@@ -4,130 +4,130 @@ Imports System.Data.SqlClient
 Imports Csla
 Imports Csla.Data
 
-
-''' <summary>
-''' DeptCollection (dynamic root list).<br/>
-''' This is a generated base class of <see cref="DeptCollection"/> business object.
-''' </summary>
-''' <remarks>
-''' The items of the collection are <see cref="DeptItem"/> objects.
-''' </remarks>
-<Serializable()>
-Partial Public Class DeptCollection
-    Inherits DynamicBindingListBase(Of DeptItem)
-
-#Region " Collection Business Methods "
+Namespace CslaExtremeDemos.BusinessVB
 
     ''' <summary>
-    ''' Determines whether a <see cref="DeptItem"/> item is in the collection.
+    ''' DeptCollection (dynamic root list).<br/>
+    ''' This is a generated base class of <see cref="DeptCollection"/> business object.
     ''' </summary>
-    ''' <param name="deptId">The DeptId of the item to search for.</param>
-    ''' <returns><c>true</c> if the DeptItem is a collection item; otherwise, <c>false</c>.</returns>
-    Public Overloads Function Contains(deptId As Short) As Boolean
-        For Each deptItem As DeptItem In Me
-            If deptItem.DeptId = deptId Then
-                Return True
-            End If
-        Next
-        Return False
-    End Function
+    ''' <remarks>
+    ''' The items of the collection are <see cref="DeptItem"/> objects.
+    ''' </remarks>
+    <Serializable()>
+    Partial Public Class DeptCollection
+        Inherits DynamicBindingListBase(Of DeptItem)
+    
+        #Region " Collection Business Methods "
 
-#End Region
+        ''' <summary>
+        ''' Determines whether a <see cref="DeptItem"/> item is in the collection.
+        ''' </summary>
+        ''' <param name="deptId">The DeptId of the item to search for.</param>
+        ''' <returns><c>True</c> if the DeptItem is a collection item; otherwise, <c>false</c>.</returns>
+        Public Overloads Function Contains(deptId As Short) As Boolean
+            For Each item As DeptItem In Me
+                If item.DeptId = deptId Then
+                    Return True
+                End If
+            Next
+            Return False
+        End Function
 
-#Region " Factory Methods "
+        #End Region
 
-    ''' <summary>
-    ''' Factory method. Creates a new <see cref="DeptCollection"/> collection.
-    ''' </summary>
-    ''' <returns>A reference to the created <see cref="DeptCollection"/> collection.</returns>
-    Public Shared Function NewDeptCollection() As DeptCollection
-        Return DataPortal.Create(Of DeptCollection)()
-    End Function
+        #Region " Factory Methods "
 
-    ''' <summary>
-    ''' Factory method. Loads a <see cref="DeptCollection"/> collection.
-    ''' </summary>
-    ''' <returns>A reference to the fetched <see cref="DeptCollection"/> collection.</returns>
-    Public Shared Function GetDeptCollection() As DeptCollection
-        Return DataPortal.Fetch(Of DeptCollection)()
-    End Function
+        ''' <summary>
+        ''' Factory method. Creates a new <see cref="DeptCollection"/> collection.
+        ''' </summary>
+        ''' <returns>A reference to the created <see cref="DeptCollection"/> collection.</returns>
+        Public Shared Function NewDeptCollection() As DeptCollection
+            Return DataPortal.Create(Of DeptCollection)()
+        End Function
 
-#End Region
+        ''' <summary>
+        ''' Factory method. Loads a <see cref="DeptCollection"/> collection.
+        ''' </summary>
+        ''' <returns>A reference to the fetched <see cref="DeptCollection"/> collection.</returns>
+        Public Shared Function GetDeptCollection() As DeptCollection
+            Return DataPortal.Fetch(Of DeptCollection)()
+        End Function
 
-#Region " Constructor "
+        #End Region
 
-    ''' <summary>
-    ''' Initializes a new instance of the <see cref="DeptCollection"/> class.
-    ''' </summary>
-    ''' <remarks> Do not use to create a Csla object. Use factory methods instead.</remarks>
-    <System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)>
-    Public Sub New()
-        ' Use factory methods and do not use direct creation.
+        #Region " Constructor "
 
-        Dim rlce = RaiseListChangedEvents
-        RaiseListChangedEvents = False
-        AllowNew = True
-        AllowEdit = True
-        AllowRemove = True
-        RaiseListChangedEvents = rlce
-    End Sub
+        ''' <summary>
+        ''' Initializes a new instance of the <see cref="DeptCollection"/> class.
+        ''' </summary>
+        ''' <remarks> Do not use to create a Csla object. Use factory methods instead.</remarks>
+        <System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)>
+        Public Sub New()
+            ' Use factory methods and do not use direct creation.
 
-#End Region
+            Dim rlce = RaiseListChangedEvents
+            RaiseListChangedEvents = False
+            AllowNew = True
+            AllowEdit = True
+            AllowRemove = True
+            RaiseListChangedEvents = rlce
+        End Sub
 
-#Region " Data Access "
+        #End Region
 
-    ''' <summary>
-    ''' Loads a <see cref="DeptCollection"/> collection from the database.
-    ''' </summary>
-    Protected Overloads Sub DataPortal_Fetch()
-        Using _
-            ctx =
-                ConnectionManager(Of SqlConnection).GetManager(Database.CslaExtremeDemosDatabaseConnection, False)
-            Using cmd = New SqlCommand("dbo.GetDeptCollection", ctx.Connection)
-                cmd.CommandType = CommandType.StoredProcedure
-                Dim args As New DataPortalHookArgs(cmd)
-                OnFetchPre(args)
-                LoadCollection(cmd)
-                OnFetchPost(args)
+        #Region " Data Access "
+
+        ''' <summary>
+        ''' Loads a <see cref="DeptCollection"/> collection from the database.
+        ''' </summary>
+        Protected Overloads Sub DataPortal_Fetch()
+            Using ctx = ConnectionManager(Of SqlConnection).GetManager(Database.CslaExtremeDemosConnection, False)
+                Using cmd = New SqlCommand("dbo.GetDeptCollection", ctx.Connection)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    Dim args As New DataPortalHookArgs(cmd)
+                    OnFetchPre(args)
+                    LoadCollection(cmd)
+                    OnFetchPost(args)
+                End Using
             End Using
-        End Using
-    End Sub
+        End Sub
 
-    Private Sub LoadCollection(cmd As SqlCommand)
-        Using dr As New SafeDataReader(cmd.ExecuteReader())
-            Fetch(dr)
-        End Using
-    End Sub
+        Private Sub LoadCollection(cmd As SqlCommand)
+            Using dr As New SafeDataReader(cmd.ExecuteReader())
+                Fetch(dr)
+            End Using
+        End Sub
 
-    ''' <summary>
-    ''' Loads all <see cref="DeptCollection"/> collection items from the given SafeDataReader.
-    ''' </summary>
-    ''' <param name="dr">The SafeDataReader to use.</param>
-    Private Sub Fetch(dr As SafeDataReader)
-        Dim rlce = RaiseListChangedEvents
-        RaiseListChangedEvents = False
-        While dr.Read()
-            Add(DataPortal.Fetch(Of DeptItem)(dr))
-        End While
-        RaiseListChangedEvents = rlce
-    End Sub
+        ''' <summary>
+        ''' Loads all <see cref="DeptCollection"/> collection items from the given SafeDataReader.
+        ''' </summary>
+        ''' <param name="dr">The SafeDataReader to use.</param>
+        Private Sub Fetch(dr As SafeDataReader)
+            Dim rlce = RaiseListChangedEvents
+            RaiseListChangedEvents = False
+            While dr.Read()
+                Add(DataPortal.Fetch(Of DeptItem)(dr))
+            End While
+            RaiseListChangedEvents = rlce
+        End Sub
 
-#End Region
+        #End Region
 
-#Region " DataPortal Hooks "
+        #Region " DataPortal Hooks "
 
-    ''' <summary>
-    ''' Occurs after setting query parameters and before the fetch operation.
-    ''' </summary>
-    Partial Private Sub OnFetchPre(args As DataPortalHookArgs)
-    End Sub
+        ''' <summary>
+        ''' Occurs after setting query parameters and before the fetch operation.
+        ''' </summary>
+        Partial Private Sub OnFetchPre(args As DataPortalHookArgs)
+        End Sub
 
-    ''' <summary>
-    ''' Occurs after the fetch operation (object or collection is fully loaded and set up).
-    ''' </summary>
-    Partial Private Sub OnFetchPost(args As DataPortalHookArgs)
-    End Sub
+        ''' <summary>
+        ''' Occurs after the fetch operation (object or collection is fully loaded and set up).
+        ''' </summary>
+        Partial Private Sub OnFetchPost(args As DataPortalHookArgs)
+        End Sub
 
-#End Region
-End Class
+        #End Region
 
+    End Class
+End Namespace

@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using CslaExtremeDemos.Business;
+using CslaExtremeDemos.BusinessVB;
 
 namespace CslaExtremeDemos.WindowsForms
 {

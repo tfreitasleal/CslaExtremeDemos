@@ -2,7 +2,7 @@ Imports System.Data
 Imports System.Data.Common
 Imports Csla.Data
 
-
+Namespace CslaExtremeDemos.BusinessVB
 
     ''' <summary>
     ''' Event arguments for the DataPortalHook.<br/>
@@ -200,4 +200,4 @@ Imports Csla.Data
 
     End Class
 
-
+End Namespace
