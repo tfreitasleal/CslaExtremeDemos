@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CivilStates.vb" />
-    <Compile Include="DatabaseCslaExtremeDemosDatabase.vb" />
+    <Compile Include="DatabaseCslaExtremeDemos.vb" />
     <Compile Include="DataPortalHookArgs.vb" />
     <Compile Include="DeptCollection.Designer.vb">
       <DependentUpon>DeptCollection.vb</DependentUpon>

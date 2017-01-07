@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="BusinessRules.cs" />
     <Compile Include="CivilStates.cs" />
-    <Compile Include="DatabaseCslaExtremeDemosDatabase.cs" />
+    <Compile Include="DatabaseCslaExtremeDemos.cs" />
     <Compile Include="DataPortalHookArgs.cs" />
     <Compile Include="DeptCollection.cs" />
     <Compile Include="DeptCollection.Designer.cs">
