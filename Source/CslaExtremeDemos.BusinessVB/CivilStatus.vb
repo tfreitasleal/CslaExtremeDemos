@@ -2,7 +2,7 @@
 
 Namespace CslaExtremeDemos.BusinessVB
     Public Enum CivilStatus As Byte
-        <Description("<Select state>")>
+        <Description("<Select status>")>
         Empty = 0
         <Description("Single")>
         Singleton

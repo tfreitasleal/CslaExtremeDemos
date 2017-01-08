@@ -94,6 +94,12 @@
   <ItemGroup>
     <Analyzer Include="..\packages\CSLA-Core.4.6.500\analyzers\c#\Csla.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CslaExtremeDemos.Rules\CslaExtremeDemos.Rules.csproj">
+      <Project>{1e60a009-4ae4-41f1-a03e-3fa0619ed7f1}</Project>
+      <Name>CslaExtremeDemos.Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

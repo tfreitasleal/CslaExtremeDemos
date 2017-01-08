@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Csla.Core;
 using Csla.Rules;
 using Csla.Rules.CommonRules;
@@ -20,6 +21,7 @@ namespace CslaExtremeDemos.Rules
         public EnumNotZero(IPropertyInfo primaryProperty)
             : base(primaryProperty)
         {
+            InputProperties = new List<IPropertyInfo> {primaryProperty};
         }
 
         /// <summary>

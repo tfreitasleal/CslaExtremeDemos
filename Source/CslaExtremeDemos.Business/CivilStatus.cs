@@ -4,7 +4,7 @@ namespace CslaExtremeDemos.Business
 {
     public enum CivilStatus : byte
     {
-        [Description("<Select state>")]
+        [Description("<Select status>")]
         Empty = 0,
         [Description("Single")]
         Singleton,

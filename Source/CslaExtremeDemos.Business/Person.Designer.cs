@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
 using Csla.Rules.CommonRules;
+using CslaExtremeDemos.Rules;
 using System.ComponentModel.DataAnnotations;
 
 namespace CslaExtremeDemos.Business
@@ -211,6 +212,8 @@ namespace CslaExtremeDemos.Business
             BusinessRules.AddRule(new MaxLength(MiddleNameProperty, 50));
             // LastName
             BusinessRules.AddRule(new MaxLength(LastNameProperty, 50));
+            // MaritalStatus
+            BusinessRules.AddRule(new EnumNotZero(MaritalStatusProperty) { MessageText = "Must specify Marital Status." });
 
             AddBusinessRulesExtend();
         }
