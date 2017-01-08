@@ -4,6 +4,7 @@ Imports System.Data.SqlClient
 Imports Csla
 Imports Csla.Data
 Imports Csla.Rules.CommonRules
+Imports CslaExtremeDemos.Rules
 Imports System.ComponentModel.DataAnnotations
 
 Namespace CslaExtremeDemos.BusinessVB
@@ -222,6 +223,8 @@ Namespace CslaExtremeDemos.BusinessVB
             BusinessRules.AddRule(New MaxLength(MiddleNameProperty, 50))
             ' LastName
             BusinessRules.AddRule(New MaxLength(LastNameProperty, 50))
+            ' MaritalStatus
+            BusinessRules.AddRule(New EnumNotZero(MaritalStatusProperty) With {.MessageText = "Must specify Marital Status."})
 
             AddBusinessRulesExtend()
         End Sub
