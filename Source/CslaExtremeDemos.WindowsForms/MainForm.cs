@@ -43,12 +43,16 @@ namespace CslaExtremeDemos.WindowsForms
         {
             if (workspace.Controls.Count != 0)
             {
+                var iClose = workspace.Controls[0] as IClose;
+                if (iClose != null)
+                    iClose.Close();
+
                 var userControl = workspace.Controls[0] as UserControl;
                 if (userControl != null)
                     userControl.Dispose();
-            }
 
-            workspace.Controls.Clear();
+                workspace.Controls.Clear();
+            }
         }
     }
 }

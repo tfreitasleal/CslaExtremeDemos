@@ -66,6 +66,7 @@
     <Compile Include="DepartmentListEdit.Designer.cs">
       <DependentUpon>DepartmentListEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="IClose.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

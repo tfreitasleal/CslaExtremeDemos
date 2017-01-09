@@ -6,7 +6,7 @@ using CslaExtremeDemos.Business;
 
 namespace CslaExtremeDemos.WindowsForms
 {
-    public partial class PersonEdit : UserControl
+    public partial class PersonEdit : UserControl, IClose
     {
         private Person _person;
 
@@ -79,5 +79,14 @@ namespace CslaExtremeDemos.WindowsForms
                 BindUI();
             }
         }
+
+        #region Implement IClose member
+
+        public void Close()
+        {
+            personBindingSource.Unbind(true, true);
+        }
+
+        #endregion
     }
 }

@@ -5,7 +5,7 @@ using CslaExtremeDemos.Business;
 
 namespace CslaExtremeDemos.WindowsForms
 {
-    public partial class UserEdit : UserControl
+    public partial class UserEdit : UserControl, IClose
     {
         private BindingSourceNode _bindingTree;
         private User _user;
@@ -77,5 +77,14 @@ namespace CslaExtremeDemos.WindowsForms
             if (Save())
                 MessageBox.Show("Order saved.");
         }
+
+        #region Implement IClose member
+
+        public void Close()
+        {
+            _bindingTree.Close();
+        }
+
+        #endregion
     }
 }

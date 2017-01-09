@@ -17,12 +17,25 @@ namespace CslaExtremeDemos.WindowsForms
         /// <param name="isRoot">if set to <c>true</c> this BindingSource contains the Root object. Set to <c>false</c> for nested BindingSources</param>
         public static void LocalUnbind(this BindingSource source, bool cancel, bool isRoot)
         {
-            IEditableObject current = null;
+            //IEditableObject current = null;
+
             // position may be -1 when bindigsource is already unbound
             // and accessing source.Current will then throw Exception.
-            if ((source.DataSource != null) && (source.Position > -1))
+            if (source.DataSource != null && source.Position > -1)
             {
-                current = source.Current as IEditableObject;
+                var current = source.Current as IEditableObject;
+
+                if (current != null)
+                {
+                    if (cancel)
+                    {
+                        current.CancelEdit();
+                    }
+                    else
+                    {
+                        current.EndEdit();
+                    }
+                }
             }
 
             // set Raise list changed to True
@@ -32,7 +45,7 @@ namespace CslaExtremeDemos.WindowsForms
 
             if (isRoot)
                 source.DataSource = null;
-            if (current == null)
+            /*if (current == null)
                 return;
 
             if (cancel)
@@ -42,7 +55,7 @@ namespace CslaExtremeDemos.WindowsForms
             else
             {
                 current.EndEdit();
-            }
+            }*/
         }
 
         /// <summary>

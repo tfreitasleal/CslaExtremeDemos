@@ -3,7 +3,7 @@ using CslaExtremeDemos.Business;
 
 namespace CslaExtremeDemos.WindowsForms
 {
-    public partial class PersonListEditLocal : UserControl
+    public partial class PersonListEditLocal : UserControl, IClose
     {
         public PersonListEditLocal()
         {
@@ -22,7 +22,6 @@ namespace CslaExtremeDemos.WindowsForms
                 return;
             }
 
-
             var editPersonId = (int) personListDataGridView.Rows[e.RowIndex].Cells[0].Value;
 
             ClearWorkspace();
@@ -37,9 +36,25 @@ namespace CslaExtremeDemos.WindowsForms
                 var userControl = workspace.Controls[0] as UserControl;
                 if (userControl != null)
                     userControl.Dispose();
-            }
 
-            workspace.Controls.Clear();
+                workspace.Controls.Clear();
+            }
         }
+
+        #region Implement IClose member
+
+        public void Close()
+        {
+            if (workspace.Controls.Count != 0)
+            {
+                var iClose = workspace.Controls[0] as IClose;
+                if (iClose != null)
+                    iClose.Close();
+
+                ClearWorkspace();
+            }
+        }
+
+        #endregion
     }
 }
