@@ -6,9 +6,6 @@ using Csla.Rules.CommonRules;
 
 namespace CslaExtremeDemos.Rules
 {
-
-    #region Comparable Field Rules
-
     /// <summary>
     /// Validates that primary property is less than compareToProperty
     /// </summary>
@@ -59,6 +56,4 @@ namespace CslaExtremeDemos.Rules
             }
         }
     }
-
-    #endregion
 }
