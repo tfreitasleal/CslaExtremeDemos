@@ -37,8 +37,8 @@
             System.Windows.Forms.Label deptIdLabel;
             this.maritalStatusLabel = new System.Windows.Forms.Label();
             this.errorWarnInfoProvider = new CslaContrib.Windows.ErrorWarnInfoProvider(this.components);
-            this.bindingSourceRefresh = new Csla.Windows.BindingSourceRefresh(this.components);
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceRefresh = new Csla.Windows.BindingSourceRefresh(this.components);
             this.deptNVLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maritalStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,8 +58,8 @@
             roleLabel = new System.Windows.Forms.Label();
             deptIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorWarnInfoProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maritalStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
@@ -124,7 +124,7 @@
             this.maritalStatusLabel.AutoSize = true;
             this.maritalStatusLabel.Location = new System.Drawing.Point(27, 118);
             this.maritalStatusLabel.Name = "maritalStatusLabel";
-            this.maritalStatusLabel.Size = new System.Drawing.Size(57, 13);
+            this.maritalStatusLabel.Size = new System.Drawing.Size(74, 13);
             this.maritalStatusLabel.TabIndex = 8;
             this.maritalStatusLabel.Text = "Marital Status:";
             // 
@@ -194,24 +194,32 @@
             // 
             // maritalStatus
             // 
+            this.maritalStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.maritalStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.maritalStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personBindingSource, "MaritalStatus", true));
             this.maritalStatus.FormattingEnabled = true;
             this.maritalStatus.Location = new System.Drawing.Point(115, 114);
             this.maritalStatus.Name = "maritalStatus";
             this.maritalStatus.Size = new System.Drawing.Size(200, 21);
             this.maritalStatus.TabIndex = 9;
+            this.maritalStatus.Validated += new System.EventHandler(this.maritalStatus_Validated);
             // 
             // role
             // 
+            this.role.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.role.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.role.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personBindingSource, "Role", true));
             this.role.FormattingEnabled = true;
             this.role.Location = new System.Drawing.Point(115, 139);
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(200, 21);
             this.role.TabIndex = 11;
+            this.role.Validated += new System.EventHandler(this.role_Validated);
             // 
             // deptId
             // 
+            this.deptId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.deptId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.deptId.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personBindingSource, "DeptId", true));
             this.deptId.DisplayMember = "Value";
             this.deptId.FormattingEnabled = true;
@@ -220,6 +228,7 @@
             this.deptId.Size = new System.Drawing.Size(200, 21);
             this.deptId.TabIndex = 13;
             this.deptId.ValueMember = "Key";
+            this.deptId.Validated += new System.EventHandler(this.deptId_Validated);
             // 
             // undo
             // 
@@ -264,8 +273,8 @@
             this.Name = "PersonEdit";
             this.Size = new System.Drawing.Size(778, 259);
             ((System.ComponentModel.ISupportInitialize)(this.errorWarnInfoProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maritalStatusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();

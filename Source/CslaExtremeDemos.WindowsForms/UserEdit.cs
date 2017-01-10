@@ -35,12 +35,18 @@ namespace CslaExtremeDemos.WindowsForms
             deptId.DisplayMember = "Value";
             deptId.ValueMember = "Key";
 
+            maritalStatus.AutoCompleteCustomSource.AddRange(EnumExtension.EnumToArray(typeof(CivilStatus)));
+            role.AutoCompleteCustomSource.AddRange(EnumExtension.EnumToArray(typeof(Roles)));
+            deptId.AutoCompleteCustomSource.AddRange(EnumExtension.NvlToArray(DeptNVL.GetDeptNVL()));
+
             BindUI();
         }
 
         private void BindUI()
         {
-            _bindingTree = BindingSourceHelper.InitializeBindingSourceTree(components, userBindingSource);
+            if (_bindingTree == null)
+                _bindingTree = BindingSourceHelper.InitializeBindingSourceTree(components, userBindingSource);
+
             _bindingTree.Bind(_user);
         }
 
@@ -76,6 +82,27 @@ namespace CslaExtremeDemos.WindowsForms
 
             if (Save())
                 MessageBox.Show("Order saved.");
+        }
+
+        private void maritalStatus_Validated(object sender, EventArgs e)
+        {
+            if ((sender as ComboBox).SelectedIndex == -1)
+                userBindingSource.ResetBindings(false);
+        }
+
+        private void role_Validated(object sender, EventArgs e)
+        {
+            if ((sender as ComboBox).SelectedIndex == -1)
+                userBindingSource.ResetBindings(false);
+        }
+
+        private void deptId_Validated(object sender, EventArgs e)
+        {
+            if ((sender as ComboBox).SelectedIndex == -1)
+            {
+                (sender as ComboBox).Text = string.Empty;
+                userBindingSource.ResetBindings(false);
+            }
         }
 
         #region Implement IClose member
