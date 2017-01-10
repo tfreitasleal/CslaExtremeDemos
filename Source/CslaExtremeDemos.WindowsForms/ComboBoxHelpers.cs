@@ -1,9 +1,11 @@
 ﻿//http://codereview.stackexchange.com/questions/39163/loading-a-combobox-with-an-enum-and-binding-to-it
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+using Csla;
 
 namespace CslaExtremeDemos.WindowsForms
 {
@@ -32,6 +34,19 @@ namespace CslaExtremeDemos.WindowsForms
                     typeof(DescriptionAttribute)) as DescriptionAttribute).Description,
                 Key
             }).OrderBy(item => item.Key).ToList();
+        }
+
+        public static string[] EnumToArray(Type enumType)
+        {
+            return (from object item in Enum.GetValues(enumType)
+                select
+                (Attribute.GetCustomAttribute(item.GetType().GetField(item.ToString()), typeof(DescriptionAttribute)) as
+                    DescriptionAttribute).Description).ToArray();
+        }
+
+        public static string[] NvlToArray(NameValueListBase<short, string> nameValueList)
+        {
+            return nameValueList.Select(nameValuePair => nameValuePair.Value).ToArray();
         }
     }
 }
