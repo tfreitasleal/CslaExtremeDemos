@@ -47,9 +47,39 @@ namespace CslaExtremeDemos.Rules
         /// <param name="context">Rule context object.</param>
         protected override void Execute(RuleContext context)
         {
-            var value = (byte) context.InputPropertyValues[PrimaryProperty];
+            int? value = null;
 
-            if (value == 0)
+            try
+            {
+                value = (byte?) context.InputPropertyValues[PrimaryProperty];
+            }
+            catch (InvalidCastException)
+            {
+            }
+
+            if (!value.HasValue)
+            {
+                try
+                {
+                    value = (short?) context.InputPropertyValues[PrimaryProperty];
+                }
+                catch (InvalidCastException)
+                {
+                }
+            }
+
+            if (!value.HasValue)
+            {
+                try
+                {
+                    value = (int?) context.InputPropertyValues[PrimaryProperty];
+                }
+                catch (InvalidCastException)
+                {
+                }
+            }
+
+            if (!value.HasValue || value == 0)
             {
                 var message = string.Format(GetMessage(), PrimaryProperty.FriendlyName);
                 context.Results.Add(new RuleResult(RuleName, PrimaryProperty, message) {Severity = Severity});
