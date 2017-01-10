@@ -5,6 +5,7 @@ namespace CslaExtremeDemos.Business
 {
     public partial class DeptNVL
     {
+
         #region OnDeserialized actions
 
         /*/// <summary>
@@ -37,5 +38,6 @@ namespace CslaExtremeDemos.Business
         //}
 
         #endregion
+
     }
 }
