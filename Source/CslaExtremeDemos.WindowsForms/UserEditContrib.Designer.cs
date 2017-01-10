@@ -1,6 +1,6 @@
 ﻿namespace CslaExtremeDemos.WindowsForms
 {
-    partial class PersonEdit
+    partial class UserEditContrib
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label personIdLabel;
+            System.Windows.Forms.Label userIdLabel;
             System.Windows.Forms.Label firstNameLabel;
             System.Windows.Forms.Label middleNameLabel;
             System.Windows.Forms.Label lastNameLabel;
@@ -37,12 +37,12 @@
             System.Windows.Forms.Label deptIdLabel;
             this.maritalStatusLabel = new System.Windows.Forms.Label();
             this.errorWarnInfoProvider = new CslaContrib.Windows.ErrorWarnInfoProvider(this.components);
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceRefresh = new Csla.Windows.BindingSourceRefresh(this.components);
             this.deptNVLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maritalStatusBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personId = new System.Windows.Forms.Label();
+            this.userId = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
             this.middleName = new System.Windows.Forms.TextBox();
             this.lastName = new System.Windows.Forms.TextBox();
@@ -51,28 +51,28 @@
             this.deptId = new System.Windows.Forms.ComboBox();
             this.undo = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
-            personIdLabel = new System.Windows.Forms.Label();
+            userIdLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             middleNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             roleLabel = new System.Windows.Forms.Label();
             deptIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorWarnInfoProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maritalStatusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // personIdLabel
+            // userIdLabel
             // 
-            personIdLabel.AutoSize = true;
-            personIdLabel.Location = new System.Drawing.Point(27, 18);
-            personIdLabel.Name = "personIdLabel";
-            personIdLabel.Size = new System.Drawing.Size(55, 13);
-            personIdLabel.TabIndex = 0;
-            personIdLabel.Text = "Person Id:";
+            userIdLabel.AutoSize = true;
+            userIdLabel.Location = new System.Drawing.Point(27, 18);
+            userIdLabel.Name = "userIdLabel";
+            userIdLabel.Size = new System.Drawing.Size(55, 13);
+            userIdLabel.TabIndex = 0;
+            userIdLabel.Text = "User Id:";
             // 
             // firstNameLabel
             // 
@@ -131,13 +131,13 @@
             // errorWarnInfoProvider
             // 
             this.errorWarnInfoProvider.ContainerControl = this;
-            this.errorWarnInfoProvider.DataSource = this.personBindingSource;
+            this.errorWarnInfoProvider.DataSource = this.userBindingSource;
             // 
-            // personBindingSource
+            // userBindingSource
             // 
-            this.personBindingSource.AllowNew = false;
-            this.personBindingSource.DataSource = typeof(CslaExtremeDemos.Business.Person);
-            this.bindingSourceRefresh.SetReadValuesOnChange(this.personBindingSource, true);
+            this.userBindingSource.AllowNew = false;
+            this.userBindingSource.DataSource = typeof(CslaExtremeDemos.Business.User);
+            this.bindingSourceRefresh.SetReadValuesOnChange(this.userBindingSource, true);
             // 
             // deptNVLBindingSource
             // 
@@ -156,18 +156,18 @@
             this.rolesBindingSource.DataSource = typeof(CslaExtremeDemos.Business.Roles);
             this.bindingSourceRefresh.SetReadValuesOnChange(this.rolesBindingSource, true);
             // 
-            // personId
+            // userId
             // 
-            this.personId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "PersonId", true));
-            this.personId.Location = new System.Drawing.Point(115, 18);
-            this.personId.Name = "personId";
-            this.personId.Size = new System.Drawing.Size(87, 13);
-            this.personId.TabIndex = 1;
-            this.personId.Text = "label1";
+            this.userId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "UserId", true));
+            this.userId.Location = new System.Drawing.Point(115, 18);
+            this.userId.Name = "userId";
+            this.userId.Size = new System.Drawing.Size(87, 13);
+            this.userId.TabIndex = 1;
+            this.userId.Text = "label1";
             // 
             // firstName
             // 
-            this.firstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "FirstName", true));
+            this.firstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "FirstName", true));
             this.firstName.Location = new System.Drawing.Point(115, 40);
             this.firstName.MaxLength = 50;
             this.firstName.Name = "firstName";
@@ -176,7 +176,7 @@
             // 
             // middleName
             // 
-            this.middleName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "MiddleName", true));
+            this.middleName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "MiddleName", true));
             this.middleName.Location = new System.Drawing.Point(115, 65);
             this.middleName.MaxLength = 50;
             this.middleName.Name = "middleName";
@@ -185,7 +185,7 @@
             // 
             // lastName
             // 
-            this.lastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "LastName", true));
+            this.lastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.userBindingSource, "LastName", true));
             this.lastName.Location = new System.Drawing.Point(115, 90);
             this.lastName.MaxLength = 50;
             this.lastName.Name = "lastName";
@@ -196,7 +196,7 @@
             // 
             this.maritalStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.maritalStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.maritalStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personBindingSource, "MaritalStatus", true));
+            this.maritalStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "MaritalStatus", true));
             this.maritalStatus.FormattingEnabled = true;
             this.maritalStatus.Location = new System.Drawing.Point(115, 114);
             this.maritalStatus.Name = "maritalStatus";
@@ -208,7 +208,7 @@
             // 
             this.role.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.role.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.role.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personBindingSource, "Role", true));
+            this.role.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "Role", true));
             this.role.FormattingEnabled = true;
             this.role.Location = new System.Drawing.Point(115, 139);
             this.role.Name = "role";
@@ -220,7 +220,7 @@
             // 
             this.deptId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.deptId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.deptId.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personBindingSource, "DeptId", true));
+            this.deptId.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.userBindingSource, "DeptId", true));
             this.deptId.DisplayMember = "Value";
             this.deptId.FormattingEnabled = true;
             this.deptId.Location = new System.Drawing.Point(115, 164);
@@ -250,7 +250,7 @@
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
-            // PersonEdit
+            // UserEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -268,12 +268,12 @@
             this.Controls.Add(this.middleName);
             this.Controls.Add(firstNameLabel);
             this.Controls.Add(this.firstName);
-            this.Controls.Add(personIdLabel);
-            this.Controls.Add(this.personId);
-            this.Name = "PersonEdit";
+            this.Controls.Add(userIdLabel);
+            this.Controls.Add(this.userId);
+            this.Name = "UserEdit";
             this.Size = new System.Drawing.Size(778, 259);
             ((System.ComponentModel.ISupportInitialize)(this.errorWarnInfoProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptNVLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maritalStatusBindingSource)).EndInit();
@@ -286,8 +286,8 @@
         #endregion
 
         private Csla.Windows.BindingSourceRefresh bindingSourceRefresh;
-        private System.Windows.Forms.BindingSource personBindingSource;
-        private System.Windows.Forms.Label personId;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.Label userId;
         private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.TextBox middleName;
         private System.Windows.Forms.TextBox lastName;

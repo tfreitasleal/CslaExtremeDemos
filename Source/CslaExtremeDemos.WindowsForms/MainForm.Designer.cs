@@ -30,8 +30,8 @@
         {
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.usersMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personsLocalMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersContribMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersLocalMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departmentsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workspace = new System.Windows.Forms.Panel();
             this.mainMenu.SuspendLayout();
@@ -41,8 +41,8 @@
             // 
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usersMenuItem,
-            this.personsMenuItem,
-            this.personsLocalMenuItem,
+            this.usersContribMenuItem,
+            this.usersLocalMenuItem,
             this.departmentsMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
@@ -57,19 +57,19 @@
             this.usersMenuItem.Text = "Users";
             this.usersMenuItem.Click += new System.EventHandler(this.usersMenuItem_Click);
             // 
-            // personsMenuItem
+            // usersContribMenuItem
             // 
-            this.personsMenuItem.Name = "personsMenuItem";
-            this.personsMenuItem.Size = new System.Drawing.Size(133, 20);
-            this.personsMenuItem.Text = "Persons (CslaContrib)";
-            this.personsMenuItem.Click += new System.EventHandler(this.personsMenuItem_Click);
+            this.usersContribMenuItem.Name = "usersContribMenuItem";
+            this.usersContribMenuItem.Size = new System.Drawing.Size(133, 20);
+            this.usersContribMenuItem.Text = "Users (CslaContrib)";
+            this.usersContribMenuItem.Click += new System.EventHandler(this.usersContribMenuItem_Click);
             // 
-            // personsLocalMenuItem
+            // usersLocalMenuItem
             // 
-            this.personsLocalMenuItem.Name = "personsLocalMenuItem";
-            this.personsLocalMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.personsLocalMenuItem.Text = "Persons (local)";
-            this.personsLocalMenuItem.Click += new System.EventHandler(this.personsLocalMenuItem_Click);
+            this.usersLocalMenuItem.Name = "usersLocalMenuItem";
+            this.usersLocalMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.usersLocalMenuItem.Text = "Users (local)";
+            this.usersLocalMenuItem.Click += new System.EventHandler(this.usersLocalMenuItem_Click);
             // 
             // departmentsMenuItem
             // 
@@ -107,10 +107,10 @@
 
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem usersMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usersContribMenuItem;
         private System.Windows.Forms.ToolStripMenuItem departmentsMenuItem;
         private System.Windows.Forms.Panel workspace;
-        private System.Windows.Forms.ToolStripMenuItem personsLocalMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usersLocalMenuItem;
     }
 }
 

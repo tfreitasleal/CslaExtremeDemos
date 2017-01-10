@@ -17,18 +17,18 @@ namespace CslaExtremeDemos.WindowsForms
             workspace.Controls.Add(userList);
         }
 
-        private void personsMenuItem_Click(object sender, EventArgs e)
+        private void usersContribMenuItem_Click(object sender, EventArgs e)
         {
             ClearWorkspace();
-            var personList = new PersonListEdit();
-            workspace.Controls.Add(personList);
+            var userListContrib = new UserListEditContrib();
+            workspace.Controls.Add(userListContrib);
         }
 
-        private void personsLocalMenuItem_Click(object sender, EventArgs e)
+        private void usersLocalMenuItem_Click(object sender, EventArgs e)
         {
             ClearWorkspace();
-            var personListLocal = new PersonListEditLocal();
-            workspace.Controls.Add(personListLocal);
+            var userListLocal = new UserListEditLocal();
+            workspace.Controls.Add(userListLocal);
         }
 
         private void departmentsMenuItem_Click(object sender, EventArgs e)

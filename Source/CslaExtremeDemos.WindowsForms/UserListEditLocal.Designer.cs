@@ -1,6 +1,6 @@
 ﻿namespace CslaExtremeDemos.WindowsForms
 {
-    partial class PersonListEdit
+    partial class UserListEditLocal
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,60 +30,60 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bindingSourceRefresh = new Csla.Windows.BindingSourceRefresh(this.components);
-            this.personListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personListDataGridView = new System.Windows.Forms.DataGridView();
-            this.personId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userListDataGridView = new System.Windows.Forms.DataGridView();
+            this.userId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.middleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.workspace = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personListDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userListDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // personListBindingSource
+            // userListBindingSource
             // 
-            this.personListBindingSource.AllowNew = false;
-            this.personListBindingSource.DataSource = typeof(CslaExtremeDemos.Business.PersonInfo);
-            this.bindingSourceRefresh.SetReadValuesOnChange(this.personListBindingSource, true);
+            this.userListBindingSource.AllowNew = false;
+            this.userListBindingSource.DataSource = typeof(CslaExtremeDemos.Business.UserInfo);
+            this.bindingSourceRefresh.SetReadValuesOnChange(this.userListBindingSource, true);
             // 
-            // personListDataGridView
+            // userListDataGridView
             // 
-            this.personListDataGridView.AllowUserToAddRows = false;
-            this.personListDataGridView.AllowUserToDeleteRows = false;
-            this.personListDataGridView.AllowUserToResizeRows = false;
-            this.personListDataGridView.AutoGenerateColumns = false;
-            this.personListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.personListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.personId,
+            this.userListDataGridView.AllowUserToAddRows = false;
+            this.userListDataGridView.AllowUserToDeleteRows = false;
+            this.userListDataGridView.AllowUserToResizeRows = false;
+            this.userListDataGridView.AutoGenerateColumns = false;
+            this.userListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userId,
             this.firstName,
             this.middleName,
             this.lastName});
-            this.personListDataGridView.DataSource = this.personListBindingSource;
-            this.personListDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.personListDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.personListDataGridView.MultiSelect = false;
-            this.personListDataGridView.Name = "personListDataGridView";
-            this.personListDataGridView.ReadOnly = true;
-            this.personListDataGridView.RowHeadersVisible = false;
-            this.personListDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.personListDataGridView.ShowCellErrors = false;
-            this.personListDataGridView.ShowEditingIcon = false;
-            this.personListDataGridView.ShowRowErrors = false;
-            this.personListDataGridView.Size = new System.Drawing.Size(781, 270);
-            this.personListDataGridView.TabIndex = 1;
-            this.personListDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.personListDataGridView_CellDoubleClick);
+            this.userListDataGridView.DataSource = this.userListBindingSource;
+            this.userListDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userListDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.userListDataGridView.MultiSelect = false;
+            this.userListDataGridView.Name = "userListDataGridView";
+            this.userListDataGridView.ReadOnly = true;
+            this.userListDataGridView.RowHeadersVisible = false;
+            this.userListDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.userListDataGridView.ShowCellErrors = false;
+            this.userListDataGridView.ShowEditingIcon = false;
+            this.userListDataGridView.ShowRowErrors = false;
+            this.userListDataGridView.Size = new System.Drawing.Size(781, 270);
+            this.userListDataGridView.TabIndex = 1;
+            this.userListDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userListDataGridView_CellDoubleClick);
             // 
-            // personId
+            // userId
             // 
-            this.personId.DataPropertyName = "PersonId";
-            this.personId.Frozen = true;
-            this.personId.HeaderText = "Person Id";
-            this.personId.MinimumWidth = 75;
-            this.personId.Name = "personId";
-            this.personId.ReadOnly = true;
-            this.personId.Width = 75;
+            this.userId.DataPropertyName = "UserId";
+            this.userId.Frozen = true;
+            this.userId.HeaderText = "User Id";
+            this.userId.MinimumWidth = 75;
+            this.userId.Name = "userId";
+            this.userId.ReadOnly = true;
+            this.userId.Width = 75;
             // 
             // firstName
             // 
@@ -122,19 +122,19 @@
             this.workspace.Size = new System.Drawing.Size(781, 262);
             this.workspace.TabIndex = 2;
             // 
-            // PersonListEdit
+            // UserListEditLocalLocal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.workspace);
-            this.Controls.Add(this.personListDataGridView);
-            this.Name = "PersonListEdit";
+            this.Controls.Add(this.userListDataGridView);
+            this.Name = "UserListEditLocalLocal";
             this.Size = new System.Drawing.Size(781, 534);
-            this.Load += new System.EventHandler(this.PersonListEdit_Load);
+            this.Load += new System.EventHandler(this.UserListEditLocal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personListDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userListDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,10 +142,10 @@
         #endregion
 
         private Csla.Windows.BindingSourceRefresh bindingSourceRefresh;
-        private System.Windows.Forms.BindingSource personListBindingSource;
-        private System.Windows.Forms.DataGridView personListDataGridView;
+        private System.Windows.Forms.BindingSource userListBindingSource;
+        private System.Windows.Forms.DataGridView userListDataGridView;
         private System.Windows.Forms.Panel workspace;
-        private System.Windows.Forms.DataGridViewTextBoxColumn personId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userId;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn middleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;

@@ -74,29 +74,29 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonEdit.cs">
+    <Compile Include="UserEditContrib.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PersonEdit.Designer.cs">
-      <DependentUpon>PersonEdit.cs</DependentUpon>
+    <Compile Include="UserEditContrib.Designer.cs">
+      <DependentUpon>UserEditContrib.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonEditLocal.cs">
+    <Compile Include="UserEditLocal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PersonEditLocal.Designer.cs">
-      <DependentUpon>PersonEditLocal.cs</DependentUpon>
+    <Compile Include="UserEditLocal.Designer.cs">
+      <DependentUpon>UserEditLocal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonListEdit.cs">
+    <Compile Include="UserListEditContrib.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PersonListEdit.Designer.cs">
-      <DependentUpon>PersonListEdit.cs</DependentUpon>
+    <Compile Include="UserListEditContrib.Designer.cs">
+      <DependentUpon>UserListEditContrib.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonListEditLocal.cs">
+    <Compile Include="UserListEditLocal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PersonListEditLocal.Designer.cs">
-      <DependentUpon>PersonListEditLocal.cs</DependentUpon>
+    <Compile Include="UserListEditLocal.Designer.cs">
+      <DependentUpon>UserListEditLocal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,17 +118,17 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonEdit.resx">
-      <DependentUpon>PersonEdit.cs</DependentUpon>
+    <EmbeddedResource Include="UserEditContrib.resx">
+      <DependentUpon>UserEditContrib.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonEditLocal.resx">
-      <DependentUpon>PersonEditLocal.cs</DependentUpon>
+    <EmbeddedResource Include="UserEditLocal.resx">
+      <DependentUpon>UserEditLocal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonListEdit.resx">
-      <DependentUpon>PersonListEdit.cs</DependentUpon>
+    <EmbeddedResource Include="UserListEditContrib.resx">
+      <DependentUpon>UserListEditContrib.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonListEditLocal.resx">
-      <DependentUpon>PersonListEditLocal.cs</DependentUpon>
+    <EmbeddedResource Include="UserListEditLocal.resx">
+      <DependentUpon>UserListEditLocal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

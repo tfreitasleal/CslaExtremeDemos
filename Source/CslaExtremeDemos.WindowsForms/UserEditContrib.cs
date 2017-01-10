@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Windows.Forms;
 using Csla;
+using CslaContrib.Windows;
 using CslaExtremeDemos.Business;
 
 namespace CslaExtremeDemos.WindowsForms
 {
-    public partial class PersonEditLocal : UserControl, IClose
+    public partial class UserEditContrib : UserControl, IClose
     {
-        private Person _person;
+        private User _user;
 
-        private PersonEditLocal()
+        private UserEditContrib()
         {
             InitializeComponent();
         }
 
-        public PersonEditLocal(int personId) : this()
+        public UserEditContrib(int userId) : this()
         {
-            _person = Person.GetPerson(personId);
+            _user = User.GetUser(userId);
 
             // Bind ComboBox list datasources first
             maritalStatusBindingSource.EnumToDataSource(typeof(CivilStatus));
@@ -29,7 +30,7 @@ namespace CslaExtremeDemos.WindowsForms
             role.DisplayMember = "Description";
             role.ValueMember = "Key";
 
-            deptNVLBindingSource.LocalRebind(DeptNVL.GetDeptNVL());
+            deptNVLBindingSource.Rebind(DeptNVL.GetDeptNVL());
             deptId.DataSource = deptNVLBindingSource;
             deptId.DisplayMember = "Value";
             deptId.ValueMember = "Key";
@@ -44,18 +45,18 @@ namespace CslaExtremeDemos.WindowsForms
         private void BindUI()
         {
             // Bind dataobjects - starting with root object, child, grandchild and so on...
-            personBindingSource.LocalRebind(_person, true);
+            userBindingSource.Rebind(_user, true);
         }
 
         private void UnbindUI(bool cancel)
         {
             // Unbind in the opposite sequence of BindUI
-            personBindingSource.LocalUnbind(cancel, true);
+            userBindingSource.Unbind(cancel, true);
         }
 
         private void undo_Click(object sender, EventArgs e)
         {
-            if (!_person.IsDirty)
+            if (!_user.IsDirty)
                 return;
 
             UnbindUI(true);
@@ -64,13 +65,13 @@ namespace CslaExtremeDemos.WindowsForms
 
         private void save_Click(object sender, EventArgs e)
         {
-            if (!_person.IsSavable)
+            if (!_user.IsSavable)
                 return;
 
             UnbindUI(false);
             try
             {
-                _person = _person.Save();
+                _user = _user.Save();
                 MessageBox.Show("Order saved.");
             }
             catch (DataPortalException ex)
@@ -86,13 +87,13 @@ namespace CslaExtremeDemos.WindowsForms
         private void maritalStatus_Validated(object sender, EventArgs e)
         {
             if ((sender as ComboBox).SelectedIndex == -1)
-                personBindingSource.ResetBindings(false);
+                userBindingSource.ResetBindings(false);
         }
 
         private void role_Validated(object sender, EventArgs e)
         {
             if ((sender as ComboBox).SelectedIndex == -1)
-                personBindingSource.ResetBindings(false);
+                userBindingSource.ResetBindings(false);
         }
 
         private void deptId_Validated(object sender, EventArgs e)
@@ -100,7 +101,7 @@ namespace CslaExtremeDemos.WindowsForms
             if ((sender as ComboBox).SelectedIndex == -1)
             {
                 (sender as ComboBox).Text = string.Empty;
-                personBindingSource.ResetBindings(false);
+                userBindingSource.ResetBindings(false);
             }
         }
 
@@ -108,7 +109,7 @@ namespace CslaExtremeDemos.WindowsForms
 
         public void Close()
         {
-            personBindingSource.LocalUnbind(true, true);
+            userBindingSource.Unbind(true, true);
         }
 
         #endregion

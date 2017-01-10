@@ -3,30 +3,30 @@ using CslaExtremeDemos.Business;
 
 namespace CslaExtremeDemos.WindowsForms
 {
-    public partial class PersonListEditLocal : UserControl, IClose
+    public partial class UserListEditLocal : UserControl, IClose
     {
-        public PersonListEditLocal()
+        public UserListEditLocal()
         {
             InitializeComponent();
         }
 
-        private void PersonListEdit_Load(object sender, System.EventArgs e)
+        private void UserListEditLocal_Load(object sender, System.EventArgs e)
         {
-            personListBindingSource.DataSource = PersonList.GetPersonList();
+            userListBindingSource.DataSource = UserList.GetUserList();
         }
 
-        private void personListDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void userListDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex <= -1)
             {
                 return;
             }
 
-            var editPersonId = (int) personListDataGridView.Rows[e.RowIndex].Cells[0].Value;
+            var editUserId = (int) userListDataGridView.Rows[e.RowIndex].Cells[0].Value;
 
             ClearWorkspace();
-            var personEditLocal = new PersonEditLocal(editPersonId);
-            workspace.Controls.Add(personEditLocal);
+            var userEditLocal = new UserEditLocal(editUserId);
+            workspace.Controls.Add(userEditLocal);
         }
 
         private void ClearWorkspace()
