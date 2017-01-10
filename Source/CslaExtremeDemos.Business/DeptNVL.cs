@@ -5,7 +5,6 @@ namespace CslaExtremeDemos.Business
 {
     public partial class DeptNVL
     {
-
         #region OnDeserialized actions
 
         /*/// <summary>
@@ -22,10 +21,15 @@ namespace CslaExtremeDemos.Business
 
         #region Implementation of DataPortal Hooks
 
-        //partial void OnFetchPre(DataPortalHookArgs args)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        partial void OnFetchPre(DataPortalHookArgs args)
+        {
+            IsReadOnly = false;
+            var rlce = RaiseListChangedEvents;
+            RaiseListChangedEvents = false;
+            Add(new NameValuePair(0, string.Empty));
+            RaiseListChangedEvents = rlce;
+            IsReadOnly = true;
+        }
 
         //partial void OnFetchPost(DataPortalHookArgs args)
         //{
@@ -33,6 +37,5 @@ namespace CslaExtremeDemos.Business
         //}
 
         #endregion
-
     }
 }
