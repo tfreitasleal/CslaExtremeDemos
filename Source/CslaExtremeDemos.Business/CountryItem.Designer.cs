@@ -3,6 +3,8 @@ using System.Data;
 using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
+using Csla.Rules.CommonRules;
+using CslaGenFork.Rules.CollectionRules;
 
 namespace CslaExtremeDemos.Business
 {
@@ -64,6 +66,36 @@ namespace CslaExtremeDemos.Business
             // show the framework that this is a child object
             MarkAsChild();
         }
+
+        #endregion
+
+        #region Business Rules and Property Authorization
+
+        /// <summary>
+        /// Override this method in your business class to be notified when you need to set up shared business rules.
+        /// </summary>
+        /// <remarks>
+        /// This method is automatically called by CSLA.NET when your object should associate
+        /// per-type validation rules with its properties.
+        /// </remarks>
+        protected override void AddBusinessRules()
+        {
+            base.AddBusinessRules();
+
+            // Property Business Rules
+
+            // Name
+            BusinessRules.AddRule(new Required(NameProperty, "Country name is required."));
+            BusinessRules.AddRule(new MaxLength(NameProperty, 50));
+            BusinessRules.AddRule(new NoDuplicates(NameProperty, "Country names can't be repeated."));
+
+            AddBusinessRulesExtend();
+        }
+
+        /// <summary>
+        /// Allows the set up of custom shared business rules.
+        /// </summary>
+        partial void AddBusinessRulesExtend();
 
         #endregion
 

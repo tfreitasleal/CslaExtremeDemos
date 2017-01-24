@@ -3,6 +3,8 @@ Imports System.Data
 Imports System.Data.SqlClient
 Imports Csla
 Imports Csla.Data
+Imports Csla.Rules.CommonRules
+Imports CslaGenFork.Rules.CollectionRules
 
 Namespace CslaExtremeDemos.BusinessVB
 
@@ -65,6 +67,36 @@ Namespace CslaExtremeDemos.BusinessVB
 
             ' show the framework that this is a child object
             MarkAsChild()
+        End Sub
+
+        #End Region
+
+        #Region " Business Rules and Property Authorization "
+
+        ''' <summary>
+        ''' Override this method in your business class to be notified when you need to set up shared business rules.
+        ''' </summary>
+        ''' <remarks>
+        ''' This method is automatically called by CSLA.NET when your object should associate
+        ''' per-type validation rules with its properties.
+        ''' </remarks>
+        Protected Overrides Sub AddBusinessRules()
+            MyBase.AddBusinessRules()
+
+            ' Property Business Rules
+
+            ' Name
+            BusinessRules.AddRule(New Required(NameProperty, "Country name is required."))
+            BusinessRules.AddRule(New MaxLength(NameProperty, 50))
+            BusinessRules.AddRule(New NoDuplicates(NameProperty, "Country names can't be repeated."))
+
+            AddBusinessRulesExtend()
+        End Sub
+
+        ''' <summary>
+        ''' Allows the set up of custom shared business rules.
+        ''' </summary>
+        Partial Private Sub AddBusinessRulesExtend()
         End Sub
 
         #End Region

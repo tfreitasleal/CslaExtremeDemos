@@ -36,6 +36,9 @@
       <HintPath>..\packages\CSLA-Core.4.6.500\lib\net45\Csla.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CslaGenFork.Rules">
+      <HintPath>..\Dependencies\CslaGenFork.Rules.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />

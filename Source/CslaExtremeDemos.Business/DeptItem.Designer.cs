@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
 using Csla.Rules.CommonRules;
+using CslaGenFork.Rules.CollectionRules;
 using System.ComponentModel.DataAnnotations;
 
 namespace CslaExtremeDemos.Business
@@ -125,6 +126,7 @@ namespace CslaExtremeDemos.Business
 
             // DeptName
             BusinessRules.AddRule(new MaxLength(DeptNameProperty, 50));
+            BusinessRules.AddRule(new NoDuplicates(DeptNameProperty, "Department names can't be repeated."));
 
             AddBusinessRulesExtend();
         }

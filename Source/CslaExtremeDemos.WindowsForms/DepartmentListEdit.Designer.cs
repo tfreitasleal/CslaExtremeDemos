@@ -188,6 +188,7 @@
             this.deptCollectionDataGridView.Name = "deptCollectionDataGridView";
             this.deptCollectionDataGridView.Size = new System.Drawing.Size(407, 245);
             this.deptCollectionDataGridView.TabIndex = 1;
+            this.deptCollectionDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.deptCollectionDataGridView_DataError);
             // 
             // deptId
             // 
@@ -212,7 +213,7 @@
             this.isActive.Name = "isActive";
             this.isActive.Width = 75;
             // 
-            // Departments
+            // DepartmentListEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,7 +222,7 @@
             this.Controls.Add(this.deptCollectionBindingNavigator);
             this.MaximumSize = new System.Drawing.Size(423, 309);
             this.MinimumSize = new System.Drawing.Size(423, 309);
-            this.Name = "Departments";
+            this.Name = "DepartmentListEdit";
             this.Text = "Departments";
             this.Load += new System.EventHandler(this.DepartmentListEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();

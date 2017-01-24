@@ -19,6 +19,14 @@ Namespace CslaExtremeDemos.BusinessVB
 
         #End Region
 
+        #Region " Custom Business Rules and Property Authorization "
+
+        ' Partial Private Sub AddBusinessRulesExtend()
+        '     Throw New NotImplementedException()
+        ' End Sub
+
+        #End Region
+
         #Region " Implementation of DataPortal Hooks "
 
         ' Partial Private Sub OnCreate(args As DataPortalHookArgs)
