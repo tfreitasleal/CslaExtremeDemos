@@ -47,7 +47,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Gets or sets the Dept Name.
         ''' </summary>
         ''' <value>The Dept Name.</value>
-        <Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")>
+        <Required(AllowEmptyStrings := false, ErrorMessage := "Must fill.")>
         Public Property DeptName As String
             Get
                 Return GetProperty(DeptNameProperty)

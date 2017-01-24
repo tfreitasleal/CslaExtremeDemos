@@ -69,6 +69,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CivilStatus.vb" />
+    <Compile Include="CountryCollection.Designer.vb">
+      <DependentUpon>CountryCollection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CountryCollection.vb" />
+    <Compile Include="CountryItem.Designer.vb">
+      <DependentUpon>CountryItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CountryItem.vb" />
+    <Compile Include="CountryNVL.Designer.vb">
+      <DependentUpon>CountryNVL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CountryNVL.vb" />
     <Compile Include="DatabaseCslaExtremeDemos.vb" />
     <Compile Include="DataPortalHookArgs.vb" />
     <Compile Include="DeptCollection.Designer.vb">
@@ -83,6 +95,14 @@
       <DependentUpon>DeptNVL.vb</DependentUpon>
     </Compile>
     <Compile Include="DeptNVL.vb" />
+    <Compile Include="JobCollection.Designer.vb">
+      <DependentUpon>JobCollection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JobCollection.vb" />
+    <Compile Include="JobItem.Designer.vb">
+      <DependentUpon>JobItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JobItem.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
