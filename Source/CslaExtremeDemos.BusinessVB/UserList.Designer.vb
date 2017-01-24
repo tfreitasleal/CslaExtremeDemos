@@ -22,6 +22,28 @@ Namespace CslaExtremeDemos.BusinessVB
     Partial Public Class UserList
         Inherits ReadOnlyBindingListBase(Of UserList, UserInfo)
     
+        #Region " Event handler properties "
+
+        <NotUndoable>
+        Private Shared _singleInstanceSavedHandler As Boolean = True
+
+        ''' <summary>
+        ''' Gets or sets a value indicating whether only a single instance should handle the Saved event.
+        ''' </summary>
+        ''' <value>
+        ''' <c>true</c> if only a single instance should handle the Saved event; otherwise, <c>false</c>.
+        ''' </value>
+        Public Shared Property SingleInstanceSavedHandler() As Boolean
+            Get
+                Return _singleInstanceSavedHandler
+            End Get
+            Set(ByVal value As Boolean)
+                _singleInstanceSavedHandler = value
+            End Set
+        End Property
+
+        #End Region
+
         #Region " Collection Business Methods "
 
         ''' <summary>
@@ -116,20 +138,20 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' <param name="sender">The sender of the event.</param>
         ''' <param name="e">The <see cref="Csla.Core.SavedEventArgs"/> instance containing the event data.</param>
         Private Sub UserSavedHandler(sender As Object, e As Csla.Core.SavedEventArgs)
-            Dim obj = CType(e.NewObject, User)
+            Dim obj As User = CType(e.NewObject, User)
             If CType(sender, User).IsNew Then
                 IsReadOnly = False
-                Dim rlce = RaiseListChangedEvents
+                Dim rlce As Boolean = RaiseListChangedEvents
                 RaiseListChangedEvents = True
                 Add(UserInfo.LoadInfo(obj))
                 RaiseListChangedEvents = rlce
                 IsReadOnly = True
             ElseIf CType(sender, User).IsDeleted Then
                 For index = 0 To Count - 1
-                    Dim child = Me(index)
+                    Dim child As UserInfo = Me(index)
                     If child.UserId = obj.UserId Then
                         IsReadOnly = False
-                        Dim rlce = RaiseListChangedEvents
+                        Dim rlce As Boolean = RaiseListChangedEvents
                         RaiseListChangedEvents = True
                         RemoveItem(index)
                         RaiseListChangedEvents = rlce
@@ -139,7 +161,7 @@ Namespace CslaExtremeDemos.BusinessVB
                 Next
             Else
                 For index = 0 To Count - 1
-                    Dim child = Me(index)
+                    Dim child As UserInfo = Me(index)
                     If child.UserId = obj.UserId Then
                         child.UpdatePropertiesOnSaved(obj)
                         Dim listChangedEventArgs As New ListChangedEventArgs(ListChangedType.ItemChanged, index)
@@ -220,6 +242,71 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' </summary>
         Partial Private Sub OnFetchPost(args As DataPortalHookArgs)
         End Sub
+
+        #End Region
+
+        #Region " UserSaved nested class "
+
+        ''' <summary>
+        ''' Nested class to manage the Saved events of <see cref="User"/>
+        ''' to update the list of <see cref="UserInfo"/> objects.
+        ''' </summary>
+        Private NotInheritable Class UserSaved
+            Private Shared _references As List(Of WeakReference)
+
+            Private Sub New()
+            End Sub
+
+            Private Shared Function Found(ByVal obj As Object) As Boolean
+                Return _references.Any(Function(reference) Equals(reference.Target, obj))
+            End Function
+
+            ''' <summary>
+            ''' Registers a UserList instance to handle Saved events.
+            ''' to update the list of <see cref="UserInfo"/> objects.
+            ''' </summary>
+            ''' <param name="obj">The UserList instance.</param>
+            Public Shared Sub Register(ByVal obj As UserList)
+                Dim mustRegister As Boolean = _references Is Nothing
+
+                If mustRegister Then
+                    _references = New List(Of WeakReference)()
+                End If
+
+                If UserList.SingleInstanceSavedHandler Then
+                    _references.Clear()
+                End If
+
+                If Not Found(obj) Then
+                    _references.Add(New WeakReference(obj))
+                End If
+
+                If mustRegister Then
+                    AddHandler User.UserSaved, AddressOf UserSavedHandler
+                End If
+            End Sub
+
+            ''' <summary>
+            ''' Handles Saved events of <see cref="User"/>.
+            ''' </summary>
+            ''' <param name="sender">The sender of the event.</param>
+            ''' <param name="e">The <see cref="Csla.Core.SavedEventArgs"/> instance containing the event data.</param>
+            Public Shared Sub UserSavedHandler(ByVal sender As Object, ByVal e As Csla.Core.SavedEventArgs)
+                For Each reference As WeakReference In _references
+                    If reference.IsAlive Then
+                        CType(reference.Target, UserList).UserSavedHandler(sender, e)
+                    End If
+                Next reference
+            End Sub
+
+            ''' <summary>
+            ''' Removes event handling and clears all registered UserList instances.
+            ''' </summary>
+            Public Shared Sub Unregister()
+                RemoveHandler User.UserSaved, AddressOf UserSavedHandler
+                _references = Nothing
+            End Sub
+        End Class
 
         #End Region
 

@@ -34,42 +34,55 @@ namespace CslaExtremeDemos.Business
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="FirstName"/> property.
+        /// Maintains metadata about <see cref="Name"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> FirstNameProperty = RegisterProperty<string>(p => p.FirstName, "First Name");
+        public static readonly PropertyInfo<string> NameProperty = RegisterProperty<string>(p => p.Name, "Name");
         /// <summary>
-        /// Gets the First Name.
+        /// Gets the Name.
         /// </summary>
-        /// <value>The First Name.</value>
-        public string FirstName
+        /// <value>The Name.</value>
+        public string Name
         {
-            get { return GetProperty(FirstNameProperty); }
+            get { return GetProperty(NameProperty); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="MiddleName"/> property.
+        /// Maintains metadata about <see cref="Gender"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> MiddleNameProperty = RegisterProperty<string>(p => p.MiddleName, "Middle Name", null);
+        public static readonly PropertyInfo<byte> GenderProperty = RegisterProperty<byte>(p => p.Gender, "Gender");
         /// <summary>
-        /// Gets the Middle Name.
+        /// Gets the Gender.
         /// </summary>
-        /// <value>The Middle Name.</value>
-        public string MiddleName
+        /// <value>The Gender.</value>
+        public byte Gender
         {
-            get { return GetProperty(MiddleNameProperty); }
+            get { return GetProperty(GenderProperty); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="LastName"/> property.
+        /// Maintains metadata about <see cref="BirthDate"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> LastNameProperty = RegisterProperty<string>(p => p.LastName, "Last Name");
+        public static readonly PropertyInfo<SmartDate> BirthDateProperty = RegisterProperty<SmartDate>(p => p.BirthDate, "Birth Date");
         /// <summary>
-        /// Gets the Last Name.
+        /// Gets the Birth Date.
         /// </summary>
-        /// <value>The Last Name.</value>
-        public string LastName
+        /// <value>The Birth Date.</value>
+        public string BirthDate
         {
-            get { return GetProperty(LastNameProperty); }
+            get { return GetPropertyConvert<SmartDate, string>(BirthDateProperty); }
+        }
+
+        /// <summary>
+        /// Maintains metadata about <see cref="BirthCountryId"/> property.
+        /// </summary>
+        public static readonly PropertyInfo<short> BirthCountryIdProperty = RegisterProperty<short>(p => p.BirthCountryId, "Birth Country Id");
+        /// <summary>
+        /// Gets the Birth Country Id.
+        /// </summary>
+        /// <value>The Birth Country Id.</value>
+        public short BirthCountryId
+        {
+            get { return GetProperty(BirthCountryIdProperty); }
         }
 
         #endregion
@@ -106,9 +119,10 @@ namespace CslaExtremeDemos.Business
         internal void UpdatePropertiesOnSaved(Person person)
         {
             LoadProperty(PersonIdProperty, person.PersonId);
-            LoadProperty(FirstNameProperty, person.FirstName);
-            LoadProperty(MiddleNameProperty, person.MiddleName);
-            LoadProperty(LastNameProperty, person.LastName);
+            LoadProperty(NameProperty, person.Name);
+            LoadProperty(GenderProperty, person.Gender);
+            LoadProperty(BirthDateProperty, (SmartDate)person.BirthDate);
+            LoadProperty(BirthCountryIdProperty, person.BirthCountryId);
         }
 
         #endregion
@@ -123,9 +137,10 @@ namespace CslaExtremeDemos.Business
         {
             // Value properties
             LoadProperty(PersonIdProperty, dr.GetInt32("PersonId"));
-            LoadProperty(FirstNameProperty, dr.GetString("FirstName"));
-            LoadProperty(MiddleNameProperty, dr.IsDBNull("MiddleName") ? null : dr.GetString("MiddleName"));
-            LoadProperty(LastNameProperty, dr.GetString("LastName"));
+            LoadProperty(NameProperty, dr.GetString("Name"));
+            LoadProperty(GenderProperty, dr.GetByte("Gender"));
+            LoadProperty(BirthDateProperty, dr.GetSmartDate("BirthDate", true));
+            LoadProperty(BirthCountryIdProperty, dr.GetInt16("BirthCountryId"));
             var args = new DataPortalHookArgs(dr);
             OnFetchRead(args);
         }

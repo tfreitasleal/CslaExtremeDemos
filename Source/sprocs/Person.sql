@@ -13,13 +13,24 @@ AS
         /* Get Person from table */
         SELECT
             [Persons].[PersonId],
-            [Persons].[FirstName],
-            [Persons].[MiddleName],
-            [Persons].[LastName],
-            [Persons].[MaritalStatusId],
-            [Persons].[RoleId],
-            [Persons].[DeptId]
+            [Persons].[Name],
+            [Persons].[Gender],
+            [Persons].[BirthDate],
+            [Persons].[BirthCountryId],
+            [Persons].[GraduationDate],
+            [Persons].[GraduationCollege],
+            [Persons].[GraduationCountryId],
+            [Persons].[GraduationDegree]
         FROM [dbo].[Persons]
+        WHERE
+            [Persons].[PersonId] = @PersonId
+
+        /* Get JobItem from table */
+        SELECT
+            [Jobs].[JobId],
+            [Jobs].[CompanyName]
+        FROM [dbo].[Jobs]
+            INNER JOIN [dbo].[Persons] ON [Jobs].[PersonId] = [Persons].[PersonId]
         WHERE
             [Persons].[PersonId] = @PersonId
 
@@ -33,12 +44,14 @@ GO
 
 CREATE PROCEDURE [dbo].[AddPerson]
     @PersonId int OUTPUT,
-    @FirstName varchar(50),
-    @MiddleName varchar(50),
-    @LastName varchar(50),
-    @MaritalStatusId tinyint,
-    @RoleId tinyint,
-    @DeptId smallint
+    @Name varchar(50),
+    @Gender tinyint,
+    @BirthDate datetime2,
+    @BirthCountryId smallint,
+    @GraduationDate datetime2,
+    @GraduationCollege varchar(50),
+    @GraduationCountryId smallint,
+    @GraduationDegree tinyint
 AS
     BEGIN
 
@@ -47,21 +60,25 @@ AS
         /* Insert object into dbo.Persons */
         INSERT INTO [dbo].[Persons]
         (
-            [FirstName],
-            [MiddleName],
-            [LastName],
-            [MaritalStatusId],
-            [RoleId],
-            [DeptId]
+            [Name],
+            [Gender],
+            [BirthDate],
+            [BirthCountryId],
+            [GraduationDate],
+            [GraduationCollege],
+            [GraduationCountryId],
+            [GraduationDegree]
         )
         VALUES
         (
-            @FirstName,
-            @MiddleName,
-            @LastName,
-            @MaritalStatusId,
-            @RoleId,
-            @DeptId
+            @Name,
+            @Gender,
+            @BirthDate,
+            @BirthCountryId,
+            @GraduationDate,
+            @GraduationCollege,
+            @GraduationCountryId,
+            @GraduationDegree
         )
 
         /* Return new primary key */
@@ -77,12 +94,14 @@ GO
 
 CREATE PROCEDURE [dbo].[UpdatePerson]
     @PersonId int,
-    @FirstName varchar(50),
-    @MiddleName varchar(50),
-    @LastName varchar(50),
-    @MaritalStatusId tinyint,
-    @RoleId tinyint,
-    @DeptId smallint
+    @Name varchar(50),
+    @Gender tinyint,
+    @BirthDate datetime2,
+    @BirthCountryId smallint,
+    @GraduationDate datetime2,
+    @GraduationCollege varchar(50),
+    @GraduationCountryId smallint,
+    @GraduationDegree tinyint
 AS
     BEGIN
 
@@ -103,12 +122,14 @@ AS
         /* Update object in dbo.Persons */
         UPDATE [dbo].[Persons]
         SET
-            [FirstName] = @FirstName,
-            [MiddleName] = @MiddleName,
-            [LastName] = @LastName,
-            [MaritalStatusId] = @MaritalStatusId,
-            [RoleId] = @RoleId,
-            [DeptId] = @DeptId
+            [Name] = @Name,
+            [Gender] = @Gender,
+            [BirthDate] = @BirthDate,
+            [BirthCountryId] = @BirthCountryId,
+            [GraduationDate] = @GraduationDate,
+            [GraduationCollege] = @GraduationCollege,
+            [GraduationCountryId] = @GraduationCountryId,
+            [GraduationDegree] = @GraduationDegree
         WHERE
             [PersonId] = @PersonId
 

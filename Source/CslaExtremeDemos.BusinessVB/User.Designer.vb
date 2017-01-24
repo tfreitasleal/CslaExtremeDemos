@@ -15,7 +15,7 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' </summary>
     <Serializable()>
     Partial Public Class User
-        Inherits BusinessBase(Of User)
+    Inherits BusinessBase(Of User)
 
         #Region " Static Fields "
 
@@ -48,7 +48,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Gets or sets the First Name.
         ''' </summary>
         ''' <value>The First Name.</value>
-        <Required(AllowEmptyStrings := False, ErrorMessage := "Must fill.")>
+        <Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")>
         Public Property FirstName As String
             Get
                 Return GetProperty(FirstNameProperty)
@@ -83,7 +83,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Gets or sets the Last Name.
         ''' </summary>
         ''' <value>The Last Name.</value>
-        <Required(AllowEmptyStrings := False, ErrorMessage := "Must fill.")>
+        <Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")>
         Public Property LastName As String
             Get
                 Return GetProperty(LastNameProperty)
@@ -224,7 +224,7 @@ Namespace CslaExtremeDemos.BusinessVB
             ' LastName
             BusinessRules.AddRule(New MaxLength(LastNameProperty, 50))
             ' MaritalStatus
-            BusinessRules.AddRule(New EnumNotZero(MaritalStatusProperty) With {.MessageText = "Must specify Marital Status."})
+            BusinessRules.AddRule(New EnumNotZero(MaritalStatusProperty) With { .MessageText = "Must specify Marital Status." })
 
             AddBusinessRulesExtend()
         End Sub

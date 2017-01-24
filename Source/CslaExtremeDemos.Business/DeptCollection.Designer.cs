@@ -21,6 +21,19 @@ namespace CslaExtremeDemos.Business
         #region Collection Business Methods
 
         /// <summary>
+        /// Adds a new <see cref="DeptItem"/> item to the collection.
+        /// </summary>
+        /// <param name="item">The item to add.</param>
+        /// <exception cref="ArgumentException">if the item already exists in the collection.</exception>
+        public new void Add(DeptItem item)
+        {
+            if (Contains(item.DeptId))
+                throw new ArgumentException("DeptItem already exists.");
+
+            base.Add(item);
+        }
+
+        /// <summary>
         /// Determines whether a <see cref="DeptItem"/> item is in the collection.
         /// </summary>
         /// <param name="deptId">The DeptId of the item to search for.</param>
@@ -35,6 +48,28 @@ namespace CslaExtremeDemos.Business
                 }
             }
             return false;
+        }
+
+        #endregion
+
+        #region Find Methods
+
+        /// <summary>
+        /// Finds a <see cref="DeptItem"/> item of the <see cref="DeptCollection"/> collection, based on a given DeptName.
+        /// </summary>
+        /// <param name="deptName">The DeptName.</param>
+        /// <returns>A <see cref="DeptItem"/> object.</returns>
+        public DeptItem FindDeptItemByDeptName(string deptName)
+        {
+            for (var i = 0; i < this.Count; i++)
+            {
+                if (this[i].DeptName.Equals(deptName))
+                {
+                    return this[i];
+                }
+            }
+
+            return null;
         }
 
         #endregion

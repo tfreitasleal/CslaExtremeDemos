@@ -15,7 +15,7 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' </remarks>
     <Serializable()>
     Partial Public Class UserInfo
-        Inherits ReadOnlyBase(Of UserInfo)
+    Inherits ReadOnlyBase(Of UserInfo)
 
         #Region " Business Properties "
 

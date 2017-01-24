@@ -7,23 +7,23 @@ Imports Csla.Data
 Namespace CslaExtremeDemos.BusinessVB
 
     ''' <summary>
-    ''' DeptNVL (name value list).<br/>
-    ''' This is a generated base class of <see cref="DeptNVL"/> business object.
+    ''' CountryNVL (name value list).<br/>
+    ''' This is a generated base class of <see cref="CountryNVL"/> business object.
     ''' </summary>
     <Serializable()>
-    Partial Public Class DeptNVL
+    Partial Public Class CountryNVL
     Inherits NameValueListBase(Of Short, String)
 
         #Region " Private Fields "
 
-        Private Shared _list As DeptNVL
+        Private Shared _list As CountryNVL
 
         #End Region
 
         #Region " Cache Management Methods "
 
         ''' <summary>
-        ''' Clears the in-memory DeptNVL cache so it is reloaded on the next request.
+        ''' Clears the in-memory CountryNVL cache so it is reloaded on the next request.
         ''' </summary>
         Public Shared Sub InvalidateCache()
             _list = Nothing
@@ -33,7 +33,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Used by async loaders to load the cache.
         ''' </summary>
         ''' <param name="lst">The list to cache.</param>
-        Friend Shared Sub SetCache(lst As DeptNVL)
+        Friend Shared Sub SetCache(lst As CountryNVL)
             _list = lst
         End Sub
 
@@ -48,12 +48,12 @@ Namespace CslaExtremeDemos.BusinessVB
         #Region " Factory Methods "
 
         ''' <summary>
-        ''' Factory method. Loads a <see cref="DeptNVL"/> object.
+        ''' Factory method. Loads a <see cref="CountryNVL"/> object.
         ''' </summary>
-        ''' <returns>A reference to the fetched <see cref="DeptNVL"/> object.</returns>
-        Public Shared Function GetDeptNVL() As DeptNVL
+        ''' <returns>A reference to the fetched <see cref="CountryNVL"/> object.</returns>
+        Public Shared Function GetCountryNVL() As CountryNVL
             If _list Is Nothing Then
-                _list = DataPortal.Fetch(Of DeptNVL)()
+                _list = DataPortal.Fetch(Of CountryNVL)()
             End If
 
             Return _list
@@ -64,7 +64,7 @@ Namespace CslaExtremeDemos.BusinessVB
         #Region " Constructor "
 
         ''' <summary>
-        ''' Initializes a new instance of the <see cref="DeptNVL"/> class.
+        ''' Initializes a new instance of the <see cref="CountryNVL"/> class.
         ''' </summary>
         ''' <remarks> Do not use to create a Csla object. Use factory methods instead.</remarks>
         <System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)>
@@ -77,7 +77,7 @@ Namespace CslaExtremeDemos.BusinessVB
         #Region " Data Access "
 
         ''' <summary>
-        ''' Loads a <see cref="DeptNVL"/> collection from the database or from the cache.
+        ''' Loads a <see cref="CountryNVL"/> collection from the database or from the cache.
         ''' </summary>
         Protected Overloads Sub DataPortal_Fetch()
             If IsCached Then
@@ -86,7 +86,7 @@ Namespace CslaExtremeDemos.BusinessVB
             End If
 
             Using ctx = ConnectionManager(Of SqlConnection).GetManager(Database.CslaExtremeDemosConnection, False)
-                Using cmd = New SqlCommand("dbo.GetDeptNVL", ctx.Connection)
+                Using cmd = New SqlCommand("dbo.GetCountryNVL", ctx.Connection)
                     cmd.CommandType = CommandType.StoredProcedure
                     Dim args = New DataPortalHookArgs(cmd)
                     OnFetchPre(args)
@@ -113,8 +113,8 @@ Namespace CslaExtremeDemos.BusinessVB
             Using dr = New SafeDataReader(cmd.ExecuteReader())
                 While dr.Read()
                     Add(New NameValuePair(
-                        dr.GetInt16("DeptId"),
-                        dr.GetString("DeptName")))
+                        dr.GetInt16("CountryId"),
+                        dr.GetString("Name")))
                 End While
             End Using
             RaiseListChangedEvents = rlce

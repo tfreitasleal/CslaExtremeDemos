@@ -3,9 +3,6 @@ Imports System.Data
 Imports System.Data.SqlClient
 Imports Csla
 Imports Csla.Data
-Imports Csla.Rules.CommonRules
-Imports CslaExtremeDemos.Rules
-Imports System.ComponentModel.DataAnnotations
 
 Namespace CslaExtremeDemos.BusinessVB
 
@@ -13,9 +10,13 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' Person (editable root object).<br/>
     ''' This is a generated base class of <see cref="Person"/> business object.
     ''' </summary>
+    ''' <remarks>
+    ''' This class contains one child collection:<br/>
+    ''' - <see cref="Jobs"/> of type <see cref="JobCollection"/> (1:M relation to <see cref="JobItem"/>)
+    ''' </remarks>
     <Serializable()>
     Partial Public Class Person
-        Inherits BusinessBase(Of Person)
+    Inherits BusinessBase(Of Person)
 
         #Region " Static Fields "
 
@@ -41,106 +42,155 @@ Namespace CslaExtremeDemos.BusinessVB
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="FirstName"/> property.
+        ''' Maintains metadata about <see cref="Name"/> property.
         ''' </summary>
-        Public Shared ReadOnly FirstNameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.FirstName, "First Name")
+        Public Shared ReadOnly NameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.Name, "Name")
         ''' <summary>
-        ''' Gets or sets the First Name.
+        ''' Gets or sets the Name.
         ''' </summary>
-        ''' <value>The First Name.</value>
-        <Required(AllowEmptyStrings := False, ErrorMessage := "Must fill.")>
-        Public Property FirstName As String
+        ''' <value>The Name.</value>
+        Public Property Name As String
             Get
-                Return GetProperty(FirstNameProperty)
+                Return GetProperty(NameProperty)
             End Get
             Set(ByVal value As String)
-                SetProperty(FirstNameProperty, value)
+                SetProperty(NameProperty, value)
             End Set
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="MiddleName"/> property.
+        ''' Maintains metadata about <see cref="Gender"/> property.
         ''' </summary>
-        Public Shared ReadOnly MiddleNameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.MiddleName, "Middle Name")
+        Public Shared ReadOnly GenderProperty As PropertyInfo(Of Byte) = RegisterProperty(Of Byte)(Function(p) p.Gender, "Gender")
         ''' <summary>
-        ''' Gets or sets the Middle Name.
+        ''' Gets or sets the Gender.
         ''' </summary>
-        ''' <value>The Middle Name.</value>
-        Public Property MiddleName As String
+        ''' <value>The Gender.</value>
+        Public Property Gender As Byte
             Get
-                Return GetProperty(MiddleNameProperty)
+                Return GetProperty(GenderProperty)
+            End Get
+            Set(ByVal value As Byte)
+                SetProperty(GenderProperty, value)
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Maintains metadata about <see cref="BirthDate"/> property.
+        ''' </summary>
+        Public Shared ReadOnly BirthDateProperty As PropertyInfo(Of SmartDate) = RegisterProperty(Of SmartDate)(Function(p) p.BirthDate, "Birth Date")
+        ''' <summary>
+        ''' Gets or sets the Birth Date.
+        ''' </summary>
+        ''' <value>The Birth Date.</value>
+        Public Property BirthDate As String
+            Get
+                Return GetPropertyConvert(Of SmartDate, String)(BirthDateProperty)
             End Get
             Set(ByVal value As String)
-                SetProperty(MiddleNameProperty, value)
+                SetPropertyConvert(Of SmartDate, String)(BirthDateProperty, value)
             End Set
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="LastName"/> property.
+        ''' Maintains metadata about <see cref="BirthCountryId"/> property.
         ''' </summary>
-        Public Shared ReadOnly LastNameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.LastName, "Last Name")
+        Public Shared ReadOnly BirthCountryIdProperty As PropertyInfo(Of Short) = RegisterProperty(Of Short)(Function(p) p.BirthCountryId, "Birth Country Id")
         ''' <summary>
-        ''' Gets or sets the Last Name.
+        ''' Gets or sets the Birth Country Id.
         ''' </summary>
-        ''' <value>The Last Name.</value>
-        <Required(AllowEmptyStrings := False, ErrorMessage := "Must fill.")>
-        Public Property LastName As String
+        ''' <value>The Birth Country Id.</value>
+        Public Property BirthCountryId As Short
             Get
-                Return GetProperty(LastNameProperty)
+                Return GetProperty(BirthCountryIdProperty)
+            End Get
+            Set(ByVal value As Short)
+                SetProperty(BirthCountryIdProperty, value)
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Maintains metadata about <see cref="GraduationDate"/> property.
+        ''' </summary>
+        Public Shared ReadOnly GraduationDateProperty As PropertyInfo(Of SmartDate) = RegisterProperty(Of SmartDate)(Function(p) p.GraduationDate, "Graduation Date")
+        ''' <summary>
+        ''' Gets or sets the Graduation Date.
+        ''' </summary>
+        ''' <value>The Graduation Date.</value>
+        Public Property GraduationDate As String
+            Get
+                Return GetPropertyConvert(Of SmartDate, String)(GraduationDateProperty)
             End Get
             Set(ByVal value As String)
-                SetProperty(LastNameProperty, value)
+                SetPropertyConvert(Of SmartDate, String)(GraduationDateProperty, value)
             End Set
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="MaritalStatus"/> property.
+        ''' Maintains metadata about <see cref="GraduationCollege"/> property.
         ''' </summary>
-        Public Shared ReadOnly MaritalStatusProperty As PropertyInfo(Of Byte) = RegisterProperty(Of Byte)(Function(p) p.MaritalStatus, "Marital Status")
+        Public Shared ReadOnly GraduationCollegeProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.GraduationCollege, "Graduation College")
         ''' <summary>
-        ''' Gets or sets the Marital Status.
+        ''' Gets or sets the Graduation College.
         ''' </summary>
-        ''' <value>The Marital Status.</value>
-        Public Property MaritalStatus As CivilStatus
+        ''' <value>The Graduation College.</value>
+        Public Property GraduationCollege As String
             Get
-                Return GetPropertyConvert(Of Byte, CivilStatus)(MaritalStatusProperty)
+                Return GetProperty(GraduationCollegeProperty)
             End Get
-            Set(ByVal value As CivilStatus)
-                SetPropertyConvert(Of Byte, CivilStatus)(MaritalStatusProperty, value)
+            Set(ByVal value As String)
+                SetProperty(GraduationCollegeProperty, value)
             End Set
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="Role"/> property.
+        ''' Maintains metadata about <see cref="GraduationCountryId"/> property.
         ''' </summary>
-        Public Shared ReadOnly RoleProperty As PropertyInfo(Of Byte) = RegisterProperty(Of Byte)(Function(p) p.Role, "Role")
+        Public Shared ReadOnly GraduationCountryIdProperty As PropertyInfo(Of Short?) = RegisterProperty(Of Short?)(Function(p) p.GraduationCountryId, "Graduation Country Id")
         ''' <summary>
-        ''' Gets or sets the Role.
+        ''' Gets or sets the Graduation Country Id.
         ''' </summary>
-        ''' <value>The Role.</value>
-        Public Property Role As Roles
+        ''' <value>The Graduation Country Id.</value>
+        Public Property GraduationCountryId As Short?
             Get
-                Return GetPropertyConvert(Of Byte, Roles)(RoleProperty)
-            End Get
-            Set(ByVal value As Roles)
-                SetPropertyConvert(Of Byte, Roles)(RoleProperty, value)
-            End Set
-        End Property
-
-        ''' <summary>
-        ''' Maintains metadata about <see cref="DeptId"/> property.
-        ''' </summary>
-        Public Shared ReadOnly DeptIdProperty As PropertyInfo(Of Short?) = RegisterProperty(Of Short?)(Function(p) p.DeptId, "Dept")
-        ''' <summary>
-        ''' Gets or sets the Dept.
-        ''' </summary>
-        ''' <value>The Dept.</value>
-        Public Property DeptId As Short?
-            Get
-                Return GetProperty(DeptIdProperty)
+                Return GetProperty(GraduationCountryIdProperty)
             End Get
             Set(ByVal value As Short?)
-                SetProperty(DeptIdProperty, value)
+                SetProperty(GraduationCountryIdProperty, value)
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Maintains metadata about <see cref="GraduationDegree"/> property.
+        ''' </summary>
+        Public Shared ReadOnly GraduationDegreeProperty As PropertyInfo(Of Byte?) = RegisterProperty(Of Byte?)(Function(p) p.GraduationDegree, "Graduation Degree")
+        ''' <summary>
+        ''' Gets or sets the Graduation Degree.
+        ''' </summary>
+        ''' <value>The Graduation Degree.</value>
+        Public Property GraduationDegree As Byte?
+            Get
+                Return GetProperty(GraduationDegreeProperty)
+            End Get
+            Set(ByVal value As Byte?)
+                SetProperty(GraduationDegreeProperty, value)
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Maintains metadata about child <see cref="Jobs"/> property.
+        ''' </summary>
+        Public Shared ReadOnly JobsProperty As PropertyInfo(Of JobCollection) = RegisterProperty(Of JobCollection)(Function(p) p.Jobs, "Jobs", RelationshipTypes.Child)
+        ''' <summary>
+        ''' Gets the Jobs ("parent load" child property).
+        ''' </summary>
+        ''' <value>The Jobs.</value>
+        Public Property Jobs As JobCollection
+            Get
+                Return GetProperty(JobsProperty)
+            End Get
+            Private Set(ByVal value As JobCollection)
+                LoadProperty(JobsProperty, value)
             End Set
         End Property
 
@@ -203,40 +253,6 @@ Namespace CslaExtremeDemos.BusinessVB
 
         #End Region
 
-        #Region " Business Rules and Property Authorization "
-
-        ''' <summary>
-        ''' Override this method in your business class to be notified when you need to set up shared business rules.
-        ''' </summary>
-        ''' <remarks>
-        ''' This method is automatically called by CSLA.NET when your object should associate
-        ''' per-type validation rules with its properties.
-        ''' </remarks>
-        Protected Overrides Sub AddBusinessRules()
-            MyBase.AddBusinessRules()
-
-            ' Property Business Rules
-
-            ' FirstName
-            BusinessRules.AddRule(New MaxLength(FirstNameProperty, 50))
-            ' MiddleName
-            BusinessRules.AddRule(New MaxLength(MiddleNameProperty, 50))
-            ' LastName
-            BusinessRules.AddRule(New MaxLength(LastNameProperty, 50))
-            ' MaritalStatus
-            BusinessRules.AddRule(New EnumNotZero(MaritalStatusProperty) With {.MessageText = "Must specify Marital Status."})
-
-            AddBusinessRulesExtend()
-        End Sub
-
-        ''' <summary>
-        ''' Allows the set up of custom shared business rules.
-        ''' </summary>
-        Partial Private Sub AddBusinessRulesExtend()
-        End Sub
-
-        #End Region
-
         #Region " Data Access "
 
         ''' <summary>
@@ -245,7 +261,9 @@ Namespace CslaExtremeDemos.BusinessVB
         <Csla.RunLocal()>
         Protected Overrides Sub DataPortal_Create()
             LoadProperty(PersonIdProperty, System.Threading.Interlocked.Decrement(_lastId))
-            LoadProperty(MiddleNameProperty, Nothing)
+            LoadProperty(GraduationDateProperty, Nothing)
+            LoadProperty(GraduationCollegeProperty, Nothing)
+            LoadProperty(JobsProperty, DataPortal.CreateChild(Of JobCollection)())
             Dim args As New DataPortalHookArgs()
             OnCreate(args)
             MyBase.DataPortal_Create()
@@ -274,6 +292,7 @@ Namespace CslaExtremeDemos.BusinessVB
             Using dr As New SafeDataReader(cmd.ExecuteReader())
                 If dr.Read() Then
                     Fetch(dr)
+                    FetchChildren(dr)
                 End If
             End Using
         End Sub
@@ -285,14 +304,25 @@ Namespace CslaExtremeDemos.BusinessVB
         Private Sub Fetch(dr As SafeDataReader)
             ' Value properties
             LoadProperty(PersonIdProperty, dr.GetInt32("PersonId"))
-            LoadProperty(FirstNameProperty, dr.GetString("FirstName"))
-            LoadProperty(MiddleNameProperty, If(dr.IsDBNull("MiddleName"), Nothing, dr.GetString("MiddleName")))
-            LoadProperty(LastNameProperty, dr.GetString("LastName"))
-            LoadProperty(MaritalStatusProperty, dr.GetByte("MaritalStatusId"))
-            LoadProperty(RoleProperty, dr.GetByte("RoleId"))
-            LoadProperty(DeptIdProperty, DirectCast(dr.GetValue("DeptId"), Short?))
+            LoadProperty(NameProperty, dr.GetString("Name"))
+            LoadProperty(GenderProperty, dr.GetByte("Gender"))
+            LoadProperty(BirthDateProperty, dr.GetSmartDate("BirthDate", True))
+            LoadProperty(BirthCountryIdProperty, dr.GetInt16("BirthCountryId"))
+            LoadProperty(GraduationDateProperty, If(dr.IsDBNull("GraduationDate"), Nothing, dr.GetSmartDate("GraduationDate", True)))
+            LoadProperty(GraduationCollegeProperty, If(dr.IsDBNull("GraduationCollege"), Nothing, dr.GetString("GraduationCollege")))
+            LoadProperty(GraduationCountryIdProperty, DirectCast(dr.GetValue("GraduationCountryId"), Short?))
+            LoadProperty(GraduationDegreeProperty, DirectCast(dr.GetValue("GraduationDegree"), Byte?))
             Dim args As New DataPortalHookArgs(dr)
             OnFetchRead(args)
+        End Sub
+
+        ''' <summary>
+        ''' Loads child objects from the given SafeDataReader.
+        ''' </summary>
+        ''' <param name="dr">The SafeDataReader to use.</param>
+        Private Sub FetchChildren(dr As SafeDataReader)
+            dr.NextResult()
+            LoadProperty(JobsProperty, DataPortal.FetchChild(Of JobCollection)(dr))
         End Sub
 
         ''' <summary>
@@ -304,19 +334,22 @@ Namespace CslaExtremeDemos.BusinessVB
                     cmd.Transaction = ctx.Transaction
                     cmd.CommandType = CommandType.StoredProcedure
                     cmd.Parameters.AddWithValue("@PersonId", ReadProperty(PersonIdProperty)).Direction = ParameterDirection.Output
-                    cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String
-                    cmd.Parameters.AddWithValue("@MiddleName", If(ReadProperty(MiddleNameProperty) Is Nothing, DBNull.Value, ReadProperty(MiddleNameProperty))).DbType = DbType.String
-                    cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String
-                    cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte
-                    ' For nullable PropertyConvert, null (Nothing) is persisted if the backing field is zero
-                    cmd.Parameters.AddWithValue("@RoleId", If(ReadProperty(RoleProperty) = 0, DBNull.Value, ReadProperty(RoleProperty))).DbType = DbType.Byte
-                    cmd.Parameters.AddWithValue("@DeptId", If(ReadProperty(DeptIdProperty) Is Nothing, DBNull.Value, ReadProperty(DeptIdProperty).Value)).DbType = DbType.Int16
+                    cmd.Parameters.AddWithValue("@Name", ReadProperty(NameProperty)).DbType = DbType.String
+                    cmd.Parameters.AddWithValue("@Gender", ReadProperty(GenderProperty)).DbType = DbType.Byte
+                    cmd.Parameters.AddWithValue("@BirthDate", ReadProperty(BirthDateProperty).DBValue).DbType = DbType.DateTime2
+                    cmd.Parameters.AddWithValue("@BirthCountryId", ReadProperty(BirthCountryIdProperty)).DbType = DbType.Int16
+                    cmd.Parameters.AddWithValue("@GraduationDate", ReadProperty(GraduationDateProperty).DBValue).DbType = DbType.DateTime2
+                    cmd.Parameters.AddWithValue("@GraduationCollege", If(ReadProperty(GraduationCollegeProperty) Is Nothing, DBNull.Value, ReadProperty(GraduationCollegeProperty))).DbType = DbType.String
+                    cmd.Parameters.AddWithValue("@GraduationCountryId", If(ReadProperty(GraduationCountryIdProperty) Is Nothing, DBNull.Value, ReadProperty(GraduationCountryIdProperty).Value)).DbType = DbType.Int16
+                    cmd.Parameters.AddWithValue("@GraduationDegree", If(ReadProperty(GraduationDegreeProperty) Is Nothing, DBNull.Value, ReadProperty(GraduationDegreeProperty).Value)).DbType = DbType.Byte
                     Dim args As New DataPortalHookArgs(cmd)
                     OnInsertPre(args)
                     cmd.ExecuteNonQuery()
                     OnInsertPost(args)
                     LoadProperty(PersonIdProperty, DirectCast(cmd.Parameters("@PersonId").Value, Integer))
                 End Using
+                ' flushes all pending data operations
+                FieldManager.UpdateChildren(Me)
                 ctx.Commit()
             End Using
         End Sub
@@ -330,18 +363,21 @@ Namespace CslaExtremeDemos.BusinessVB
                     cmd.Transaction = ctx.Transaction
                     cmd.CommandType = CommandType.StoredProcedure
                     cmd.Parameters.AddWithValue("@PersonId", ReadProperty(PersonIdProperty)).DbType = DbType.Int32
-                    cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String
-                    cmd.Parameters.AddWithValue("@MiddleName", If(ReadProperty(MiddleNameProperty) Is Nothing, DBNull.Value, ReadProperty(MiddleNameProperty))).DbType = DbType.String
-                    cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String
-                    cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte
-                    ' For nullable PropertyConvert, null (Nothing) is persisted if the backing field is zero
-                    cmd.Parameters.AddWithValue("@RoleId", If(ReadProperty(RoleProperty) = 0, DBNull.Value, ReadProperty(RoleProperty))).DbType = DbType.Byte
-                    cmd.Parameters.AddWithValue("@DeptId", If(ReadProperty(DeptIdProperty) Is Nothing, DBNull.Value, ReadProperty(DeptIdProperty).Value)).DbType = DbType.Int16
+                    cmd.Parameters.AddWithValue("@Name", ReadProperty(NameProperty)).DbType = DbType.String
+                    cmd.Parameters.AddWithValue("@Gender", ReadProperty(GenderProperty)).DbType = DbType.Byte
+                    cmd.Parameters.AddWithValue("@BirthDate", ReadProperty(BirthDateProperty).DBValue).DbType = DbType.DateTime2
+                    cmd.Parameters.AddWithValue("@BirthCountryId", ReadProperty(BirthCountryIdProperty)).DbType = DbType.Int16
+                    cmd.Parameters.AddWithValue("@GraduationDate", ReadProperty(GraduationDateProperty).DBValue).DbType = DbType.DateTime2
+                    cmd.Parameters.AddWithValue("@GraduationCollege", If(ReadProperty(GraduationCollegeProperty) Is Nothing, DBNull.Value, ReadProperty(GraduationCollegeProperty))).DbType = DbType.String
+                    cmd.Parameters.AddWithValue("@GraduationCountryId", If(ReadProperty(GraduationCountryIdProperty) Is Nothing, DBNull.Value, ReadProperty(GraduationCountryIdProperty).Value)).DbType = DbType.Int16
+                    cmd.Parameters.AddWithValue("@GraduationDegree", If(ReadProperty(GraduationDegreeProperty) Is Nothing, DBNull.Value, ReadProperty(GraduationDegreeProperty).Value)).DbType = DbType.Byte
                     Dim args As New DataPortalHookArgs(cmd)
                     OnUpdatePre(args)
                     cmd.ExecuteNonQuery()
                     OnUpdatePost(args)
                 End Using
+                ' flushes all pending data operations
+                FieldManager.UpdateChildren(Me)
                 ctx.Commit()
             End Using
         End Sub

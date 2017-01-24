@@ -33,18 +33,18 @@
     <SpIgnoreFilterWhenSoftDeleteIsParam>true</SpIgnoreFilterWhenSoftDeleteIsParam>
     <SpRemoveChildBeforeParent>true</SpRemoveChildBeforeParent>
     <IDGuidDefaultValue>Guid.NewGuid()</IDGuidDefaultValue>
-    <IDInt16DefaultValue>_lastID</IDInt16DefaultValue>
-    <IDInt32DefaultValue>_lastID</IDInt32DefaultValue>
-    <IDInt64DefaultValue>_lastID</IDInt64DefaultValue>
+    <IDInt16DefaultValue>_lastId</IDInt16DefaultValue>
+    <IDInt32DefaultValue>_lastId</IDInt32DefaultValue>
+    <IDInt64DefaultValue>_lastId</IDInt64DefaultValue>
     <FieldNamePrefix>_</FieldNamePrefix>
     <DelegateNamePrefix>d_</DelegateNamePrefix>
     <CreationDateColumn>CreateDate</CreationDateColumn>
-    <CreationUserColumn>CreateUserID</CreationUserColumn>
+    <CreationUserColumn>CreateUserId</CreationUserColumn>
     <ChangedDateColumn>ChangeDate</ChangedDateColumn>
-    <ChangedUserColumn>ChangeUserID</ChangedUserColumn>
+    <ChangedUserColumn>ChangeUserId</ChangedUserColumn>
     <LogDateAndTime>true</LogDateAndTime>
     <LogInUtc>false</LogInUtc>
-    <GetUserMethod>Security.UserInformation.UserID</GetUserMethod>
+    <GetUserMethod>Security.UserInformation.UserId</GetUserMethod>
     <EnforceGenericInheritance>true</EnforceGenericInheritance>
   </Params>
   <GenerationParams>
@@ -61,7 +61,6 @@
     <PropertyMode>Default</PropertyMode>
     <GenerateAuthorization>None</GenerateAuthorization>
     <HeaderVerbosity>None</HeaderVerbosity>
-    <UseBypassPropertyChecks>false</UseBypassPropertyChecks>
     <UseSingleCriteria>false</UseSingleCriteria>
     <UsePublicPropertyInfo>true</UsePublicPropertyInfo>
     <UseChildFactory>false</UseChildFactory>
@@ -95,6 +94,874 @@
     <GenerateAsynchronous>false</GenerateAsynchronous>
   </GenerationParams>
   <CslaObjects>
+    <CslaObjectInfo>
+      <Generate>false</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>PlaceHolder</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>- - - Countries - - -</ObjectName>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName />
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties />
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects />
+      <ParentType />
+      <ParentProperties />
+      <ParentInsertOnly>false</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType />
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>ADO</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName />
+      <SelectProcedureName />
+      <UpdateProcedureName />
+      <DeleteProcedureName />
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>EditableRootCollection</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>CountryCollection</ObjectName>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>CountryCollection</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties />
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects>
+        <Criteria>
+          <Name>Criteria</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties />
+          <CreateOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>true</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>true</Procedure>
+            <ProcedureName>GetCountryCollection</ProcedureName>
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+      </CriteriaObjects>
+      <ParentType />
+      <ParentProperties />
+      <ParentInsertOnly>false</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType>CountryItem</ItemType>
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>true</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache>
+        <string>CountryNVL</string>
+      </InvalidateCache>
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>ADO</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName>AddCountryCollection</InsertProcedureName>
+      <SelectProcedureName />
+      <UpdateProcedureName>UpdateCountryCollection</UpdateProcedureName>
+      <DeleteProcedureName />
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>EditableChild</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>CountryItem</ObjectName>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>CountryItem</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties>
+        <ValueProperty>
+          <ParameterName>CountryId</ParameterName>
+          <Name>CountryId</Name>
+          <PropertyType>Int16</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int16</DataType>
+            <NativeType>smallint</NativeType>
+            <Size>5</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>CountryId</ColumnName>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <ObjectName>Countries</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>true</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Country Id</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>Name</ParameterName>
+          <Name>Name</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>Name</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Countries</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Name</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+      </ValueProperties>
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects>
+        <Criteria>
+          <Name>CriteriaNew</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties />
+          <CreateOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>true</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+      </CriteriaObjects>
+      <ParentType>CountryCollection</ParentType>
+      <ParentProperties />
+      <ParentInsertOnly>true</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType />
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>ADO</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName>AddCountryItem</InsertProcedureName>
+      <SelectProcedureName />
+      <UpdateProcedureName>UpdateCountryItem</UpdateProcedureName>
+      <DeleteProcedureName>DeleteCountryItem</DeleteProcedureName>
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>false</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>false</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>false</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>NameValueList</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>CountryNVL</ObjectName>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>CountryNVL</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties>
+        <ValueProperty>
+          <ParameterName>CountryId</ParameterName>
+          <Name>CountryId</Name>
+          <PropertyType>Int16</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int16</DataType>
+            <NativeType>smallint</NativeType>
+            <Size>5</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>CountryId</ColumnName>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <ObjectName>Countries</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>true</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>UserProvidedPK</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Country Id</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>Name</ParameterName>
+          <Name>Name</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>Name</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Countries</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Name</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+      </ValueProperties>
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects>
+        <Criteria>
+          <Name>CriteriaGet</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties />
+          <CreateOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>true</Procedure>
+            <ProcedureName>GetCountryNVL</ProcedureName>
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+      </CriteriaObjects>
+      <ParentType />
+      <ParentProperties />
+      <ParentInsertOnly>false</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType />
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>false</AllowNew>
+      <AllowEdit>false</AllowEdit>
+      <AllowRemove>false</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>DataPortal</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn>CountryId</ValueColumn>
+      <NameColumn>Name</NameColumn>
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>ADO</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName />
+      <SelectProcedureName />
+      <UpdateProcedureName />
+      <DeleteProcedureName />
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
     <CslaObjectInfo>
       <Generate>false</Generate>
       <GenerateConstructor>true</GenerateConstructor>
@@ -320,8 +1187,191 @@
       <IsPolymorphic>false</IsPolymorphic>
       <ItemType>DeptItem</ItemType>
       <ContainsItem>true</ContainsItem>
-      <UniqueItems>false</UniqueItems>
-      <FindMethodsParameters />
+      <UniqueItems>true</UniqueItems>
+      <FindMethodsParameters>
+        <Property xsi:type="ValueProperty">
+          <ParameterName>DeptName</ParameterName>
+          <Name>DeptName</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>DeptName</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Depts</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Dept Name</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes>
+            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
+          </Attributes>
+          <Interfaces />
+          <BusinessRules>
+            <BusinessRule>
+              <BaseRuleProperties>
+                <string>Severity</string>
+                <string>MessageText</string>
+                <string>MessageDelegate</string>
+                <string>CanRunAsAffectedProperty</string>
+                <string>CanRunOnServer</string>
+                <string>CanRunInCheckRules</string>
+                <string>PrimaryProperty</string>
+                <string>Priority</string>
+                <string>RunMode</string>
+              </BaseRuleProperties>
+              <Name>MaxLength</Name>
+              <ObjectName />
+              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <Type>MaxLength</Type>
+              <Constructors>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #1 (Active)</Name>
+                  <IsActive>true</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">DeptName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">50</Value>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #2</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">DeptName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>message</Name>
+                      <Type>String</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+                <BusinessRuleConstructor>
+                  <Name>Constructor #3</Name>
+                  <IsActive>false</IsActive>
+                  <ConstructorParameters>
+                    <BusinessRuleConstructorParameter>
+                      <Name>primaryProperty</Name>
+                      <Type>IPropertyInfo</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string">DeptName</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>max</Name>
+                      <Type>Int32</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>false</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:int">0</Value>
+                    </BusinessRuleConstructorParameter>
+                    <BusinessRuleConstructorParameter>
+                      <Name>messageDelegate</Name>
+                      <Type>Func&lt;String&gt;</Type>
+                      <IsParams>false</IsParams>
+                      <IsGenericType>false</IsGenericType>
+                      <IsGenericParameter>true</IsGenericParameter>
+                      <GenericType>Empty</GenericType>
+                      <Value xsi:type="xsd:string" />
+                    </BusinessRuleConstructorParameter>
+                  </ConstructorParameters>
+                </BusinessRuleConstructor>
+              </Constructors>
+              <RuleProperties />
+              <Severity>Error</Severity>
+              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
+              <CanRunOnServer>true</CanRunOnServer>
+              <CanRunInCheckRules>true</CanRunInCheckRules>
+              <Priority>0</Priority>
+              <RunMode>Default</RunMode>
+              <AffectedProperties />
+              <InputProperties />
+              <IsAsync>false</IsAsync>
+              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
+            </BusinessRule>
+          </BusinessRules>
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </Property>
+      </FindMethodsParameters>
       <UpdaterType />
       <AllowNew>true</AllowNew>
       <AllowEdit>true</AllowEdit>
@@ -1564,35 +2614,46 @@
         </UpdateValueProperty>
         <UpdateValueProperty>
           <ParameterName />
-          <Name>FirstName</Name>
+          <Name>Name</Name>
           <PropertyType>Empty</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
           <Remarks />
-          <SourcePropertyName>FirstName</SourcePropertyName>
+          <SourcePropertyName>Name</SourcePropertyName>
           <IsIdentity>false</IsIdentity>
         </UpdateValueProperty>
         <UpdateValueProperty>
           <ParameterName />
-          <Name>MiddleName</Name>
+          <Name>Gender</Name>
           <PropertyType>Empty</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
           <Remarks />
-          <SourcePropertyName>MiddleName</SourcePropertyName>
+          <SourcePropertyName>Gender</SourcePropertyName>
           <IsIdentity>false</IsIdentity>
         </UpdateValueProperty>
         <UpdateValueProperty>
           <ParameterName />
-          <Name>LastName</Name>
+          <Name>BirthDate</Name>
           <PropertyType>Empty</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
           <Remarks />
-          <SourcePropertyName>LastName</SourcePropertyName>
+          <SourcePropertyName>BirthDate</SourcePropertyName>
+          <IsIdentity>false</IsIdentity>
+        </UpdateValueProperty>
+        <UpdateValueProperty>
+          <ParameterName />
+          <Name>BirthCountryId</Name>
+          <PropertyType>Empty</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <SourcePropertyName>BirthCountryId</SourcePropertyName>
           <IsIdentity>false</IsIdentity>
         </UpdateValueProperty>
       </UpdateValueProperties>
@@ -1659,8 +2720,8 @@
           <Undoable>false</Undoable>
         </ValueProperty>
         <ValueProperty>
-          <ParameterName>FirstName</ParameterName>
-          <Name>FirstName</Name>
+          <ParameterName>Name</ParameterName>
+          <Name>Name</Name>
           <PropertyType>String</PropertyType>
           <ReadOnly>true</ReadOnly>
           <Nullable>false</Nullable>
@@ -1672,7 +2733,7 @@
             <NativeType>varchar</NativeType>
             <Size>50</Size>
             <SpResultIndex>0</SpResultIndex>
-            <ColumnName>FirstName</ColumnName>
+            <ColumnName>Name</ColumnName>
             <IsPrimaryKey>false</IsPrimaryKey>
             <ObjectName>Persons</ObjectName>
             <CatalogName>CslaExtremeDemos</CatalogName>
@@ -1683,7 +2744,7 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>First Name</FriendlyName>
+          <FriendlyName>Name</FriendlyName>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1719,31 +2780,31 @@
           <Undoable>true</Undoable>
         </ValueProperty>
         <ValueProperty>
-          <ParameterName>MiddleName</ParameterName>
-          <Name>MiddleName</Name>
-          <PropertyType>String</PropertyType>
+          <ParameterName>Gender</ParameterName>
+          <Name>Gender</Name>
+          <PropertyType>Byte</PropertyType>
           <ReadOnly>true</ReadOnly>
-          <Nullable>true</Nullable>
+          <Nullable>false</Nullable>
           <Summary />
           <Remarks />
           <DbBindColumn>
             <ColumnOriginType>Table</ColumnOriginType>
-            <DataType>String</DataType>
-            <NativeType>varchar</NativeType>
-            <Size>50</Size>
+            <DataType>Byte</DataType>
+            <NativeType>tinyint</NativeType>
+            <Size>3</Size>
             <SpResultIndex>0</SpResultIndex>
-            <ColumnName>MiddleName</ColumnName>
+            <ColumnName>Gender</ColumnName>
             <IsPrimaryKey>false</IsPrimaryKey>
             <ObjectName>Persons</ObjectName>
             <CatalogName>CslaExtremeDemos</CatalogName>
             <SchemaName>dbo</SchemaName>
-            <IsNullable>true</IsNullable>
+            <IsNullable>false</IsNullable>
             <IsIdentity>false</IsIdentity>
           </DbBindColumn>
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Middle Name</FriendlyName>
+          <FriendlyName>Gender</FriendlyName>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1779,8 +2840,8 @@
           <Undoable>true</Undoable>
         </ValueProperty>
         <ValueProperty>
-          <ParameterName>LastName</ParameterName>
-          <Name>LastName</Name>
+          <ParameterName>BirthDate</ParameterName>
+          <Name>BirthDate</Name>
           <PropertyType>String</PropertyType>
           <ReadOnly>true</ReadOnly>
           <Nullable>false</Nullable>
@@ -1788,11 +2849,11 @@
           <Remarks />
           <DbBindColumn>
             <ColumnOriginType>Table</ColumnOriginType>
-            <DataType>String</DataType>
-            <NativeType>varchar</NativeType>
-            <Size>50</Size>
+            <DataType>DateTime2</DataType>
+            <NativeType>datetime2</NativeType>
+            <Size>7</Size>
             <SpResultIndex>0</SpResultIndex>
-            <ColumnName>LastName</ColumnName>
+            <ColumnName>BirthDate</ColumnName>
             <IsPrimaryKey>false</IsPrimaryKey>
             <ObjectName>Persons</ObjectName>
             <CatalogName>CslaExtremeDemos</CatalogName>
@@ -1803,7 +2864,67 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Last Name</FriendlyName>
+          <FriendlyName>Birth Date</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>SmartDate</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>BirthCountryId</ParameterName>
+          <Name>BirthCountryId</Name>
+          <PropertyType>Int16</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int16</DataType>
+            <NativeType>smallint</NativeType>
+            <Size>5</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>BirthCountryId</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Birth Country Id</FriendlyName>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1940,11 +3061,7 @@
       <ClassVisibility>Public</ClassVisibility>
       <ClassSummary />
       <ClassRemarks />
-      <Namespaces>
-        <string>System.ComponentModel.DataAnnotations</string>
-        <string>Csla.Rules.CommonRules</string>
-        <string>CslaExtremeDemos.Rules</string>
-      </Namespaces>
+      <Namespaces />
       <Attributes />
       <Interfaces />
       <InheritedType>
@@ -1964,7 +3081,144 @@
       <Folder />
       <FileName>Person</FileName>
       <UnitOfWorkProperties />
-      <ChildCollectionProperties />
+      <ChildCollectionProperties>
+        <ChildProperty>
+          <ParameterName>Jobs</ParameterName>
+          <Name>Jobs</Name>
+          <PropertyType>Empty</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <FriendlyName>Jobs</FriendlyName>
+          <TypeName>JobCollection</TypeName>
+          <DeclarationMode>Managed</DeclarationMode>
+          <ChildUpdateOrder>0</ChildUpdateOrder>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <LoadingScheme>ParentLoad</LoadingScheme>
+          <LazyLoad>false</LazyLoad>
+          <ParentLoadProperties />
+          <LoadParameters>
+            <Parameter>
+              <Criteria>
+                <Name>Criteria</Name>
+                <CriteriaClassMode>Simple</CriteriaClassMode>
+                <NestedClass>true</NestedClass>
+                <Properties>
+                  <Property>
+                    <ParameterName>PersonId</ParameterName>
+                    <Name>PersonId</Name>
+                    <PropertyType>Int32</PropertyType>
+                    <ReadOnly>false</ReadOnly>
+                    <Nullable>false</Nullable>
+                    <Summary />
+                    <Remarks />
+                    <DbBindColumn>
+                      <ColumnOriginType>Table</ColumnOriginType>
+                      <DataType>Int32</DataType>
+                      <NativeType>int</NativeType>
+                      <Size>10</Size>
+                      <SpResultIndex>0</SpResultIndex>
+                      <ColumnName>PersonId</ColumnName>
+                      <IsPrimaryKey>true</IsPrimaryKey>
+                      <ObjectName>Persons</ObjectName>
+                      <CatalogName>CslaExtremeDemos</CatalogName>
+                      <SchemaName>dbo</SchemaName>
+                      <IsNullable>false</IsNullable>
+                      <IsIdentity>true</IsIdentity>
+                    </DbBindColumn>
+                    <CustomPropertyType />
+                    <ParameterValue />
+                    <InlineQueryParameter>Plain</InlineQueryParameter>
+                  </Property>
+                </Properties>
+                <CreateOptions>
+                  <Factory>false</Factory>
+                  <AddRemove>false</AddRemove>
+                  <DataPortal>false</DataPortal>
+                  <RunLocal>false</RunLocal>
+                  <Procedure>false</Procedure>
+                  <ProcedureName />
+                  <FactorySuffix />
+                </CreateOptions>
+                <GetOptions>
+                  <Factory>true</Factory>
+                  <AddRemove>false</AddRemove>
+                  <DataPortal>true</DataPortal>
+                  <RunLocal>false</RunLocal>
+                  <Procedure>true</Procedure>
+                  <ProcedureName>GetPerson</ProcedureName>
+                  <FactorySuffix />
+                </GetOptions>
+                <DeleteOptions>
+                  <Factory>false</Factory>
+                  <AddRemove>false</AddRemove>
+                  <DataPortal>false</DataPortal>
+                  <RunLocal>false</RunLocal>
+                  <Procedure>false</Procedure>
+                  <ProcedureName />
+                  <FactorySuffix />
+                </DeleteOptions>
+                <Summary />
+                <Remarks />
+              </Criteria>
+              <Property xsi:type="CriteriaProperty">
+                <ParameterName>PersonId</ParameterName>
+                <Name>PersonId</Name>
+                <PropertyType>Int32</PropertyType>
+                <ReadOnly>false</ReadOnly>
+                <Nullable>false</Nullable>
+                <Summary />
+                <Remarks />
+                <DbBindColumn>
+                  <ColumnOriginType>Table</ColumnOriginType>
+                  <DataType>Int32</DataType>
+                  <NativeType>int</NativeType>
+                  <Size>10</Size>
+                  <SpResultIndex>0</SpResultIndex>
+                  <ColumnName>PersonId</ColumnName>
+                  <IsPrimaryKey>true</IsPrimaryKey>
+                  <ObjectName>Persons</ObjectName>
+                  <CatalogName>CslaExtremeDemos</CatalogName>
+                  <SchemaName>dbo</SchemaName>
+                  <IsNullable>false</IsNullable>
+                  <IsIdentity>true</IsIdentity>
+                </DbBindColumn>
+                <CustomPropertyType />
+                <ParameterValue />
+                <InlineQueryParameter>Plain</InlineQueryParameter>
+              </Property>
+            </Parameter>
+          </LoadParameters>
+          <Access>IsPublic</Access>
+          <Undoable>true</Undoable>
+        </ChildProperty>
+      </ChildCollectionProperties>
       <ChildProperties />
       <InheritedChildCollectionProperties />
       <InheritedChildProperties />
@@ -2033,8 +3287,8 @@
           <Undoable>false</Undoable>
         </ValueProperty>
         <ValueProperty>
-          <ParameterName>FirstName</ParameterName>
-          <Name>FirstName</Name>
+          <ParameterName>Name</ParameterName>
+          <Name>Name</Name>
           <PropertyType>String</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>false</Nullable>
@@ -2046,7 +3300,7 @@
             <NativeType>varchar</NativeType>
             <Size>50</Size>
             <SpResultIndex>0</SpResultIndex>
-            <ColumnName>FirstName</ColumnName>
+            <ColumnName>Name</ColumnName>
             <IsPrimaryKey>false</IsPrimaryKey>
             <ObjectName>Persons</ObjectName>
             <CatalogName>CslaExtremeDemos</CatalogName>
@@ -2057,685 +3311,10 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>First Name</FriendlyName>
+          <FriendlyName>Name</FriendlyName>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
-          <DefaultValue />
-          <Attributes>
-            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
-          </Attributes>
-          <Interfaces />
-          <BusinessRules>
-            <BusinessRule>
-              <BaseRuleProperties>
-                <string>Severity</string>
-                <string>MessageText</string>
-                <string>MessageDelegate</string>
-                <string>CanRunAsAffectedProperty</string>
-                <string>CanRunOnServer</string>
-                <string>CanRunInCheckRules</string>
-                <string>PrimaryProperty</string>
-                <string>Priority</string>
-                <string>RunMode</string>
-              </BaseRuleProperties>
-              <Name>MaxLength</Name>
-              <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
-              <Type>MaxLength</Type>
-              <Constructors>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #1 (Active)</Name>
-                  <IsActive>true</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">FirstName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">50</Value>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #2</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">FirstName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">0</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>message</Name>
-                      <Type>String</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #3</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">FirstName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">0</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>messageDelegate</Name>
-                      <Type>Func&lt;String&gt;</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>true</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string" />
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-              </Constructors>
-              <RuleProperties />
-              <Severity>Error</Severity>
-              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
-              <CanRunOnServer>true</CanRunOnServer>
-              <CanRunInCheckRules>true</CanRunInCheckRules>
-              <Priority>0</Priority>
-              <RunMode>Default</RunMode>
-              <AffectedProperties />
-              <InputProperties />
-              <IsAsync>false</IsAsync>
-              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
-            </BusinessRule>
-          </BusinessRules>
-          <AuthzProvider>IsInRole</AuthzProvider>
-          <ReadRoles />
-          <WriteRoles />
-          <ReadAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </ReadAuthzRuleType>
-          <WriteAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </WriteAuthzRuleType>
-          <Access>IsPublic</Access>
-          <PropSetAccessibility>Default</PropSetAccessibility>
-          <Undoable>true</Undoable>
-        </ValueProperty>
-        <ValueProperty>
-          <ParameterName>MiddleName</ParameterName>
-          <Name>MiddleName</Name>
-          <PropertyType>String</PropertyType>
-          <ReadOnly>false</ReadOnly>
-          <Nullable>true</Nullable>
-          <Summary />
-          <Remarks />
-          <DbBindColumn>
-            <ColumnOriginType>Table</ColumnOriginType>
-            <DataType>String</DataType>
-            <NativeType>varchar</NativeType>
-            <Size>50</Size>
-            <SpResultIndex>0</SpResultIndex>
-            <ColumnName>MiddleName</ColumnName>
-            <IsPrimaryKey>false</IsPrimaryKey>
-            <ObjectName>Persons</ObjectName>
-            <CatalogName>CslaExtremeDemos</CatalogName>
-            <SchemaName>dbo</SchemaName>
-            <IsNullable>true</IsNullable>
-            <IsIdentity>false</IsIdentity>
-          </DbBindColumn>
-          <DataAccess>ReadWrite</DataAccess>
-          <PrimaryKey>Default</PrimaryKey>
-          <FKConstraint />
-          <FriendlyName>Middle Name</FriendlyName>
-          <CustomPropertyType />
-          <DeclarationMode>Managed</DeclarationMode>
-          <BackingFieldType>Empty</BackingFieldType>
-          <DefaultValue />
-          <Attributes />
-          <Interfaces />
-          <BusinessRules>
-            <BusinessRule>
-              <BaseRuleProperties>
-                <string>Severity</string>
-                <string>MessageText</string>
-                <string>MessageDelegate</string>
-                <string>CanRunAsAffectedProperty</string>
-                <string>CanRunOnServer</string>
-                <string>CanRunInCheckRules</string>
-                <string>PrimaryProperty</string>
-                <string>Priority</string>
-                <string>RunMode</string>
-              </BaseRuleProperties>
-              <Name>MaxLength</Name>
-              <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
-              <Type>MaxLength</Type>
-              <Constructors>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #1 (Active)</Name>
-                  <IsActive>true</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">MiddleName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">50</Value>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #2</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">MiddleName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">0</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>message</Name>
-                      <Type>String</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #3</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">MiddleName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">0</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>messageDelegate</Name>
-                      <Type>Func&lt;String&gt;</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>true</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string" />
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-              </Constructors>
-              <RuleProperties />
-              <Severity>Error</Severity>
-              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
-              <CanRunOnServer>true</CanRunOnServer>
-              <CanRunInCheckRules>true</CanRunInCheckRules>
-              <Priority>0</Priority>
-              <RunMode>Default</RunMode>
-              <AffectedProperties />
-              <InputProperties />
-              <IsAsync>false</IsAsync>
-              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
-            </BusinessRule>
-          </BusinessRules>
-          <AuthzProvider>IsInRole</AuthzProvider>
-          <ReadRoles />
-          <WriteRoles />
-          <ReadAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </ReadAuthzRuleType>
-          <WriteAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </WriteAuthzRuleType>
-          <Access>IsPublic</Access>
-          <PropSetAccessibility>Default</PropSetAccessibility>
-          <Undoable>true</Undoable>
-        </ValueProperty>
-        <ValueProperty>
-          <ParameterName>LastName</ParameterName>
-          <Name>LastName</Name>
-          <PropertyType>String</PropertyType>
-          <ReadOnly>false</ReadOnly>
-          <Nullable>false</Nullable>
-          <Summary />
-          <Remarks />
-          <DbBindColumn>
-            <ColumnOriginType>Table</ColumnOriginType>
-            <DataType>String</DataType>
-            <NativeType>varchar</NativeType>
-            <Size>50</Size>
-            <SpResultIndex>0</SpResultIndex>
-            <ColumnName>LastName</ColumnName>
-            <IsPrimaryKey>false</IsPrimaryKey>
-            <ObjectName>Persons</ObjectName>
-            <CatalogName>CslaExtremeDemos</CatalogName>
-            <SchemaName>dbo</SchemaName>
-            <IsNullable>false</IsNullable>
-            <IsIdentity>false</IsIdentity>
-          </DbBindColumn>
-          <DataAccess>ReadWrite</DataAccess>
-          <PrimaryKey>Default</PrimaryKey>
-          <FKConstraint />
-          <FriendlyName>Last Name</FriendlyName>
-          <CustomPropertyType />
-          <DeclarationMode>Managed</DeclarationMode>
-          <BackingFieldType>Empty</BackingFieldType>
-          <DefaultValue />
-          <Attributes>
-            <string>Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")</string>
-          </Attributes>
-          <Interfaces />
-          <BusinessRules>
-            <BusinessRule>
-              <BaseRuleProperties>
-                <string>Severity</string>
-                <string>MessageText</string>
-                <string>MessageDelegate</string>
-                <string>CanRunAsAffectedProperty</string>
-                <string>CanRunOnServer</string>
-                <string>CanRunInCheckRules</string>
-                <string>PrimaryProperty</string>
-                <string>Priority</string>
-                <string>RunMode</string>
-              </BaseRuleProperties>
-              <Name>MaxLength</Name>
-              <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
-              <Type>MaxLength</Type>
-              <Constructors>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #1 (Active)</Name>
-                  <IsActive>true</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">LastName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">50</Value>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #2</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">LastName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">0</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>message</Name>
-                      <Type>String</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #3</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">LastName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>max</Name>
-                      <Type>Int32</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:int">0</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>messageDelegate</Name>
-                      <Type>Func&lt;String&gt;</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>true</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string" />
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-              </Constructors>
-              <RuleProperties />
-              <Severity>Error</Severity>
-              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
-              <CanRunOnServer>true</CanRunOnServer>
-              <CanRunInCheckRules>true</CanRunInCheckRules>
-              <Priority>0</Priority>
-              <RunMode>Default</RunMode>
-              <AffectedProperties />
-              <InputProperties />
-              <IsAsync>false</IsAsync>
-              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
-            </BusinessRule>
-          </BusinessRules>
-          <AuthzProvider>IsInRole</AuthzProvider>
-          <ReadRoles />
-          <WriteRoles />
-          <ReadAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </ReadAuthzRuleType>
-          <WriteAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </WriteAuthzRuleType>
-          <Access>IsPublic</Access>
-          <PropSetAccessibility>Default</PropSetAccessibility>
-          <Undoable>true</Undoable>
-        </ValueProperty>
-        <ValueProperty>
-          <ParameterName>MaritalStatusId</ParameterName>
-          <Name>MaritalStatus</Name>
-          <PropertyType>CustomType</PropertyType>
-          <ReadOnly>false</ReadOnly>
-          <Nullable>false</Nullable>
-          <Summary />
-          <Remarks />
-          <DbBindColumn>
-            <ColumnOriginType>Table</ColumnOriginType>
-            <DataType>Byte</DataType>
-            <NativeType>tinyint</NativeType>
-            <Size>3</Size>
-            <SpResultIndex>0</SpResultIndex>
-            <ColumnName>MaritalStatusId</ColumnName>
-            <IsPrimaryKey>false</IsPrimaryKey>
-            <ObjectName>Persons</ObjectName>
-            <CatalogName>CslaExtremeDemos</CatalogName>
-            <SchemaName>dbo</SchemaName>
-            <IsNullable>false</IsNullable>
-            <IsIdentity>false</IsIdentity>
-          </DbBindColumn>
-          <DataAccess>ReadWrite</DataAccess>
-          <PrimaryKey>Default</PrimaryKey>
-          <FKConstraint />
-          <FriendlyName>Marital Status</FriendlyName>
-          <CustomPropertyType>CivilStatus</CustomPropertyType>
-          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
-          <BackingFieldType>Byte</BackingFieldType>
-          <DefaultValue />
-          <Attributes />
-          <Interfaces />
-          <BusinessRules>
-            <BusinessRule>
-              <BaseRuleProperties>
-                <string>Severity</string>
-                <string>MessageText</string>
-                <string>MessageDelegate</string>
-                <string>CanRunAsAffectedProperty</string>
-                <string>CanRunOnServer</string>
-                <string>CanRunInCheckRules</string>
-                <string>PrimaryProperty</string>
-                <string>Priority</string>
-                <string>RunMode</string>
-              </BaseRuleProperties>
-              <Name>EnumNotZero</Name>
-              <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\CslaExtremeDemos.Rules.dll</AssemblyFile>
-              <Type>CslaExtremeDemos.Rules.EnumNotZero</Type>
-              <Constructors>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #1 (Active)</Name>
-                  <IsActive>true</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">MaritalStatus</Value>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #2</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">MaritalStatus</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>errorMessageDelegate</Name>
-                      <Type>Func&lt;String&gt;</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>true</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string" />
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-              </Constructors>
-              <RuleProperties />
-              <Severity>Error</Severity>
-              <MessageText>Must specify Marital Status.</MessageText>
-              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
-              <CanRunOnServer>true</CanRunOnServer>
-              <CanRunInCheckRules>true</CanRunInCheckRules>
-              <Priority>0</Priority>
-              <RunMode>Default</RunMode>
-              <AffectedProperties />
-              <InputProperties />
-              <IsAsync>false</IsAsync>
-              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
-            </BusinessRule>
-          </BusinessRules>
-          <AuthzProvider>IsInRole</AuthzProvider>
-          <ReadRoles />
-          <WriteRoles />
-          <ReadAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </ReadAuthzRuleType>
-          <WriteAuthzRuleType>
-            <BaseRuleProperties />
-            <Name />
-            <ObjectName />
-            <AssemblyFile />
-            <Type />
-            <Constructors />
-            <RuleProperties />
-            <CacheResult>false</CacheResult>
-          </WriteAuthzRuleType>
-          <Access>IsPublic</Access>
-          <PropSetAccessibility>Default</PropSetAccessibility>
-          <Undoable>true</Undoable>
-        </ValueProperty>
-        <ValueProperty>
-          <ParameterName>RoleId</ParameterName>
-          <Name>Role</Name>
-          <PropertyType>CustomType</PropertyType>
-          <ReadOnly>false</ReadOnly>
-          <Nullable>true</Nullable>
-          <Summary />
-          <Remarks />
-          <DbBindColumn>
-            <ColumnOriginType>Table</ColumnOriginType>
-            <DataType>Byte</DataType>
-            <NativeType>tinyint</NativeType>
-            <Size>3</Size>
-            <SpResultIndex>0</SpResultIndex>
-            <ColumnName>RoleId</ColumnName>
-            <IsPrimaryKey>false</IsPrimaryKey>
-            <ObjectName>Persons</ObjectName>
-            <CatalogName>CslaExtremeDemos</CatalogName>
-            <SchemaName>dbo</SchemaName>
-            <IsNullable>true</IsNullable>
-            <IsIdentity>false</IsIdentity>
-          </DbBindColumn>
-          <DataAccess>ReadWrite</DataAccess>
-          <PrimaryKey>Default</PrimaryKey>
-          <FKConstraint />
-          <FriendlyName>Role</FriendlyName>
-          <CustomPropertyType>Roles</CustomPropertyType>
-          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
-          <BackingFieldType>Byte</BackingFieldType>
           <DefaultValue />
           <Attributes />
           <Interfaces />
@@ -2768,8 +3347,308 @@
           <Undoable>true</Undoable>
         </ValueProperty>
         <ValueProperty>
-          <ParameterName>DeptId</ParameterName>
-          <Name>DeptId</Name>
+          <ParameterName>Gender</ParameterName>
+          <Name>Gender</Name>
+          <PropertyType>Byte</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Byte</DataType>
+            <NativeType>tinyint</NativeType>
+            <Size>3</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>Gender</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Gender</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>BirthDate</ParameterName>
+          <Name>BirthDate</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>DateTime2</DataType>
+            <NativeType>datetime2</NativeType>
+            <Size>7</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>BirthDate</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Birth Date</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>SmartDate</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>BirthCountryId</ParameterName>
+          <Name>BirthCountryId</Name>
+          <PropertyType>Int16</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int16</DataType>
+            <NativeType>smallint</NativeType>
+            <Size>5</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>BirthCountryId</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Birth Country Id</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>GraduationDate</ParameterName>
+          <Name>GraduationDate</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>DateTime2</DataType>
+            <NativeType>datetime2</NativeType>
+            <Size>7</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>GraduationDate</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>true</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Graduation Date</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>SmartDate</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>GraduationCollege</ParameterName>
+          <Name>GraduationCollege</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>GraduationCollege</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>true</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Graduation College</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>GraduationCountryId</ParameterName>
+          <Name>GraduationCountryId</Name>
           <PropertyType>Int16</PropertyType>
           <ReadOnly>false</ReadOnly>
           <Nullable>true</Nullable>
@@ -2781,7 +3660,7 @@
             <NativeType>smallint</NativeType>
             <Size>5</Size>
             <SpResultIndex>0</SpResultIndex>
-            <ColumnName>DeptId</ColumnName>
+            <ColumnName>GraduationCountryId</ColumnName>
             <IsPrimaryKey>false</IsPrimaryKey>
             <ObjectName>Persons</ObjectName>
             <CatalogName>CslaExtremeDemos</CatalogName>
@@ -2792,83 +3671,74 @@
           <DataAccess>ReadWrite</DataAccess>
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
-          <FriendlyName>Dept</FriendlyName>
+          <FriendlyName>Graduation Country Id</FriendlyName>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
           <DefaultValue />
           <Attributes />
           <Interfaces />
-          <BusinessRules>
-            <BusinessRule>
-              <BaseRuleProperties>
-                <string>Severity</string>
-                <string>MessageText</string>
-                <string>MessageDelegate</string>
-                <string>CanRunAsAffectedProperty</string>
-                <string>CanRunOnServer</string>
-                <string>CanRunInCheckRules</string>
-                <string>PrimaryProperty</string>
-                <string>Priority</string>
-                <string>RunMode</string>
-              </BaseRuleProperties>
-              <Name>EnumNotZero</Name>
-              <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\CslaExtremeDemos.Rules.dll</AssemblyFile>
-              <Type>EnumNotZero</Type>
-              <Constructors>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #1 (Active)</Name>
-                  <IsActive>true</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">DeptId</Value>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #2</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">DeptId</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>errorMessageDelegate</Name>
-                      <Type>Func&lt;String&gt;</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>true</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string" />
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-              </Constructors>
-              <RuleProperties />
-              <Severity>Error</Severity>
-              <MessageText>Must specify Department.</MessageText>
-              <CanRunAsAffectedProperty>true</CanRunAsAffectedProperty>
-              <CanRunOnServer>true</CanRunOnServer>
-              <CanRunInCheckRules>true</CanRunInCheckRules>
-              <Priority>0</Priority>
-              <RunMode>Default</RunMode>
-              <IsAsync>false</IsAsync>
-              <ProvideTargetWhenAsync>false</ProvideTargetWhenAsync>
-            </BusinessRule>
-          </BusinessRules>
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>GraduationDegree</ParameterName>
+          <Name>GraduationDegree</Name>
+          <PropertyType>Byte</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Byte</DataType>
+            <NativeType>tinyint</NativeType>
+            <Size>3</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>GraduationDegree</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>true</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Graduation Degree</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
           <AuthzProvider>IsInRole</AuthzProvider>
           <ReadRoles />
           <WriteRoles />
@@ -3027,6 +3897,482 @@
       <SelectProcedureName />
       <UpdateProcedureName>UpdatePerson</UpdateProcedureName>
       <DeleteProcedureName />
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>EditableChildCollection</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>JobCollection</ObjectName>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>JobCollection</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties />
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects />
+      <ParentType>Person</ParentType>
+      <ParentProperties />
+      <ParentInsertOnly>false</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType>JobItem</ItemType>
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>ADO</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName>AddJobCollection</InsertProcedureName>
+      <SelectProcedureName />
+      <UpdateProcedureName>UpdateJobCollection</UpdateProcedureName>
+      <DeleteProcedureName />
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>EditableChild</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>JobItem</ObjectName>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>JobItem</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties>
+        <ValueProperty>
+          <ParameterName>JobId</ParameterName>
+          <Name>JobId</Name>
+          <PropertyType>Int32</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int32</DataType>
+            <NativeType>int</NativeType>
+            <Size>10</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>JobId</ColumnName>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <ObjectName>Jobs</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>true</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Job Id</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue>_lastId</DefaultValue>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>CompanyName</ParameterName>
+          <Name>CompanyName</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>CompanyName</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Jobs</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Company Name</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+      </ValueProperties>
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects>
+        <Criteria>
+          <Name>CriteriaNew</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties />
+          <CreateOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>true</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+      </CriteriaObjects>
+      <ParentType>JobCollection</ParentType>
+      <ParentProperties>
+        <Property xsi:type="ValueProperty">
+          <ParameterName>PersonId</ParameterName>
+          <Name>PersonId</Name>
+          <PropertyType>Int32</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int32</DataType>
+            <NativeType>int</NativeType>
+            <Size>10</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>PersonId</ColumnName>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <ObjectName>Persons</ObjectName>
+            <CatalogName>CslaExtremeDemos</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>true</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Person Id</FriendlyName>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue>_lastId</DefaultValue>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </Property>
+      </ParentProperties>
+      <ParentInsertOnly>true</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType />
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>ADO</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName>AddJobItem</InsertProcedureName>
+      <SelectProcedureName />
+      <UpdateProcedureName>UpdateJobItem</UpdateProcedureName>
+      <DeleteProcedureName>DeleteJobItem</DeleteProcedureName>
       <DeleteUseTimestamp>false</DeleteUseTimestamp>
       <RemoveItem>true</RemoveItem>
       <ToStringProperty />

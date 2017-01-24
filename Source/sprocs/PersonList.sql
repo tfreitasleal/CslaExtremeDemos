@@ -12,9 +12,10 @@ AS
         /* Get PersonInfo from table */
         SELECT
             [Persons].[PersonId],
-            [Persons].[FirstName],
-            [Persons].[MiddleName],
-            [Persons].[LastName]
+            [Persons].[Name],
+            [Persons].[Gender],
+            [Persons].[BirthDate],
+            [Persons].[BirthCountryId]
         FROM [dbo].[Persons]
 
     END

@@ -3,7 +3,7 @@ using Csla;
 
 namespace CslaExtremeDemos.Business
 {
-    public partial class DeptNVL
+    public partial class CountryNVL
     {
 
         #region OnDeserialized actions

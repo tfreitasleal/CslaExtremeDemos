@@ -46,6 +46,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CivilStatus.cs" />
+    <Compile Include="CountryCollection.cs" />
+    <Compile Include="CountryCollection.Designer.cs">
+      <DependentUpon>CountryCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryItem.cs" />
+    <Compile Include="CountryItem.Designer.cs">
+      <DependentUpon>CountryItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountryNVL.cs" />
+    <Compile Include="CountryNVL.Designer.cs">
+      <DependentUpon>CountryNVL.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseCslaExtremeDemos.cs" />
     <Compile Include="DataPortalHookArgs.cs" />
     <Compile Include="DeptCollection.cs" />
@@ -59,6 +71,14 @@
     <Compile Include="DeptNVL.cs" />
     <Compile Include="DeptNVL.Designer.cs">
       <DependentUpon>DeptNVL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCollection.cs" />
+    <Compile Include="JobCollection.Designer.cs">
+      <DependentUpon>JobCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobItem.cs" />
+    <Compile Include="JobItem.Designer.cs">
+      <DependentUpon>JobItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Person.Designer.cs">

@@ -146,8 +146,11 @@
       <DependentUpon>UserListEdit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CslaExtremeDemos.Business.CountryCollection.datasource" />
+    <None Include="Properties\DataSources\CslaExtremeDemos.Business.CountryNVL.datasource" />
     <None Include="Properties\DataSources\CslaExtremeDemos.Business.DeptCollection.datasource" />
     <None Include="Properties\DataSources\CslaExtremeDemos.Business.DeptNVL.datasource" />
+    <None Include="Properties\DataSources\CslaExtremeDemos.Business.JobCollection.datasource" />
     <None Include="Properties\DataSources\CslaExtremeDemos.Business.Person.datasource" />
     <None Include="Properties\DataSources\CslaExtremeDemos.Business.PersonList.datasource" />
     <None Include="Properties\DataSources\CslaExtremeDemos.Business.User.datasource" />

@@ -3,9 +3,6 @@ using System.Data;
 using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
-using Csla.Rules.CommonRules;
-using CslaExtremeDemos.Rules;
-using System.ComponentModel.DataAnnotations;
 
 namespace CslaExtremeDemos.Business
 {
@@ -14,6 +11,10 @@ namespace CslaExtremeDemos.Business
     /// Person (editable root object).<br/>
     /// This is a generated base class of <see cref="Person"/> business object.
     /// </summary>
+    /// <remarks>
+    /// This class contains one child collection:<br/>
+    /// - <see cref="Jobs"/> of type <see cref="JobCollection"/> (1:M relation to <see cref="JobItem"/>)
+    /// </remarks>
     [Serializable]
     public partial class Person : BusinessBase<Person>
     {
@@ -41,89 +42,129 @@ namespace CslaExtremeDemos.Business
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="FirstName"/> property.
+        /// Maintains metadata about <see cref="Name"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> FirstNameProperty = RegisterProperty<string>(p => p.FirstName, "First Name");
+        public static readonly PropertyInfo<string> NameProperty = RegisterProperty<string>(p => p.Name, "Name");
         /// <summary>
-        /// Gets or sets the First Name.
+        /// Gets or sets the Name.
         /// </summary>
-        /// <value>The First Name.</value>
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")]
-        public string FirstName
+        /// <value>The Name.</value>
+        public string Name
         {
-            get { return GetProperty(FirstNameProperty); }
-            set { SetProperty(FirstNameProperty, value); }
+            get { return GetProperty(NameProperty); }
+            set { SetProperty(NameProperty, value); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="MiddleName"/> property.
+        /// Maintains metadata about <see cref="Gender"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> MiddleNameProperty = RegisterProperty<string>(p => p.MiddleName, "Middle Name");
+        public static readonly PropertyInfo<byte> GenderProperty = RegisterProperty<byte>(p => p.Gender, "Gender");
         /// <summary>
-        /// Gets or sets the Middle Name.
+        /// Gets or sets the Gender.
         /// </summary>
-        /// <value>The Middle Name.</value>
-        public string MiddleName
+        /// <value>The Gender.</value>
+        public byte Gender
         {
-            get { return GetProperty(MiddleNameProperty); }
-            set { SetProperty(MiddleNameProperty, value); }
+            get { return GetProperty(GenderProperty); }
+            set { SetProperty(GenderProperty, value); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="LastName"/> property.
+        /// Maintains metadata about <see cref="BirthDate"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> LastNameProperty = RegisterProperty<string>(p => p.LastName, "Last Name");
+        public static readonly PropertyInfo<SmartDate> BirthDateProperty = RegisterProperty<SmartDate>(p => p.BirthDate, "Birth Date");
         /// <summary>
-        /// Gets or sets the Last Name.
+        /// Gets or sets the Birth Date.
         /// </summary>
-        /// <value>The Last Name.</value>
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")]
-        public string LastName
+        /// <value>The Birth Date.</value>
+        public string BirthDate
         {
-            get { return GetProperty(LastNameProperty); }
-            set { SetProperty(LastNameProperty, value); }
+            get { return GetPropertyConvert<SmartDate, string>(BirthDateProperty); }
+            set { SetPropertyConvert<SmartDate, string>(BirthDateProperty, value); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="MaritalStatus"/> property.
+        /// Maintains metadata about <see cref="BirthCountryId"/> property.
         /// </summary>
-        public static readonly PropertyInfo<byte> MaritalStatusProperty = RegisterProperty<byte>(p => p.MaritalStatus, "Marital Status");
+        public static readonly PropertyInfo<short> BirthCountryIdProperty = RegisterProperty<short>(p => p.BirthCountryId, "Birth Country Id");
         /// <summary>
-        /// Gets or sets the Marital Status.
+        /// Gets or sets the Birth Country Id.
         /// </summary>
-        /// <value>The Marital Status.</value>
-        public CivilStatus MaritalStatus
+        /// <value>The Birth Country Id.</value>
+        public short BirthCountryId
         {
-            get { return GetPropertyConvert<byte, CivilStatus>(MaritalStatusProperty); }
-            set { SetPropertyConvert<byte, CivilStatus>(MaritalStatusProperty, value); }
+            get { return GetProperty(BirthCountryIdProperty); }
+            set { SetProperty(BirthCountryIdProperty, value); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="Role"/> property.
+        /// Maintains metadata about <see cref="GraduationDate"/> property.
         /// </summary>
-        public static readonly PropertyInfo<byte> RoleProperty = RegisterProperty<byte>(p => p.Role, "Role");
+        public static readonly PropertyInfo<SmartDate> GraduationDateProperty = RegisterProperty<SmartDate>(p => p.GraduationDate, "Graduation Date");
         /// <summary>
-        /// Gets or sets the Role.
+        /// Gets or sets the Graduation Date.
         /// </summary>
-        /// <value>The Role.</value>
-        public Roles Role
+        /// <value>The Graduation Date.</value>
+        public string GraduationDate
         {
-            get { return GetPropertyConvert<byte, Roles>(RoleProperty); }
-            set { SetPropertyConvert<byte, Roles>(RoleProperty, value); }
+            get { return GetPropertyConvert<SmartDate, string>(GraduationDateProperty); }
+            set { SetPropertyConvert<SmartDate, string>(GraduationDateProperty, value); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="DeptId"/> property.
+        /// Maintains metadata about <see cref="GraduationCollege"/> property.
         /// </summary>
-        public static readonly PropertyInfo<short?> DeptIdProperty = RegisterProperty<short?>(p => p.DeptId, "Dept");
+        public static readonly PropertyInfo<string> GraduationCollegeProperty = RegisterProperty<string>(p => p.GraduationCollege, "Graduation College");
         /// <summary>
-        /// Gets or sets the Dept.
+        /// Gets or sets the Graduation College.
         /// </summary>
-        /// <value>The Dept.</value>
-        public short? DeptId
+        /// <value>The Graduation College.</value>
+        public string GraduationCollege
         {
-            get { return GetProperty(DeptIdProperty); }
-            set { SetProperty(DeptIdProperty, value); }
+            get { return GetProperty(GraduationCollegeProperty); }
+            set { SetProperty(GraduationCollegeProperty, value); }
+        }
+
+        /// <summary>
+        /// Maintains metadata about <see cref="GraduationCountryId"/> property.
+        /// </summary>
+        public static readonly PropertyInfo<short?> GraduationCountryIdProperty = RegisterProperty<short?>(p => p.GraduationCountryId, "Graduation Country Id");
+        /// <summary>
+        /// Gets or sets the Graduation Country Id.
+        /// </summary>
+        /// <value>The Graduation Country Id.</value>
+        public short? GraduationCountryId
+        {
+            get { return GetProperty(GraduationCountryIdProperty); }
+            set { SetProperty(GraduationCountryIdProperty, value); }
+        }
+
+        /// <summary>
+        /// Maintains metadata about <see cref="GraduationDegree"/> property.
+        /// </summary>
+        public static readonly PropertyInfo<byte?> GraduationDegreeProperty = RegisterProperty<byte?>(p => p.GraduationDegree, "Graduation Degree");
+        /// <summary>
+        /// Gets or sets the Graduation Degree.
+        /// </summary>
+        /// <value>The Graduation Degree.</value>
+        public byte? GraduationDegree
+        {
+            get { return GetProperty(GraduationDegreeProperty); }
+            set { SetProperty(GraduationDegreeProperty, value); }
+        }
+
+        /// <summary>
+        /// Maintains metadata about child <see cref="Jobs"/> property.
+        /// </summary>
+        public static readonly PropertyInfo<JobCollection> JobsProperty = RegisterProperty<JobCollection>(p => p.Jobs, "Jobs", RelationshipTypes.Child);
+        /// <summary>
+        /// Gets the Jobs ("parent load" child property).
+        /// </summary>
+        /// <value>The Jobs.</value>
+        public JobCollection Jobs
+        {
+            get { return GetProperty(JobsProperty); }
+            private set { LoadProperty(JobsProperty, value); }
         }
 
         #endregion
@@ -191,40 +232,6 @@ namespace CslaExtremeDemos.Business
 
         #endregion
 
-        #region Business Rules and Property Authorization
-
-        /// <summary>
-        /// Override this method in your business class to be notified when you need to set up shared business rules.
-        /// </summary>
-        /// <remarks>
-        /// This method is automatically called by CSLA.NET when your object should associate
-        /// per-type validation rules with its properties.
-        /// </remarks>
-        protected override void AddBusinessRules()
-        {
-            base.AddBusinessRules();
-
-            // Property Business Rules
-
-            // FirstName
-            BusinessRules.AddRule(new MaxLength(FirstNameProperty, 50));
-            // MiddleName
-            BusinessRules.AddRule(new MaxLength(MiddleNameProperty, 50));
-            // LastName
-            BusinessRules.AddRule(new MaxLength(LastNameProperty, 50));
-            // MaritalStatus
-            BusinessRules.AddRule(new EnumNotZero(MaritalStatusProperty) { MessageText = "Must specify Marital Status." });
-
-            AddBusinessRulesExtend();
-        }
-
-        /// <summary>
-        /// Allows the set up of custom shared business rules.
-        /// </summary>
-        partial void AddBusinessRulesExtend();
-
-        #endregion
-
         #region Data Access
 
         /// <summary>
@@ -234,7 +241,9 @@ namespace CslaExtremeDemos.Business
         protected override void DataPortal_Create()
         {
             LoadProperty(PersonIdProperty, System.Threading.Interlocked.Decrement(ref _lastId));
-            LoadProperty(MiddleNameProperty, null);
+            LoadProperty(GraduationDateProperty, null);
+            LoadProperty(GraduationCollegeProperty, null);
+            LoadProperty(JobsProperty, DataPortal.CreateChild<JobCollection>());
             var args = new DataPortalHookArgs();
             OnCreate(args);
             base.DataPortal_Create();
@@ -269,6 +278,7 @@ namespace CslaExtremeDemos.Business
                 if (dr.Read())
                 {
                     Fetch(dr);
+                    FetchChildren(dr);
                 }
             }
         }
@@ -281,14 +291,26 @@ namespace CslaExtremeDemos.Business
         {
             // Value properties
             LoadProperty(PersonIdProperty, dr.GetInt32("PersonId"));
-            LoadProperty(FirstNameProperty, dr.GetString("FirstName"));
-            LoadProperty(MiddleNameProperty, dr.IsDBNull("MiddleName") ? null : dr.GetString("MiddleName"));
-            LoadProperty(LastNameProperty, dr.GetString("LastName"));
-            LoadProperty(MaritalStatusProperty, dr.GetByte("MaritalStatusId"));
-            LoadProperty(RoleProperty, dr.GetByte("RoleId"));
-            LoadProperty(DeptIdProperty, (short?)dr.GetValue("DeptId"));
+            LoadProperty(NameProperty, dr.GetString("Name"));
+            LoadProperty(GenderProperty, dr.GetByte("Gender"));
+            LoadProperty(BirthDateProperty, dr.GetSmartDate("BirthDate", true));
+            LoadProperty(BirthCountryIdProperty, dr.GetInt16("BirthCountryId"));
+            LoadProperty(GraduationDateProperty, dr.IsDBNull("GraduationDate") ? null : dr.GetSmartDate("GraduationDate", true));
+            LoadProperty(GraduationCollegeProperty, dr.IsDBNull("GraduationCollege") ? null : dr.GetString("GraduationCollege"));
+            LoadProperty(GraduationCountryIdProperty, (short?)dr.GetValue("GraduationCountryId"));
+            LoadProperty(GraduationDegreeProperty, (byte?)dr.GetValue("GraduationDegree"));
             var args = new DataPortalHookArgs(dr);
             OnFetchRead(args);
+        }
+
+        /// <summary>
+        /// Loads child objects from the given SafeDataReader.
+        /// </summary>
+        /// <param name="dr">The SafeDataReader to use.</param>
+        private void FetchChildren(SafeDataReader dr)
+        {
+            dr.NextResult();
+            LoadProperty(JobsProperty, DataPortal.FetchChild<JobCollection>(dr));
         }
 
         /// <summary>
@@ -303,19 +325,22 @@ namespace CslaExtremeDemos.Business
                     cmd.Transaction = ctx.Transaction;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@PersonId", ReadProperty(PersonIdProperty)).Direction = ParameterDirection.Output;
-                    cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte;
-                    // For nullable PropertyConvert, null is persisted if the backing field is zero
-                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
-                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@Name", ReadProperty(NameProperty)).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@Gender", ReadProperty(GenderProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@BirthDate", ReadProperty(BirthDateProperty).DBValue).DbType = DbType.DateTime2;
+                    cmd.Parameters.AddWithValue("@BirthCountryId", ReadProperty(BirthCountryIdProperty)).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@GraduationDate", ReadProperty(GraduationDateProperty).DBValue).DbType = DbType.DateTime2;
+                    cmd.Parameters.AddWithValue("@GraduationCollege", ReadProperty(GraduationCollegeProperty) == null ? (object)DBNull.Value : ReadProperty(GraduationCollegeProperty)).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@GraduationCountryId", ReadProperty(GraduationCountryIdProperty) == null ? (object)DBNull.Value : ReadProperty(GraduationCountryIdProperty).Value).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@GraduationDegree", ReadProperty(GraduationDegreeProperty) == null ? (object)DBNull.Value : ReadProperty(GraduationDegreeProperty).Value).DbType = DbType.Byte;
                     var args = new DataPortalHookArgs(cmd);
                     OnInsertPre(args);
                     cmd.ExecuteNonQuery();
                     OnInsertPost(args);
                     LoadProperty(PersonIdProperty, (int) cmd.Parameters["@PersonId"].Value);
                 }
+                // flushes all pending data operations
+                FieldManager.UpdateChildren(this);
                 ctx.Commit();
             }
         }
@@ -332,18 +357,21 @@ namespace CslaExtremeDemos.Business
                     cmd.Transaction = ctx.Transaction;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@PersonId", ReadProperty(PersonIdProperty)).DbType = DbType.Int32;
-                    cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte;
-                    // For nullable PropertyConvert, null is persisted if the backing field is zero
-                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
-                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@Name", ReadProperty(NameProperty)).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@Gender", ReadProperty(GenderProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@BirthDate", ReadProperty(BirthDateProperty).DBValue).DbType = DbType.DateTime2;
+                    cmd.Parameters.AddWithValue("@BirthCountryId", ReadProperty(BirthCountryIdProperty)).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@GraduationDate", ReadProperty(GraduationDateProperty).DBValue).DbType = DbType.DateTime2;
+                    cmd.Parameters.AddWithValue("@GraduationCollege", ReadProperty(GraduationCollegeProperty) == null ? (object)DBNull.Value : ReadProperty(GraduationCollegeProperty)).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@GraduationCountryId", ReadProperty(GraduationCountryIdProperty) == null ? (object)DBNull.Value : ReadProperty(GraduationCountryIdProperty).Value).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@GraduationDegree", ReadProperty(GraduationDegreeProperty) == null ? (object)DBNull.Value : ReadProperty(GraduationDegreeProperty).Value).DbType = DbType.Byte;
                     var args = new DataPortalHookArgs(cmd);
                     OnUpdatePre(args);
                     cmd.ExecuteNonQuery();
                     OnUpdatePost(args);
                 }
+                // flushes all pending data operations
+                FieldManager.UpdateChildren(this);
                 ctx.Commit();
             }
         }

@@ -15,7 +15,7 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' </remarks>
     <Serializable()>
     Partial Public Class PersonInfo
-        Inherits ReadOnlyBase(Of PersonInfo)
+    Inherits ReadOnlyBase(Of PersonInfo)
 
         #Region " Business Properties "
 
@@ -34,44 +34,58 @@ Namespace CslaExtremeDemos.BusinessVB
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="FirstName"/> property.
+        ''' Maintains metadata about <see cref="Name"/> property.
         ''' </summary>
-        Public Shared ReadOnly FirstNameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.FirstName, "First Name")
+        Public Shared ReadOnly NameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.Name, "Name")
         ''' <summary>
-        ''' Gets the First Name.
+        ''' Gets the Name.
         ''' </summary>
-        ''' <value>The First Name.</value>
-        Public ReadOnly Property FirstName As String
+        ''' <value>The Name.</value>
+        Public ReadOnly Property Name As String
             Get
-                Return GetProperty(FirstNameProperty)
+                Return GetProperty(NameProperty)
             End Get
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="MiddleName"/> property.
+        ''' Maintains metadata about <see cref="Gender"/> property.
         ''' </summary>
-        Public Shared ReadOnly MiddleNameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.MiddleName, "Middle Name", New String(Nothing))
+        Public Shared ReadOnly GenderProperty As PropertyInfo(Of Byte) = RegisterProperty(Of Byte)(Function(p) p.Gender, "Gender")
         ''' <summary>
-        ''' Gets the Middle Name.
+        ''' Gets the Gender.
         ''' </summary>
-        ''' <value>The Middle Name.</value>
-        Public ReadOnly Property MiddleName As String
+        ''' <value>The Gender.</value>
+        Public ReadOnly Property Gender As Byte
             Get
-                Return GetProperty(MiddleNameProperty)
+                Return GetProperty(GenderProperty)
             End Get
         End Property
 
         ''' <summary>
-        ''' Maintains metadata about <see cref="LastName"/> property.
+        ''' Maintains metadata about <see cref="BirthDate"/> property.
         ''' </summary>
-        Public Shared ReadOnly LastNameProperty As PropertyInfo(Of String) = RegisterProperty(Of String)(Function(p) p.LastName, "Last Name")
+        Public Shared ReadOnly BirthDateProperty As PropertyInfo(Of SmartDate) = RegisterProperty(Of SmartDate)(Function(p) p.BirthDate, "Birth Date")
         ''' <summary>
-        ''' Gets the Last Name.
+        ''' Gets the Birth Date.
         ''' </summary>
-        ''' <value>The Last Name.</value>
-        Public ReadOnly Property LastName As String
+        ''' <value>The Birth Date.</value>
+        Public ReadOnly Property BirthDate As String
             Get
-                Return GetProperty(LastNameProperty)
+                Return GetPropertyConvert(Of SmartDate, String)(BirthDateProperty)
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' Maintains metadata about <see cref="BirthCountryId"/> property.
+        ''' </summary>
+        Public Shared ReadOnly BirthCountryIdProperty As PropertyInfo(Of Short) = RegisterProperty(Of Short)(Function(p) p.BirthCountryId, "Birth Country Id")
+        ''' <summary>
+        ''' Gets the Birth Country Id.
+        ''' </summary>
+        ''' <value>The Birth Country Id.</value>
+        Public ReadOnly Property BirthCountryId As Short
+            Get
+                Return GetProperty(BirthCountryIdProperty)
             End Get
         End Property
 
@@ -106,9 +120,10 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' </summary>
         Friend Sub UpdatePropertiesOnSaved(person As Person)
             LoadProperty(PersonIdProperty, person.PersonId)
-            LoadProperty(FirstNameProperty, person.FirstName)
-            LoadProperty(MiddleNameProperty, person.MiddleName)
-            LoadProperty(LastNameProperty, person.LastName)
+            LoadProperty(NameProperty, person.Name)
+            LoadProperty(GenderProperty, person.Gender)
+            LoadProperty(BirthDateProperty, CType(person.BirthDate, SmartDate))
+            LoadProperty(BirthCountryIdProperty, person.BirthCountryId)
         End Sub
 
         #End Region
@@ -122,9 +137,10 @@ Namespace CslaExtremeDemos.BusinessVB
         Private Sub Child_Fetch(dr As SafeDataReader)
             ' Value properties
             LoadProperty(PersonIdProperty, dr.GetInt32("PersonId"))
-            LoadProperty(FirstNameProperty, dr.GetString("FirstName"))
-            LoadProperty(MiddleNameProperty, If(dr.IsDBNull("MiddleName"), Nothing, dr.GetString("MiddleName")))
-            LoadProperty(LastNameProperty, dr.GetString("LastName"))
+            LoadProperty(NameProperty, dr.GetString("Name"))
+            LoadProperty(GenderProperty, dr.GetByte("Gender"))
+            LoadProperty(BirthDateProperty, dr.GetSmartDate("BirthDate", True))
+            LoadProperty(BirthCountryIdProperty, dr.GetInt16("BirthCountryId"))
             Dim args As New DataPortalHookArgs(dr)
             OnFetchRead(args)
         End Sub

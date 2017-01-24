@@ -20,6 +20,19 @@ Namespace CslaExtremeDemos.BusinessVB
         #Region " Collection Business Methods "
 
         ''' <summary>
+        ''' Adds a new <see cref="DeptItem"/> item to the collection.
+        ''' </summary>
+        ''' <param name="item">The item to add.</param>
+        ''' <exception cref="ArgumentException">if the item already exists in the collection.</exception>
+        Public Overloads Sub Add(item As DeptItem)
+            If Contains(item.DeptId) Then
+                Throw New ArgumentException("DeptItem already exists.")
+            End If
+
+            Add(item)
+        End Sub
+
+        ''' <summary>
         ''' Determines whether a <see cref="DeptItem"/> item is in the collection.
         ''' </summary>
         ''' <param name="deptId">The DeptId of the item to search for.</param>
@@ -31,6 +44,25 @@ Namespace CslaExtremeDemos.BusinessVB
                 End If
             Next
             Return False
+        End Function
+
+        #End Region
+
+        #Region " Find Methods "
+
+        ''' <summary>
+        ''' Finds a <see cref="DeptItem"/> item of the <see cref="DeptCollection"/> collection, based on a given DeptName.
+        ''' </summary>
+        ''' <param name="deptName">The DeptName.</param>
+        ''' <returns>A <see cref="DeptItem"/> object.</returns>
+        Public Function FindDeptItemByDeptName(deptName As String) As DeptItem
+            For i As Integer = 0 To Me.Count - 1
+                If Me(i).DeptName.Equals(deptName) Then
+                    Return Me(i)
+                End If
+            Next i
+
+            Return Nothing
         End Function
 
         #End Region

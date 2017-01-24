@@ -3,20 +3,21 @@ using Csla;
 
 namespace CslaExtremeDemos.Business
 {
-    public partial class DeptNVL
+    public partial class CountryCollection
     {
 
         #region OnDeserialized actions
 
-        /*/// <summary>
+        /// <summary>
         /// This method is called on a newly deserialized object
         /// after deserialization is complete.
         /// </summary>
         protected override void OnDeserialized()
         {
             base.OnDeserialized();
+            Saved += OnCountryCollectionSaved;
             // add your custom OnDeserialized actions here.
-        }*/
+        }
 
         #endregion
 

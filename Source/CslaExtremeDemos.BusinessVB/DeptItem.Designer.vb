@@ -17,7 +17,7 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' </remarks>
     <Serializable()>
     Partial Public Class DeptItem
-        Inherits BusinessBase(Of DeptItem)
+    Inherits BusinessBase(Of DeptItem)
 
         #Region " Business Properties "
 
@@ -47,7 +47,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Gets or sets the Dept Name.
         ''' </summary>
         ''' <value>The Dept Name.</value>
-        <Required(AllowEmptyStrings := False, ErrorMessage := "Must fill.")>
+        <Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")>
         Public Property DeptName As String
             Get
                 Return GetProperty(DeptNameProperty)
@@ -147,7 +147,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' </summary>
         <Csla.RunLocal()>
         Protected Overrides Sub DataPortal_Create()
-            LoadProperty(IsActiveProperty, True)
+            LoadProperty(IsActiveProperty, true)
             Dim args As New DataPortalHookArgs()
             OnCreate(args)
             MyBase.DataPortal_Create()
