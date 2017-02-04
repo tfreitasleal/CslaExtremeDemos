@@ -87,7 +87,7 @@
     <GenerateSilverlight4>false</GenerateSilverlight4>
     <SilverlightUsingServices>false</SilverlightUsingServices>
     <DatabaseConnection>CslaExtremeDemos</DatabaseConnection>
-    <GenerateDTO>true</GenerateDTO>
+    <GenerateDTO>false</GenerateDTO>
     <GenerateDalInterface>false</GenerateDalInterface>
     <GenerateDalObject>false</GenerateDalObject>
     <GenerateSynchronous>true</GenerateSynchronous>
@@ -468,6 +468,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Country Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -528,6 +529,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1060,6 +1062,7 @@
           <PrimaryKey>UserProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Country Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1120,6 +1123,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1524,6 +1528,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Dept Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1829,6 +1834,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Dept Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -1889,6 +1895,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Dept Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -2164,6 +2171,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Is Active</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -2452,6 +2460,7 @@
           <PrimaryKey>UserProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Dept Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -2512,6 +2521,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Dept Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3088,6 +3098,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Person Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3148,6 +3159,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3208,6 +3220,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Gender</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3268,6 +3281,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Birth Date</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>SmartDate</BackingFieldType>
@@ -3328,6 +3342,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Birth Country Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3655,6 +3670,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Person Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3715,6 +3731,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3775,6 +3792,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Gender</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3835,6 +3853,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Birth Date</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>SmartDate</BackingFieldType>
@@ -3895,6 +3914,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Birth Country Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -3955,6 +3975,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Graduation Date</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>SmartDate</BackingFieldType>
@@ -4015,6 +4036,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Graduation College</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -4075,6 +4097,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Graduation Country Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -4135,6 +4158,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Graduation Degree</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -4554,6 +4578,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Job Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -4614,6 +4639,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Company Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -4718,6 +4744,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Person Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -5240,6 +5267,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>User Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -5300,6 +5328,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>First Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -5360,6 +5389,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Middle Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -5420,6 +5450,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Last Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -5614,6 +5645,7 @@
           <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>User Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -5674,6 +5706,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>First Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -5856,6 +5889,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Middle Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -6036,6 +6070,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Last Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -6218,6 +6253,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Marital Status</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType>CivilStatus</CustomPropertyType>
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>Byte</BackingFieldType>
@@ -6349,6 +6385,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Role</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType>Roles</CustomPropertyType>
           <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
           <BackingFieldType>Byte</BackingFieldType>
@@ -6409,6 +6446,7 @@
           <PrimaryKey>Default</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Dept</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
           <CustomPropertyType />
           <DeclarationMode>Managed</DeclarationMode>
           <BackingFieldType>Empty</BackingFieldType>
@@ -6628,6 +6666,6 @@
   <AssociativeEntities />
   <ConnectionString>Server=(local);Database=CslaExtremeDemos;persist security info=False;user id=sa;password=password_1234;packet size=4096</ConnectionString>
   <ProjectName>CslaExtremeDemos-VB</ProjectName>
-  <TargetDirectory>C:\VS GitHub\CslaExtremeDemos\Source</TargetDirectory>
-  <FileVersion>4.0.4</FileVersion>
+  <TargetDirectory>..\Source</TargetDirectory>
+  <FileVersion>4.0.5</FileVersion>
 </CslaGeneratorUnit>
