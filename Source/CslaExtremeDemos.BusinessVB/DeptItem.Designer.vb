@@ -16,9 +16,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' <remarks>
     ''' This class is an item of <see cref="DeptCollection"/> collection.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class DeptItem
-    Inherits BusinessBase(Of DeptItem)
+    <Serializable>
+    Public Partial Class DeptItem
+        Inherits BusinessBase(Of DeptItem)
 
         #Region " Business Properties "
 
@@ -28,16 +28,13 @@ Namespace CslaExtremeDemos.BusinessVB
         <NotUndoable>
         Public Shared ReadOnly DeptIdProperty As PropertyInfo(Of Short) = RegisterProperty(Of Short)(Function(p) p.DeptId, "Dept Id")
         ''' <summary>
-        ''' Gets or sets the Dept Id.
+        ''' Gets the Dept Id.
         ''' </summary>
         ''' <value>The Dept Id.</value>
-        Public Property DeptId As Short
+        Public ReadOnly Property DeptId As Short
             Get
                 Return GetProperty(DeptIdProperty)
             End Get
-            Set(ByVal value As Short)
-                SetProperty(DeptIdProperty, value)
-            End Set
         End Property
 
         ''' <summary>
@@ -147,7 +144,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' <summary>
         ''' Loads default values for the <see cref="DeptItem"/> object properties.
         ''' </summary>
-        <Csla.RunLocal()>
+        <RunLocal>
         Protected Overrides Sub DataPortal_Create()
             LoadProperty(IsActiveProperty, true)
             Dim args As New DataPortalHookArgs()

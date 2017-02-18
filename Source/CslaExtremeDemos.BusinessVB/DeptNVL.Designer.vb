@@ -10,9 +10,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' DeptNVL (name value list).<br/>
     ''' This is a generated base class of <see cref="DeptNVL"/> business object.
     ''' </summary>
-    <Serializable()>
-    Partial Public Class DeptNVL
-    Inherits NameValueListBase(Of Short, String)
+    <Serializable>
+    Public Partial Class DeptNVL
+        Inherits NameValueListBase(Of Short, String)
 
         #Region " Private Fields "
 

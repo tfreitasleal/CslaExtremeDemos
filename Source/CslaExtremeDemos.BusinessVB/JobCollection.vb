@@ -3,7 +3,7 @@ Imports Csla
 
 Namespace CslaExtremeDemos.BusinessVB
 
-    Partial Public Class JobCollection
+    Public Partial Class JobCollection
 
         #Region " OnDeserialized actions "
 
@@ -20,11 +20,11 @@ Namespace CslaExtremeDemos.BusinessVB
 
         #Region " Implementation of DataPortal Hooks "
 
-        ' Partial Private Sub OnFetchPre(args As DataPortalHookArgs)
+        ' Private Sub OnFetchPre(args As DataPortalHookArgs)
         '     Throw New NotImplementedException()
         ' End Sub
 
-        ' Partial Private Sub OnFetchPost(args As DataPortalHookArgs)
+        ' Private Sub OnFetchPost(args As DataPortalHookArgs)
         '     Throw New NotImplementedException()
         ' End Sub
 

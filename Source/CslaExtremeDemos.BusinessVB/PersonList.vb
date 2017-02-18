@@ -3,7 +3,7 @@ Imports Csla
 
 Namespace CslaExtremeDemos.BusinessVB
 
-    Partial Public Class PersonList
+    Public Partial Class PersonList
 
         #Region " OnDeserialized actions "
 
@@ -13,7 +13,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' </summary>
         Protected Overrides Sub OnDeserialized()
             MyBase.OnDeserialized()
-            AddHandler Person.PersonSaved, AddressOf PersonSavedHandler
+            PersonSaved.Register(Me)
             ' add your custom OnDeserialized actions here.
         End Sub
 
@@ -21,11 +21,11 @@ Namespace CslaExtremeDemos.BusinessVB
 
         #Region " Implementation of DataPortal Hooks "
 
-        ' Partial Private Sub OnFetchPre(args As DataPortalHookArgs)
+        ' Private Sub OnFetchPre(args As DataPortalHookArgs)
         '     Throw New NotImplementedException()
         ' End Sub
 
-        ' Partial Private Sub OnFetchPost(args As DataPortalHookArgs)
+        ' Private Sub OnFetchPost(args As DataPortalHookArgs)
         '     Throw New NotImplementedException()
         ' End Sub
 

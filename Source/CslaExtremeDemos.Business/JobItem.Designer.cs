@@ -78,7 +78,7 @@ namespace CslaExtremeDemos.Business
         /// <summary>
         /// Loads default values for the <see cref="JobItem"/> object properties.
         /// </summary>
-        [Csla.RunLocal]
+        [RunLocal]
         protected override void Child_Create()
         {
             LoadProperty(JobIdProperty, System.Threading.Interlocked.Decrement(ref _lastId));

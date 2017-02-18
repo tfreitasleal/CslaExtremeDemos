@@ -15,9 +15,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' <remarks>
     ''' This class is an item of <see cref="CountryCollection"/> collection.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class CountryItem
-    Inherits BusinessBase(Of CountryItem)
+    <Serializable>
+    Public Partial Class CountryItem
+        Inherits BusinessBase(Of CountryItem)
 
         #Region " Business Properties "
 
@@ -106,7 +106,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' <summary>
         ''' Loads default values for the <see cref="CountryItem"/> object properties.
         ''' </summary>
-        <Csla.RunLocal()>
+        <RunLocal>
         Protected Overrides Sub Child_Create()
             Dim args As New DataPortalHookArgs()
             OnCreate(args)

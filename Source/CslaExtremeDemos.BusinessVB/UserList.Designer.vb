@@ -18,8 +18,8 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' <remarks>
     ''' The items of the collection are <see cref="UserInfo"/> objects.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class UserList
+    <Serializable>
+    Public Partial Class UserList
         Inherits ReadOnlyBindingListBase(Of UserList, UserInfo)
     
         #Region " Event handler properties "
@@ -118,7 +118,7 @@ Namespace CslaExtremeDemos.BusinessVB
         <System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)>
         Public Sub New()
             ' Use factory methods and do not use direct creation.
-            AddHandler User.UserSaved, AddressOf UserSavedHandler
+            UserSaved.Register(Me)
 
             Dim rlce = RaiseListChangedEvents
             RaiseListChangedEvents = False

@@ -118,7 +118,6 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         internal void UpdatePropertiesOnSaved(Person person)
         {
-            LoadProperty(PersonIdProperty, person.PersonId);
             LoadProperty(NameProperty, person.Name);
             LoadProperty(GenderProperty, person.Gender);
             LoadProperty(BirthDateProperty, (SmartDate)person.BirthDate);

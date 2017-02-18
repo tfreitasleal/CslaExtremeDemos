@@ -13,9 +13,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' User (editable root object).<br/>
     ''' This is a generated base class of <see cref="User"/> business object.
     ''' </summary>
-    <Serializable()>
-    Partial Public Class User
-    Inherits BusinessBase(Of User)
+    <Serializable>
+    Public Partial Class User
+        Inherits BusinessBase(Of User)
 
         #Region " Static Fields "
 
@@ -242,7 +242,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' <summary>
         ''' Loads default values for the <see cref="User"/> object properties.
         ''' </summary>
-        <Csla.RunLocal()>
+        <RunLocal>
         Protected Overrides Sub DataPortal_Create()
             LoadProperty(UserIdProperty, System.Threading.Interlocked.Decrement(_lastId))
             LoadProperty(MiddleNameProperty, Nothing)

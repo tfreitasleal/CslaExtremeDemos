@@ -13,8 +13,8 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' <remarks>
     ''' The items of the collection are <see cref="CountryItem"/> objects.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class CountryCollection
+    <Serializable>
+    Public Partial Class CountryCollection
         Inherits BusinessBindingListBase(Of CountryCollection, CountryItem)
     
         #Region " Collection Business Methods "

@@ -13,9 +13,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' <remarks>
     ''' This class is an item of <see cref="PersonList"/> collection.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class PersonInfo
-    Inherits ReadOnlyBase(Of PersonInfo)
+    <Serializable>
+    Public Partial Class PersonInfo
+        Inherits ReadOnlyBase(Of PersonInfo)
 
         #Region " Business Properties "
 
@@ -119,7 +119,6 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Properties on <see cref="PersonInfo"/> object are updated by <see cref="Person"/> Saved event.
         ''' </summary>
         Friend Sub UpdatePropertiesOnSaved(person As Person)
-            LoadProperty(PersonIdProperty, person.PersonId)
             LoadProperty(NameProperty, person.Name)
             LoadProperty(GenderProperty, person.Gender)
             LoadProperty(BirthDateProperty, CType(person.BirthDate, SmartDate))

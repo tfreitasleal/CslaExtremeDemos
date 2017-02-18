@@ -14,8 +14,8 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' This class is child of <see cref="Person"/> editable root object.<br/>
     ''' The items of the collection are <see cref="JobItem"/> objects.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class JobCollection
+    <Serializable>
+    Public Partial Class JobCollection
         Inherits BusinessBindingListBase(Of JobCollection, JobItem)
     
         #Region " Collection Business Methods "

@@ -14,9 +14,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' This class contains one child collection:<br/>
     ''' - <see cref="Jobs"/> of type <see cref="JobCollection"/> (1:M relation to <see cref="JobItem"/>)
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class Person
-    Inherits BusinessBase(Of Person)
+    <Serializable>
+    Public Partial Class Person
+        Inherits BusinessBase(Of Person)
 
         #Region " Static Fields "
 
@@ -258,7 +258,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' <summary>
         ''' Loads default values for the <see cref="Person"/> object properties.
         ''' </summary>
-        <Csla.RunLocal()>
+        <RunLocal>
         Protected Overrides Sub DataPortal_Create()
             LoadProperty(PersonIdProperty, System.Threading.Interlocked.Decrement(_lastId))
             LoadProperty(GraduationDateProperty, Nothing)

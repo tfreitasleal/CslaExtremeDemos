@@ -13,8 +13,8 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' <remarks>
     ''' The items of the collection are <see cref="DeptItem"/> objects.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class DeptCollection
+    <Serializable>
+    Public Partial Class DeptCollection
         Inherits DynamicBindingListBase(Of DeptItem)
     
         #Region " Collection Business Methods "

@@ -13,9 +13,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' <remarks>
     ''' This class is an item of <see cref="JobCollection"/> collection.
     ''' </remarks>
-    <Serializable()>
-    Partial Public Class JobItem
-    Inherits BusinessBase(Of JobItem)
+    <Serializable>
+    Public Partial Class JobItem
+        Inherits BusinessBase(Of JobItem)
 
         #Region " Static Fields "
 
@@ -80,7 +80,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' <summary>
         ''' Loads default values for the <see cref="JobItem"/> object properties.
         ''' </summary>
-        <Csla.RunLocal()>
+        <RunLocal>
         Protected Overrides Sub Child_Create()
             LoadProperty(JobIdProperty, System.Threading.Interlocked.Decrement(_lastId))
             Dim args As New DataPortalHookArgs()

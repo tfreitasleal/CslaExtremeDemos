@@ -109,6 +109,7 @@
       <ObjectType>PlaceHolder</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>- - - Countries - - -</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -238,6 +239,7 @@
       <ObjectType>EditableRootCollection</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>CountryCollection</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -405,6 +407,7 @@
       <ObjectType>EditableChild</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>CountryItem</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -1002,6 +1005,7 @@
       <ObjectType>NameValueList</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>CountryNVL</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -1040,7 +1044,7 @@
           <ParameterName>CountryId</ParameterName>
           <Name>CountryId</Name>
           <PropertyType>Int16</PropertyType>
-          <ReadOnly>false</ReadOnly>
+          <ReadOnly>true</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
           <Remarks />
@@ -1059,7 +1063,7 @@
             <IsIdentity>true</IsIdentity>
           </DbBindColumn>
           <DataAccess>ReadWrite</DataAccess>
-          <PrimaryKey>UserProvidedPK</PrimaryKey>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Country Id</FriendlyName>
           <IsDatabaseBound>true</IsDatabaseBound>
@@ -1290,6 +1294,7 @@
       <ObjectType>PlaceHolder</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>- - - Departments - - -</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -1419,6 +1424,7 @@
       <ObjectType>DynamicEditableRootCollection</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>DeptCollection</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -1770,6 +1776,7 @@
       <ObjectType>DynamicEditableRoot</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>DeptItem</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -1812,7 +1819,7 @@
           <ParameterName>DeptId</ParameterName>
           <Name>DeptId</Name>
           <PropertyType>Int16</PropertyType>
-          <ReadOnly>false</ReadOnly>
+          <ReadOnly>true</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
           <Remarks />
@@ -2400,6 +2407,7 @@
       <ObjectType>NameValueList</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>DeptNVL</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -2438,7 +2446,7 @@
           <ParameterName>DeptId</ParameterName>
           <Name>DeptId</Name>
           <PropertyType>Int16</PropertyType>
-          <ReadOnly>false</ReadOnly>
+          <ReadOnly>true</ReadOnly>
           <Nullable>false</Nullable>
           <Summary />
           <Remarks />
@@ -2457,7 +2465,7 @@
             <IsIdentity>true</IsIdentity>
           </DbBindColumn>
           <DataAccess>ReadWrite</DataAccess>
-          <PrimaryKey>UserProvidedPK</PrimaryKey>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
           <FKConstraint />
           <FriendlyName>Dept Id</FriendlyName>
           <IsDatabaseBound>true</IsDatabaseBound>
@@ -2688,6 +2696,7 @@
       <ObjectType>PlaceHolder</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>- - - Persons - - -</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -2817,6 +2826,7 @@
       <ObjectType>ReadOnlyCollection</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>PersonList</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -2982,6 +2992,7 @@
       <ObjectType>ReadOnlyObject</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>PersonInfo</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -3473,6 +3484,7 @@
       <ObjectType>EditableRoot</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>Person</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -4389,6 +4401,7 @@
       <ObjectType>EditableChildCollection</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>JobCollection</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -4518,6 +4531,7 @@
       <ObjectType>EditableChild</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>JobItem</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -4868,6 +4882,7 @@
       <ObjectType>PlaceHolder</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>- - - Users - - -</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -4997,6 +5012,7 @@
       <ObjectType>ReadOnlyCollection</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>UserList</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -5162,6 +5178,7 @@
       <ObjectType>ReadOnlyObject</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>UserInfo</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>
@@ -5581,6 +5598,7 @@
       <ObjectType>EditableRoot</ObjectType>
       <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
       <ObjectName>User</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
       <IsGenericType>false</IsGenericType>
       <GenericArguments />
       <ObjectNamespace>CslaExtremeDemos.Business</ObjectNamespace>

@@ -10,9 +10,9 @@ Namespace CslaExtremeDemos.BusinessVB
     ''' CountryNVL (name value list).<br/>
     ''' This is a generated base class of <see cref="CountryNVL"/> business object.
     ''' </summary>
-    <Serializable()>
-    Partial Public Class CountryNVL
-    Inherits NameValueListBase(Of Short, String)
+    <Serializable>
+    Public Partial Class CountryNVL
+        Inherits NameValueListBase(Of Short, String)
 
         #Region " Private Fields "
 

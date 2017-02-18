@@ -29,13 +29,12 @@ namespace CslaExtremeDemos.Business
         [NotUndoable]
         public static readonly PropertyInfo<short> DeptIdProperty = RegisterProperty<short>(p => p.DeptId, "Dept Id");
         /// <summary>
-        /// Gets or sets the Dept Id.
+        /// Gets the Dept Id.
         /// </summary>
         /// <value>The Dept Id.</value>
         public short DeptId
         {
             get { return GetProperty(DeptIdProperty); }
-            set { SetProperty(DeptIdProperty, value); }
         }
 
         /// <summary>
@@ -143,7 +142,7 @@ namespace CslaExtremeDemos.Business
         /// <summary>
         /// Loads default values for the <see cref="DeptItem"/> object properties.
         /// </summary>
-        [Csla.RunLocal]
+        [RunLocal]
         protected override void DataPortal_Create()
         {
             LoadProperty(IsActiveProperty, true);
