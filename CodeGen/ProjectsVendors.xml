@@ -1,0 +1,1476 @@
+<?xml version="1.0"?>
+<CslaGeneratorUnit xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Params>
+    <DefaultNamespace>ProjectsVendors.Business</DefaultNamespace>
+    <DefaultFolder />
+    <SmartDateDefault>true</SmartDateDefault>
+    <AutoCriteria>true</AutoCriteria>
+    <AutoTimestampCriteria>false</AutoTimestampCriteria>
+    <DatesDefaultStringWithTypeConversion>true</DatesDefaultStringWithTypeConversion>
+    <ReadOnlyObjectsCopyAuditing>false</ReadOnlyObjectsCopyAuditing>
+    <ReadOnlyObjectsCopyTimestamp>false</ReadOnlyObjectsCopyTimestamp>
+    <DefaultDataBase>ProjectsVendors</DefaultDataBase>
+    <DefaultTransactionType>TransactionScope</DefaultTransactionType>
+    <DefaultPersistenceType>SqlConnectionManager</DefaultPersistenceType>
+    <DefaultDatabaseContextObject />
+    <ORBChildPropertySuffix>s</ORBChildPropertySuffix>
+    <ORBCollectionSuffix>Coll</ORBCollectionSuffix>
+    <ORBSingleSPSuffix>Relation</ORBSingleSPSuffix>
+    <ORBItemsUseSingleSP>true</ORBItemsUseSingleSP>
+    <SpAddPrefix>Add</SpAddPrefix>
+    <SpDeletePrefix>Delete</SpDeletePrefix>
+    <SpUpdatePrefix>Update</SpUpdatePrefix>
+    <SpGetPrefix>Get</SpGetPrefix>
+    <SpGeneralPrefix />
+    <SpAddSuffix />
+    <SpDeleteSuffix />
+    <SpUpdateSuffix />
+    <SpGetSuffix />
+    <SpGeneralSuffix />
+    <RegenSpNameOnObjectRename>true</RegenSpNameOnObjectRename>
+    <SpBoolSoftDeleteColumn>IsActive</SpBoolSoftDeleteColumn>
+    <SpIntSoftDeleteColumn />
+    <SpIgnoreFilterWhenSoftDeleteIsParam>true</SpIgnoreFilterWhenSoftDeleteIsParam>
+    <SpRemoveChildBeforeParent>true</SpRemoveChildBeforeParent>
+    <IDGuidDefaultValue>Guid.NewGuid()</IDGuidDefaultValue>
+    <IDInt16DefaultValue>_lastId</IDInt16DefaultValue>
+    <IDInt32DefaultValue>_lastId</IDInt32DefaultValue>
+    <IDInt64DefaultValue>_lastId</IDInt64DefaultValue>
+    <FieldNamePrefix>_</FieldNamePrefix>
+    <DelegateNamePrefix>d_</DelegateNamePrefix>
+    <CreationDateColumn />
+    <CreationUserColumn />
+    <ChangedDateColumn>LastUpdated</ChangedDateColumn>
+    <ChangedUserColumn />
+    <LogDateAndTime>true</LogDateAndTime>
+    <LogInUtc>false</LogInUtc>
+    <GetUserMethod>Security.UserInformation.UserID</GetUserMethod>
+    <EnforceGenericInheritance>true</EnforceGenericInheritance>
+  </Params>
+  <GenerationParams>
+    <SaveBeforeGenerate>true</SaveBeforeGenerate>
+    <TargetFramework>CSLA45DAL</TargetFramework>
+    <WriteTodo>true</WriteTodo>
+    <BackupOldSource>false</BackupOldSource>
+    <RetryOnFileBusy>true</RetryOnFileBusy>
+    <SeparateNamespaces>true</SeparateNamespaces>
+    <SeparateBaseClasses>false</SeparateBaseClasses>
+    <UseDotDesignerFileNameConvention>true</UseDotDesignerFileNameConvention>
+    <OutputLanguage>CSharp</OutputLanguage>
+    <UpdateOnlyDirtyChildren>true</UpdateOnlyDirtyChildren>
+    <PropertyMode>Default</PropertyMode>
+    <GenerateAuthorization>None</GenerateAuthorization>
+    <HeaderVerbosity>None</HeaderVerbosity>
+    <UseSingleCriteria>false</UseSingleCriteria>
+    <UsePublicPropertyInfo>true</UsePublicPropertyInfo>
+    <UseChildFactory>false</UseChildFactory>
+    <ForceReadOnlyProperties>true</ForceReadOnlyProperties>
+    <BaseFilenameSuffix>.Designer</BaseFilenameSuffix>
+    <ExtendedFilenameSuffix />
+    <ClassCommentFilenameSuffix />
+    <SeparateClassComment>false</SeparateClassComment>
+    <BaseNamespace>ProjectsVendors.Business</BaseNamespace>
+    <UtilitiesNamespace>ProjectsVendors.Business</UtilitiesNamespace>
+    <UtilitiesFolder />
+    <DalInterfaceNamespace>ProjectsVendors.DataAccess</DalInterfaceNamespace>
+    <DalObjectNamespace>ProjectsVendors.DataAccess.Sql</DalObjectNamespace>
+    <GenerateSprocs>true</GenerateSprocs>
+    <OneSpFilePerObject>false</OneSpFilePerObject>
+    <UseInlineQueries>Never</UseInlineQueries>
+    <ReportObjectNotFound>None</ReportObjectNotFound>
+    <GenerateQueriesWithSchema>true</GenerateQueriesWithSchema>
+    <GenerateDatabaseClass>false</GenerateDatabaseClass>
+    <DalName>ProjectsVendors</DalName>
+    <UsesCslaAuthorizationProvider>false</UsesCslaAuthorizationProvider>
+    <GenerateWinForms>true</GenerateWinForms>
+    <GenerateWPF>true</GenerateWPF>
+    <GenerateSilverlight4>false</GenerateSilverlight4>
+    <SilverlightUsingServices>false</SilverlightUsingServices>
+    <DatabaseConnection>ProjectsVendors</DatabaseConnection>
+    <GenerateDTO>true</GenerateDTO>
+    <GenerateDalInterface>true</GenerateDalInterface>
+    <GenerateDalObject>true</GenerateDalObject>
+    <GenerateSynchronous>true</GenerateSynchronous>
+    <GenerateAsynchronous>true</GenerateAsynchronous>
+  </GenerationParams>
+  <CslaObjects>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>EditableRoot</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>ProjectEdit</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>ProjectsVendors.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>ProjectEdit</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties>
+        <ChildProperty>
+          <ParameterName>Vendors</ParameterName>
+          <Name>Vendors</Name>
+          <PropertyType>Empty</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <FriendlyName>Vendors</FriendlyName>
+          <TypeName>VendorCollection</TypeName>
+          <DeclarationMode>Managed</DeclarationMode>
+          <ChildUpdateOrder>0</ChildUpdateOrder>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <LoadingScheme>SelfLoad</LoadingScheme>
+          <LazyLoad>true</LazyLoad>
+          <ParentLoadProperties />
+          <LoadParameters>
+            <Parameter>
+              <CriteriaName>Criteria</CriteriaName>
+              <PropertyName>ProjectId</PropertyName>
+            </Parameter>
+          </LoadParameters>
+          <Access>IsPublic</Access>
+          <Undoable>true</Undoable>
+        </ChildProperty>
+      </ChildCollectionProperties>
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties>
+        <ValueProperty>
+          <ParameterName>ProjectId</ParameterName>
+          <Name>ProjectId</Name>
+          <PropertyType>Int32</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int32</DataType>
+            <NativeType>int</NativeType>
+            <Size>10</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>ProjectId</ColumnName>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <ObjectName>Projects</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>true</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Project Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue>_lastId</DefaultValue>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>ProjecName</ParameterName>
+          <Name>ProjecName</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>ProjecName</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Projects</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Projec Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>StartDate</ParameterName>
+          <Name>StartDate</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>DateTime2</DataType>
+            <NativeType>datetime2</NativeType>
+            <Size>7</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>StartDate</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Projects</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Start Date</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>SmartDate</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>DeliveryDate</ParameterName>
+          <Name>DeliveryDate</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>DateTime2</DataType>
+            <NativeType>datetime2</NativeType>
+            <Size>7</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>DeliveryDate</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Projects</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Delivery Date</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>ManagedWithTypeConversion</DeclarationMode>
+          <BackingFieldType>SmartDate</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+      </ValueProperties>
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects>
+        <Criteria>
+          <Name>CriteriaNew</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties />
+          <CreateOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>true</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+        <Criteria>
+          <Name>Criteria</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties>
+            <Property>
+              <ParameterName>ProjectId</ParameterName>
+              <Name>ProjectId</Name>
+              <PropertyType>Int32</PropertyType>
+              <ReadOnly>false</ReadOnly>
+              <Nullable>false</Nullable>
+              <Summary />
+              <Remarks />
+              <DbBindColumn>
+                <ColumnOriginType>Table</ColumnOriginType>
+                <DataType>Int32</DataType>
+                <NativeType>int</NativeType>
+                <Size>10</Size>
+                <SpResultIndex>0</SpResultIndex>
+                <ColumnName>ProjectId</ColumnName>
+                <IsPrimaryKey>true</IsPrimaryKey>
+                <ObjectName>Projects</ObjectName>
+                <CatalogName>ProjectsVendors</CatalogName>
+                <SchemaName>dbo</SchemaName>
+                <IsNullable>false</IsNullable>
+                <IsIdentity>true</IsIdentity>
+              </DbBindColumn>
+              <CustomPropertyType />
+              <ParameterValue />
+              <InlineQueryParameter>Plain</InlineQueryParameter>
+            </Property>
+          </Properties>
+          <CreateOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>true</Procedure>
+            <ProcedureName>GetProjectEdit</ProcedureName>
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>true</Procedure>
+            <ProcedureName>DeleteProjectEdit</ProcedureName>
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+      </CriteriaObjects>
+      <ParentType />
+      <ParentProperties />
+      <ParentInsertOnly>true</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType />
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>TransactionScope</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName>AddProjectEdit</InsertProcedureName>
+      <SelectProcedureName />
+      <UpdateProcedureName>UpdateProjectEdit</UpdateProcedureName>
+      <DeleteProcedureName />
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>EditableChildCollection</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>VendorCollection</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>ProjectsVendors.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>VendorCollection</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties />
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects>
+        <Criteria>
+          <Name>CriteriaGet</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties>
+            <Property>
+              <ParameterName>ProjectId</ParameterName>
+              <Name>ProjectId</Name>
+              <PropertyType>Int32</PropertyType>
+              <ReadOnly>true</ReadOnly>
+              <Nullable>false</Nullable>
+              <Summary />
+              <Remarks />
+              <DbBindColumn>
+                <ColumnOriginType>Table</ColumnOriginType>
+                <DataType>Int32</DataType>
+                <NativeType>int</NativeType>
+                <Size>10</Size>
+                <SpResultIndex>0</SpResultIndex>
+                <ColumnName>ProjectId</ColumnName>
+                <IsPrimaryKey>true</IsPrimaryKey>
+                <ObjectName>Projects</ObjectName>
+                <CatalogName>ProjectsVendors</CatalogName>
+                <SchemaName>dbo</SchemaName>
+                <IsNullable>false</IsNullable>
+                <IsIdentity>true</IsIdentity>
+              </DbBindColumn>
+              <CustomPropertyType />
+              <ParameterValue />
+              <InlineQueryParameter>Plain</InlineQueryParameter>
+            </Property>
+          </Properties>
+          <CreateOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>true</Factory>
+            <AddRemove>true</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>true</Procedure>
+            <ProcedureName>GetVendorCollection</ProcedureName>
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+      </CriteriaObjects>
+      <ParentType>ProjectEdit</ParentType>
+      <ParentProperties />
+      <ParentInsertOnly>false</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType>VendorItem</ItemType>
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>TransactionScope</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName>AddVendorCollection</InsertProcedureName>
+      <SelectProcedureName />
+      <UpdateProcedureName>UpdateVendorCollection</UpdateProcedureName>
+      <DeleteProcedureName />
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+    <CslaObjectInfo>
+      <Generate>true</Generate>
+      <GenerateConstructor>true</GenerateConstructor>
+      <GenerateFactoryMethods>true</GenerateFactoryMethods>
+      <GenerateDataAccessRegion>true</GenerateDataAccessRegion>
+      <GenerateDataPortalInsert>true</GenerateDataPortalInsert>
+      <GenerateDataPortalUpdate>true</GenerateDataPortalUpdate>
+      <GenerateDataPortalDelete>true</GenerateDataPortalDelete>
+      <GenerateSprocs>true</GenerateSprocs>
+      <GenerateInlineQueries />
+      <DataSetLoadingScheme>false</DataSetLoadingScheme>
+      <UseCustomLoading>false</UseCustomLoading>
+      <ObjectType>EditableChild</ObjectType>
+      <UnitOfWorkType>CreatorGetter</UnitOfWorkType>
+      <ObjectName>VendorItem</ObjectName>
+      <CslaBaseClass>None</CslaBaseClass>
+      <IsGenericType>false</IsGenericType>
+      <GenericArguments />
+      <ObjectNamespace>ProjectsVendors.Business</ObjectNamespace>
+      <ClassVisibility>Public</ClassVisibility>
+      <ClassSummary />
+      <ClassRemarks />
+      <Namespaces />
+      <Attributes />
+      <Interfaces />
+      <InheritedType>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedType>
+      <InheritedTypeWinForms>
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <IsGenericType>false</IsGenericType>
+      </InheritedTypeWinForms>
+      <UseUnitOfWorkType />
+      <ConstructorVisibility>Default</ConstructorVisibility>
+      <Folder />
+      <FileName>VendorItem</FileName>
+      <UnitOfWorkProperties />
+      <ChildCollectionProperties />
+      <ChildProperties />
+      <InheritedChildCollectionProperties />
+      <InheritedChildProperties />
+      <ConvertValueProperties />
+      <UpdateValueProperties />
+      <InheritedValueProperties />
+      <ValueProperties>
+        <ValueProperty>
+          <ParameterName>VendorId</ParameterName>
+          <Name>VendorId</Name>
+          <PropertyType>Int32</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int32</DataType>
+            <NativeType>int</NativeType>
+            <Size>10</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>VendorId</ColumnName>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <ObjectName>Vendors</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>true</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Vendor Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue>_lastId</DefaultValue>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>VendorName</ParameterName>
+          <Name>VendorName</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>VendorName</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Vendors</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Vendor Name</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>VendorContact</ParameterName>
+          <Name>VendorContact</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>VendorContact</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Vendors</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Vendor Contact</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>VendorPhone</ParameterName>
+          <Name>VendorPhone</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>VendorPhone</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Vendors</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Vendor Phone</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>VendorEmail</ParameterName>
+          <Name>VendorEmail</Name>
+          <PropertyType>String</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>String</DataType>
+            <NativeType>varchar</NativeType>
+            <Size>50</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>VendorEmail</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Vendors</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Vendor Email</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>IsPrimaryVendor</ParameterName>
+          <Name>IsPrimaryVendor</Name>
+          <PropertyType>Boolean</PropertyType>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Boolean</DataType>
+            <NativeType>bit</NativeType>
+            <Size>0</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>IsPrimaryVendor</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Vendors</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Is Primary Vendor</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue />
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>true</Undoable>
+        </ValueProperty>
+        <ValueProperty>
+          <ParameterName>LastUpdated</ParameterName>
+          <Name>LastUpdated</Name>
+          <PropertyType>SmartDate</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>DateTime2</DataType>
+            <NativeType>datetime2</NativeType>
+            <Size>7</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>LastUpdated</ColumnName>
+            <IsPrimaryKey>false</IsPrimaryKey>
+            <ObjectName>Vendors</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>false</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>Default</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Last Updated</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue>new SmartDate(DateTime.Now)</DefaultValue>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </ValueProperty>
+      </ValueProperties>
+      <Singleton>false</Singleton>
+      <EditOnDemand>false</EditOnDemand>
+      <CheckRulesOnFetch>true</CheckRulesOnFetch>
+      <SupportUpdateProperties>false</SupportUpdateProperties>
+      <CriteriaObjects>
+        <Criteria>
+          <Name>CriteriaNew</Name>
+          <CriteriaClassMode>Simple</CriteriaClassMode>
+          <NestedClass>true</NestedClass>
+          <Properties />
+          <CreateOptions>
+            <Factory>true</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>true</DataPortal>
+            <RunLocal>true</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </CreateOptions>
+          <GetOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </GetOptions>
+          <DeleteOptions>
+            <Factory>false</Factory>
+            <AddRemove>false</AddRemove>
+            <DataPortal>false</DataPortal>
+            <RunLocal>false</RunLocal>
+            <Procedure>false</Procedure>
+            <ProcedureName />
+            <FactorySuffix />
+          </DeleteOptions>
+          <Summary />
+          <Remarks />
+        </Criteria>
+      </CriteriaObjects>
+      <ParentType>VendorCollection</ParentType>
+      <ParentProperties>
+        <Property xsi:type="ValueProperty">
+          <ParameterName>ProjectId</ParameterName>
+          <Name>ProjectId</Name>
+          <PropertyType>Int32</PropertyType>
+          <ReadOnly>true</ReadOnly>
+          <Nullable>false</Nullable>
+          <Summary />
+          <Remarks />
+          <DbBindColumn>
+            <ColumnOriginType>Table</ColumnOriginType>
+            <DataType>Int32</DataType>
+            <NativeType>int</NativeType>
+            <Size>10</Size>
+            <SpResultIndex>0</SpResultIndex>
+            <ColumnName>ProjectId</ColumnName>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <ObjectName>Projects</ObjectName>
+            <CatalogName>ProjectsVendors</CatalogName>
+            <SchemaName>dbo</SchemaName>
+            <IsNullable>false</IsNullable>
+            <IsIdentity>true</IsIdentity>
+          </DbBindColumn>
+          <DataAccess>ReadWrite</DataAccess>
+          <PrimaryKey>DBProvidedPK</PrimaryKey>
+          <FKConstraint />
+          <FriendlyName>Project Id</FriendlyName>
+          <IsDatabaseBound>true</IsDatabaseBound>
+          <CustomPropertyType />
+          <DeclarationMode>Managed</DeclarationMode>
+          <BackingFieldType>Empty</BackingFieldType>
+          <DefaultValue>_lastId</DefaultValue>
+          <Attributes />
+          <Interfaces />
+          <BusinessRules />
+          <AuthzProvider>IsInRole</AuthzProvider>
+          <ReadRoles />
+          <WriteRoles />
+          <ReadAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </ReadAuthzRuleType>
+          <WriteAuthzRuleType>
+            <BaseRuleProperties />
+            <Name />
+            <ObjectName />
+            <AssemblyFile />
+            <Type />
+            <Constructors />
+            <RuleProperties />
+            <CacheResult>false</CacheResult>
+          </WriteAuthzRuleType>
+          <Access>IsPublic</Access>
+          <PropSetAccessibility>Default</PropSetAccessibility>
+          <Undoable>false</Undoable>
+        </Property>
+      </ParentProperties>
+      <ParentInsertOnly>true</ParentInsertOnly>
+      <IsPolymorphic>false</IsPolymorphic>
+      <ItemType />
+      <ContainsItem>true</ContainsItem>
+      <UniqueItems>false</UniqueItems>
+      <FindMethodsParameters />
+      <UpdaterType />
+      <AllowNew>true</AllowNew>
+      <AllowEdit>true</AllowEdit>
+      <AllowRemove>true</AllowRemove>
+      <AddParentReference>false</AddParentReference>
+      <SimpleCacheOptions>None</SimpleCacheOptions>
+      <InvalidateCache />
+      <ValueColumn />
+      <NameColumn />
+      <PersistenceType>SqlConnectionManager</PersistenceType>
+      <CommandTimeout />
+      <TransactionType>TransactionScope</TransactionType>
+      <InsertUpdateRunLocal>false</InsertUpdateRunLocal>
+      <InsertProcedureName>AddVendorItem</InsertProcedureName>
+      <SelectProcedureName />
+      <UpdateProcedureName>UpdateVendorItem</UpdateProcedureName>
+      <DeleteProcedureName>DeleteVendorItem</DeleteProcedureName>
+      <DeleteUseTimestamp>false</DeleteUseTimestamp>
+      <RemoveItem>true</RemoveItem>
+      <ToStringProperty />
+      <BusinessRules />
+      <AuthzProvider>IsInRole</AuthzProvider>
+      <NewRoles />
+      <GetRoles />
+      <UpdateRoles />
+      <DeleteRoles />
+      <NewAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </NewAuthzRuleType>
+      <GetAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </GetAuthzRuleType>
+      <UpdateAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </UpdateAuthzRuleType>
+      <DeleteAuthzRuleType>
+        <BaseRuleProperties />
+        <Name />
+        <ObjectName />
+        <AssemblyFile />
+        <Type />
+        <Constructors />
+        <RuleProperties />
+        <CacheResult>false</CacheResult>
+      </DeleteAuthzRuleType>
+    </CslaObjectInfo>
+  </CslaObjects>
+  <AssociativeEntities />
+  <ConnectionString>Server=(local);Database=ProjectsVendors;persist security info=False;user id=sa;password=password_1234;packet size=4096</ConnectionString>
+  <ProjectName>ProjectsVendors</ProjectName>
+  <TargetDirectory>..\ProjectsVendors</TargetDirectory>
+  <FileVersion>4.0.6</FileVersion>
+</CslaGeneratorUnit>
