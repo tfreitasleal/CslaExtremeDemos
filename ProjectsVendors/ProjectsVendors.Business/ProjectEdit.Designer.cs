@@ -94,57 +94,14 @@ namespace ProjectsVendors.Business
             get
             {
 #if ASYNC
-                if (!FieldManager.FieldExists(VendorsProperty))
-                {
-                    LoadProperty(VendorsProperty, null);
-                    if (this.IsNew)
-                    {
-                        DataPortal.BeginCreate<VendorCollection>((o, e) =>
-                            {
-                                if (e.Error != null)
-                                    throw e.Error;
-                                else
-                                {
-                                    // set the property so OnPropertyChanged is raised
-                                    Vendors = e.Object;
-                                }
-                            });
-                        return null;
-                    }
-                    else
-                    {
-                        DataPortal.BeginFetch<VendorCollection>(ReadProperty(ProjectIdProperty), (o, e) =>
-                            {
-                                if (e.Error != null)
-                                    throw e.Error;
-                                else
-                                {
-                                    // set the property so OnPropertyChanged is raised
-                                    Vendors = e.Object;
-                                }
-                            });
-                        return null;
-                    }
-                }
-                else
-                {
-                    return GetProperty(VendorsProperty);
-                }
+                return LazyGetPropertyAsync(VendorsProperty,
+                    DataPortal.FetchAsync<VendorCollection>(ReadProperty(ProjectIdProperty)));
 #else
-                if (!FieldManager.FieldExists(VendorsProperty))
-                    if (this.IsNew)
-                        Vendors = DataPortal.Create<VendorCollection>();
-                    else
-                        Vendors = DataPortal.Fetch<VendorCollection>(ReadProperty(ProjectIdProperty));
-
-                return GetProperty(VendorsProperty);
+                return LazyGetProperty(VendorsProperty,
+                    () => DataPortal.Fetch<VendorCollection>(ReadProperty(ProjectIdProperty)));
 #endif
             }
-            private set
-            {
-                LoadProperty(VendorsProperty, value);
-                OnPropertyChanged(VendorsProperty);
-            }
+            private set { LoadProperty(VendorsProperty, value); }
         }
 
         #endregion
