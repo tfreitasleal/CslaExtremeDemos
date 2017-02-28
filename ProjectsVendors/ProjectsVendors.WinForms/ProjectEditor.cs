@@ -76,5 +76,10 @@ namespace ProjectsVendors.WinForms
             if (Save())
                 MessageBox.Show("Project saved.");
         }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            MessageBox.Show("tab 2 selected");
+        }
     }
 }
