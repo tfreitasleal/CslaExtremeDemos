@@ -32,6 +32,7 @@
             this.projectId = new System.Windows.Forms.TextBox();
             this.editProject = new System.Windows.Forms.Button();
             this.workspace = new System.Windows.Forms.Panel();
+            this.newProject = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // projectIdLabel
@@ -65,20 +66,32 @@
             this.workspace.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.workspace.Location = new System.Drawing.Point(0, 44);
             this.workspace.Name = "workspace";
-            this.workspace.Size = new System.Drawing.Size(894, 350);
+            this.workspace.Size = new System.Drawing.Size(914, 350);
             this.workspace.TabIndex = 3;
+            // 
+            // newProject
+            // 
+            this.newProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.newProject.Location = new System.Drawing.Point(786, 10);
+            this.newProject.Name = "newProject";
+            this.newProject.Size = new System.Drawing.Size(116, 23);
+            this.newProject.TabIndex = 4;
+            this.newProject.Text = "New Project";
+            this.newProject.UseVisualStyleBackColor = true;
+            this.newProject.Click += new System.EventHandler(this.newProject_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 394);
+            this.ClientSize = new System.Drawing.Size(914, 394);
+            this.Controls.Add(this.newProject);
             this.Controls.Add(this.workspace);
             this.Controls.Add(this.editProject);
             this.Controls.Add(this.projectId);
             this.Controls.Add(this.projectIdLabel);
-            this.MaximumSize = new System.Drawing.Size(910, 433);
-            this.MinimumSize = new System.Drawing.Size(910, 433);
+            this.MaximumSize = new System.Drawing.Size(930, 433);
+            this.MinimumSize = new System.Drawing.Size(930, 433);
             this.Name = "MainForm";
             this.Text = "Main Form";
             this.ResumeLayout(false);
@@ -92,6 +105,7 @@
         private System.Windows.Forms.TextBox projectId;
         private System.Windows.Forms.Button editProject;
         private System.Windows.Forms.Panel workspace;
+        private System.Windows.Forms.Button newProject;
     }
 }
 

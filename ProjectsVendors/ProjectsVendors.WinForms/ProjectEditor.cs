@@ -26,8 +26,10 @@ namespace ProjectsVendors.WinForms
         public ProjectEditor(int projectId) :
             this()
         {
-            _projectEdit = ProjectEdit.GetProjectEdit(projectId);
-
+            if (projectId == -1)
+                _projectEdit = ProjectEdit.NewProjectEdit();
+            else
+                _projectEdit = ProjectEdit.GetProjectEdit(projectId);
         }
 
         private void ProjectEdit_Load(object sender, EventArgs e)
@@ -41,6 +43,11 @@ namespace ProjectsVendors.WinForms
                 _bindingTree = BindingSourceHelper.InitializeBindingSourceTree(components, projectEditBindingSource);
 
             _bindingTree.Bind(_projectEdit);
+        }
+
+        private void LazyLoadVendors()
+        {
+            vendorsDataGridView.DataMember = "Vendors";
         }
 
         private bool Save()
@@ -74,12 +81,15 @@ namespace ProjectsVendors.WinForms
                 return;
 
             if (Save())
-                MessageBox.Show("Project saved.");
+                MessageBox.Show("Project saved.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("tab 2 selected");
+            if (tabControl.SelectedTab == vendorsTabPage)
+            {
+                LazyLoadVendors();
+            }
         }
     }
 }

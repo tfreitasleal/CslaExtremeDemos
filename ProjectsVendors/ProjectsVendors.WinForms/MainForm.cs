@@ -20,8 +20,24 @@ namespace ProjectsVendors.WinForms
         private void editProject_Click(object sender, EventArgs e)
         {
             var project = Convert.ToInt32(projectId.Text);
-            workspace.Controls.Clear();
+            CleanWorkspace();
             workspace.Controls.Add(new ProjectEditor(project));
+        }
+
+        private void newProject_Click(object sender, EventArgs e)
+        {
+            projectId.Text = string.Empty;
+            CleanWorkspace();
+            workspace.Controls.Add(new ProjectEditor(-1));
+        }
+
+        private void CleanWorkspace()
+        {
+            foreach (UserControl workspaceControl in workspace.Controls)
+            {
+                workspaceControl.Dispose();
+            }
+            workspace.Controls.Clear();
         }
     }
 }
