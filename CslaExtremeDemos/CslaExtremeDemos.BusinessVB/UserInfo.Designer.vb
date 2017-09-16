@@ -105,6 +105,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Properties on <see cref="UserInfo"/> object are updated by <see cref="User"/> Saved event.
         ''' </summary>
         Friend Sub UpdatePropertiesOnSaved(user As User)
+            LoadProperty(UserIdProperty, user.UserId)
             LoadProperty(FirstNameProperty, user.FirstName)
             LoadProperty(MiddleNameProperty, user.MiddleName)
             LoadProperty(LastNameProperty, user.LastName)

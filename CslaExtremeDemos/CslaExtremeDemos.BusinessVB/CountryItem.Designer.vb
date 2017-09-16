@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Imports Csla
 Imports Csla.Data
 Imports Csla.Rules.CommonRules
-Imports CslaGenFork.Rules.CollectionRules
+Imports CslaContrib.Rules.CommonRules
 
 Namespace CslaExtremeDemos.BusinessVB
 
@@ -88,7 +88,7 @@ Namespace CslaExtremeDemos.BusinessVB
             ' Name
             BusinessRules.AddRule(New Required(NameProperty, "Country name is required."))
             BusinessRules.AddRule(New MaxLength(NameProperty, 50))
-            BusinessRules.AddRule(New NoDuplicates(NameProperty, "Country names can't be repeated."))
+            BusinessRules.AddRule(New NoDuplicates(Of CountryCollection,CountryItem)(NameProperty, "Country names can't be repeated."))
 
             AddBusinessRulesExtend()
         End Sub

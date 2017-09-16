@@ -42,8 +42,8 @@
       <HintPath>..\packages\CSLA-WindowsForms.4.6.603\lib\net45\Csla.Windows.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="CslaContrib.Windows, Version=4.6.400.0, Culture=neutral, PublicKeyToken=eafe756dec3874e6, processorArchitecture=MSIL">
-      <HintPath>..\packages\CslaContrib-Windows.4.6.400\lib\net45\CslaContrib.Windows.dll</HintPath>
+    <Reference Include="CslaContrib.Windows, Version=4.6.602.0, Culture=neutral, PublicKeyToken=eafe756dec3874e6, processorArchitecture=MSIL">
+      <HintPath>..\packages\CslaContrib-Windows.4.6.602\lib\net45\CslaContrib.Windows.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

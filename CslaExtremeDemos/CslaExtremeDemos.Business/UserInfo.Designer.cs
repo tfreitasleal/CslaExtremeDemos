@@ -105,6 +105,7 @@ namespace CslaExtremeDemos.Business
         /// </summary>
         internal void UpdatePropertiesOnSaved(User user)
         {
+            LoadProperty(UserIdProperty, user.UserId);
             LoadProperty(FirstNameProperty, user.FirstName);
             LoadProperty(MiddleNameProperty, user.MiddleName);
             LoadProperty(LastNameProperty, user.LastName);

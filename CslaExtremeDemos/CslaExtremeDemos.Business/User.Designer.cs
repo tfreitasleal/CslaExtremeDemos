@@ -101,15 +101,15 @@ namespace CslaExtremeDemos.Business
         /// <summary>
         /// Maintains metadata about <see cref="Role"/> property.
         /// </summary>
-        public static readonly PropertyInfo<byte?> RoleProperty = RegisterProperty<byte?>(p => p.Role, "Role");
+        public static readonly PropertyInfo<byte> RoleProperty = RegisterProperty<byte>(p => p.Role, "Role");
         /// <summary>
         /// Gets or sets the Role.
         /// </summary>
         /// <value>The Role.</value>
-        public Roles? Role
+        public Roles Role
         {
-            get { return GetPropertyConvert<byte?, Roles?>(RoleProperty); }
-            set { SetPropertyConvert<byte?, Roles?>(RoleProperty, value); }
+            get { return GetPropertyConvert<byte, Roles>(RoleProperty); }
+            set { SetPropertyConvert<byte, Roles>(RoleProperty, value); }
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace CslaExtremeDemos.Business
             LoadProperty(MiddleNameProperty, dr.IsDBNull("MiddleName") ? null : dr.GetString("MiddleName"));
             LoadProperty(LastNameProperty, dr.GetString("LastName"));
             LoadProperty(MaritalStatusProperty, dr.GetByte("MaritalStatusId"));
-            LoadProperty(RoleProperty, (byte?)dr.GetValue("RoleId"));
+            LoadProperty(RoleProperty, dr.GetByte("RoleId"));
             LoadProperty(DeptIdProperty, (short?)dr.GetValue("DeptId"));
             var args = new DataPortalHookArgs(dr);
             OnFetchRead(args);
@@ -304,11 +304,12 @@ namespace CslaExtremeDemos.Business
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@UserId", ReadProperty(UserIdProperty)).Direction = ParameterDirection.Output;
                     cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) != null ? ReadProperty(MiddleNameProperty) : (object)DBNull.Value).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte;
-                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty).HasValue ? ReadProperty(RoleProperty).Value : (object)DBNull.Value).DbType = DbType.Byte;
-                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty).HasValue ? ReadProperty(DeptIdProperty).Value : (object)DBNull.Value).DbType = DbType.Int16;
+                    // For nullable PropertyConvert, null is persisted if the backing field is zero
+                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
                     var args = new DataPortalHookArgs(cmd);
                     OnInsertPre(args);
                     cmd.ExecuteNonQuery();
@@ -332,11 +333,12 @@ namespace CslaExtremeDemos.Business
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@UserId", ReadProperty(UserIdProperty)).DbType = DbType.Int32;
                     cmd.Parameters.AddWithValue("@FirstName", ReadProperty(FirstNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) != null ? ReadProperty(MiddleNameProperty) : (object)DBNull.Value).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@MiddleName", ReadProperty(MiddleNameProperty) == null ? (object)DBNull.Value : ReadProperty(MiddleNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@LastName", ReadProperty(LastNameProperty)).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@MaritalStatusId", ReadProperty(MaritalStatusProperty)).DbType = DbType.Byte;
-                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty).HasValue ? ReadProperty(RoleProperty).Value : (object)DBNull.Value).DbType = DbType.Byte;
-                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty).HasValue ? ReadProperty(DeptIdProperty).Value : (object)DBNull.Value).DbType = DbType.Int16;
+                    // For nullable PropertyConvert, null is persisted if the backing field is zero
+                    cmd.Parameters.AddWithValue("@RoleId", ReadProperty(RoleProperty) == 0 ? (object)DBNull.Value : ReadProperty(RoleProperty)).DbType = DbType.Byte;
+                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty) == null ? (object)DBNull.Value : ReadProperty(DeptIdProperty).Value).DbType = DbType.Int16;
                     var args = new DataPortalHookArgs(cmd);
                     OnUpdatePre(args);
                     cmd.ExecuteNonQuery();

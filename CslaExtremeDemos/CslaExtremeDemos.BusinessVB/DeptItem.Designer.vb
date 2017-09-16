@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Imports Csla
 Imports Csla.Data
 Imports Csla.Rules.CommonRules
-Imports CslaGenFork.Rules.CollectionRules
+Imports CslaContrib.Rules.CommonRules
 Imports System.ComponentModel.DataAnnotations
 
 Namespace CslaExtremeDemos.BusinessVB
@@ -126,7 +126,7 @@ Namespace CslaExtremeDemos.BusinessVB
 
             ' DeptName
             BusinessRules.AddRule(New MaxLength(DeptNameProperty, 50))
-            BusinessRules.AddRule(New NoDuplicates(DeptNameProperty, "Department names can't be repeated."))
+            BusinessRules.AddRule(New NoDuplicates(Of DeptCollection,DeptItem)(DeptNameProperty, "Department names can't be repeated."))
 
             AddBusinessRulesExtend()
         End Sub

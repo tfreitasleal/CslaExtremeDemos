@@ -4,66 +4,50 @@ using System.Data.SqlClient;
 using Csla;
 using Csla.Data;
 using Csla.Rules.CommonRules;
-using CslaGenFork.Rules.CollectionRules;
-using System.ComponentModel.DataAnnotations;
+using CslaContrib.Rules.CommonRules;
 
 namespace CslaExtremeDemos.Business
 {
 
     /// <summary>
-    /// DeptItem (dynamic root object).<br/>
-    /// This is a generated base class of <see cref="DeptItem"/> business object.
+    /// CountryItem (editable child object).<br/>
+    /// This is a generated base class of <see cref="CountryItem"/> business object.
     /// </summary>
     /// <remarks>
-    /// This class is an item of <see cref="DeptCollection"/> collection.
+    /// This class is an item of <see cref="CountryCollection"/> collection.
     /// </remarks>
     [Serializable]
-    public partial class DeptItem : BusinessBase<DeptItem>
+    public partial class CountryItem : BusinessBase<CountryItem>
     {
 
         #region Business Properties
 
         /// <summary>
-        /// Maintains metadata about <see cref="DeptId"/> property.
+        /// Maintains metadata about <see cref="CountryId"/> property.
         /// </summary>
         [NotUndoable]
-        public static readonly PropertyInfo<short> DeptIdProperty = RegisterProperty<short>(p => p.DeptId, "Dept Id");
+        public static readonly PropertyInfo<short> CountryIdProperty = RegisterProperty<short>(p => p.CountryId, "Country Id");
         /// <summary>
-        /// Gets the Dept Id.
+        /// Gets the Country Id.
         /// </summary>
-        /// <value>The Dept Id.</value>
-        public short DeptId
+        /// <value>The Country Id.</value>
+        public short CountryId
         {
-            get { return GetProperty(DeptIdProperty); }
+            get { return GetProperty(CountryIdProperty); }
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="DeptName"/> property.
+        /// Maintains metadata about <see cref="Name"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> DeptNameProperty = RegisterProperty<string>(p => p.DeptName, "Dept Name");
+        public static readonly PropertyInfo<string> NameProperty = RegisterProperty<string>(p => p.Name, "Name");
         /// <summary>
-        /// Gets or sets the Dept Name.
+        /// Gets or sets the Name.
         /// </summary>
-        /// <value>The Dept Name.</value>
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Must fill.")]
-        public string DeptName
+        /// <value>The Name.</value>
+        public string Name
         {
-            get { return GetProperty(DeptNameProperty); }
-            set { SetProperty(DeptNameProperty, value); }
-        }
-
-        /// <summary>
-        /// Maintains metadata about <see cref="IsActive"/> property.
-        /// </summary>
-        public static readonly PropertyInfo<bool> IsActiveProperty = RegisterProperty<bool>(p => p.IsActive, "Is Active");
-        /// <summary>
-        /// Gets or sets the Is Active.
-        /// </summary>
-        /// <value><c>true</c> if Is Active; otherwise, <c>false</c>.</value>
-        public bool IsActive
-        {
-            get { return GetProperty(IsActiveProperty); }
-            set { SetProperty(IsActiveProperty, value); }
+            get { return GetProperty(NameProperty); }
+            set { SetProperty(NameProperty, value); }
         }
 
         #endregion
@@ -71,39 +55,16 @@ namespace CslaExtremeDemos.Business
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeptItem"/> class.
+        /// Initializes a new instance of the <see cref="CountryItem"/> class.
         /// </summary>
         /// <remarks> Do not use to create a Csla object. Use factory methods instead.</remarks>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-        public DeptItem()
+        public CountryItem()
         {
             // Use factory methods and do not use direct creation.
-            Saved += OnDeptItemSaved;
-            DeptItemSaved += DeptItemSavedHandler;
-        }
 
-        #endregion
-
-        #region Cache Invalidation
-
-        private void DeptItemSavedHandler(object sender, Csla.Core.SavedEventArgs e)
-        {
-            // this runs on the client
-            DeptNVL.InvalidateCache();
-        }
-
-        /// <summary>
-        /// Called by the server-side DataPortal after calling the requested DataPortal_XYZ method.
-        /// </summary>
-        /// <param name="e">The DataPortalContext object passed to the DataPortal.</param>
-        protected override void DataPortal_OnDataPortalInvokeComplete(Csla.DataPortalEventArgs e)
-        {
-            if (ApplicationContext.ExecutionLocation == ApplicationContext.ExecutionLocations.Server &&
-                e.Operation == DataPortalOperations.Update)
-            {
-                // this runs on the server
-                DeptNVL.InvalidateCache();
-            }
+            // show the framework that this is a child object
+            MarkAsChild();
         }
 
         #endregion
@@ -123,9 +84,10 @@ namespace CslaExtremeDemos.Business
 
             // Property Business Rules
 
-            // DeptName
-            BusinessRules.AddRule(new MaxLength(DeptNameProperty, 50));
-            BusinessRules.AddRule(new NoDuplicates(DeptNameProperty, "Department names can't be repeated."));
+            // Name
+            BusinessRules.AddRule(new Required(NameProperty, "Country name is required."));
+            BusinessRules.AddRule(new MaxLength(NameProperty, 50));
+            BusinessRules.AddRule(new NoDuplicates<CountryCollection,CountryItem>(NameProperty, "Country names can't be repeated."));
 
             AddBusinessRulesExtend();
         }
@@ -140,27 +102,25 @@ namespace CslaExtremeDemos.Business
         #region Data Access
 
         /// <summary>
-        /// Loads default values for the <see cref="DeptItem"/> object properties.
+        /// Loads default values for the <see cref="CountryItem"/> object properties.
         /// </summary>
         [RunLocal]
-        protected override void DataPortal_Create()
+        protected override void Child_Create()
         {
-            LoadProperty(IsActiveProperty, true);
             var args = new DataPortalHookArgs();
             OnCreate(args);
-            base.DataPortal_Create();
+            base.Child_Create();
         }
 
         /// <summary>
-        /// Loads a <see cref="DeptItem"/> object from the given SafeDataReader.
+        /// Loads a <see cref="CountryItem"/> object from the given SafeDataReader.
         /// </summary>
         /// <param name="dr">The SafeDataReader to use.</param>
-        private void DataPortal_Fetch(SafeDataReader dr)
+        private void Child_Fetch(SafeDataReader dr)
         {
             // Value properties
-            LoadProperty(DeptIdProperty, dr.GetInt16("DeptId"));
-            LoadProperty(DeptNameProperty, dr.GetString("DeptName"));
-            LoadProperty(IsActiveProperty, dr.GetBoolean("IsActive"));
+            LoadProperty(CountryIdProperty, dr.GetInt16("CountryId"));
+            LoadProperty(NameProperty, dr.GetString("Name"));
             var args = new DataPortalHookArgs(dr);
             OnFetchRead(args);
             // check all object rules and property rules
@@ -168,94 +128,70 @@ namespace CslaExtremeDemos.Business
         }
 
         /// <summary>
-        /// Inserts a new <see cref="DeptItem"/> object in the database.
+        /// Inserts a new <see cref="CountryItem"/> object in the database.
         /// </summary>
-        protected override void DataPortal_Insert()
+        private void Child_Insert()
         {
             using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
-                using (var cmd = new SqlCommand("dbo.AddDeptItem", ctx.Connection))
+                using (var cmd = new SqlCommand("dbo.AddCountryItem", ctx.Connection))
                 {
                     cmd.Transaction = ctx.Transaction;
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty)).Direction = ParameterDirection.Output;
-                    cmd.Parameters.AddWithValue("@DeptName", ReadProperty(DeptNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@IsActive", ReadProperty(IsActiveProperty)).DbType = DbType.Boolean;
+                    cmd.Parameters.AddWithValue("@CountryId", ReadProperty(CountryIdProperty)).Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("@Name", ReadProperty(NameProperty)).DbType = DbType.String;
                     var args = new DataPortalHookArgs(cmd);
                     OnInsertPre(args);
                     cmd.ExecuteNonQuery();
                     OnInsertPost(args);
-                    LoadProperty(DeptIdProperty, (short) cmd.Parameters["@DeptId"].Value);
+                    LoadProperty(CountryIdProperty, (short) cmd.Parameters["@CountryId"].Value);
                 }
-                ctx.Commit();
             }
         }
 
         /// <summary>
-        /// Updates in the database all changes made to the <see cref="DeptItem"/> object.
+        /// Updates in the database all changes made to the <see cref="CountryItem"/> object.
         /// </summary>
-        protected override void DataPortal_Update()
+        private void Child_Update()
         {
+            if (!IsDirty)
+                return;
+
             using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
-                using (var cmd = new SqlCommand("dbo.UpdateDeptItem", ctx.Connection))
+                using (var cmd = new SqlCommand("dbo.UpdateCountryItem", ctx.Connection))
                 {
                     cmd.Transaction = ctx.Transaction;
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@DeptId", ReadProperty(DeptIdProperty)).DbType = DbType.Int16;
-                    cmd.Parameters.AddWithValue("@DeptName", ReadProperty(DeptNameProperty)).DbType = DbType.String;
-                    cmd.Parameters.AddWithValue("@IsActive", ReadProperty(IsActiveProperty)).DbType = DbType.Boolean;
+                    cmd.Parameters.AddWithValue("@CountryId", ReadProperty(CountryIdProperty)).DbType = DbType.Int16;
+                    cmd.Parameters.AddWithValue("@Name", ReadProperty(NameProperty)).DbType = DbType.String;
                     var args = new DataPortalHookArgs(cmd);
                     OnUpdatePre(args);
                     cmd.ExecuteNonQuery();
                     OnUpdatePost(args);
                 }
-                ctx.Commit();
             }
         }
 
         /// <summary>
-        /// Self deletes the <see cref="DeptItem"/> object.
+        /// Self deletes the <see cref="CountryItem"/> object from database.
         /// </summary>
-        protected override void DataPortal_DeleteSelf()
-        {
-            DataPortal_Delete(DeptId);
-        }
-
-        /// <summary>
-        /// Deletes the <see cref="DeptItem"/> object from database.
-        /// </summary>
-        /// <param name="deptId">The delete criteria.</param>
-        protected void DataPortal_Delete(short deptId)
+        private void Child_DeleteSelf()
         {
             using (var ctx = TransactionManager<SqlConnection, SqlTransaction>.GetManager(Database.CslaExtremeDemosConnection, false))
             {
-                using (var cmd = new SqlCommand("dbo.DeleteDeptItem", ctx.Connection))
+                using (var cmd = new SqlCommand("dbo.DeleteCountryItem", ctx.Connection))
                 {
                     cmd.Transaction = ctx.Transaction;
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@DeptId", deptId).DbType = DbType.Int16;
-                    var args = new DataPortalHookArgs(cmd, deptId);
+                    cmd.Parameters.AddWithValue("@CountryId", ReadProperty(CountryIdProperty)).DbType = DbType.Int16;
+                    var args = new DataPortalHookArgs(cmd);
                     OnDeletePre(args);
                     cmd.ExecuteNonQuery();
                     OnDeletePost(args);
                 }
-                ctx.Commit();
             }
         }
-
-        #endregion
-
-        #region Saved Event
-
-        private void OnDeptItemSaved(object sender, Csla.Core.SavedEventArgs e)
-        {
-            if (DeptItemSaved != null)
-                DeptItemSaved(sender, e);
-        }
-
-        /// <summary> Use this event to signal a <see cref="DeptItem"/> object was saved.</summary>
-        public static event EventHandler<Csla.Core.SavedEventArgs> DeptItemSaved;
 
         #endregion
 

@@ -119,6 +119,7 @@ Namespace CslaExtremeDemos.BusinessVB
         ''' Properties on <see cref="PersonInfo"/> object are updated by <see cref="Person"/> Saved event.
         ''' </summary>
         Friend Sub UpdatePropertiesOnSaved(person As Person)
+            LoadProperty(PersonIdProperty, person.PersonId)
             LoadProperty(NameProperty, person.Name)
             LoadProperty(GenderProperty, person.Gender)
             LoadProperty(BirthDateProperty, CType(person.BirthDate, SmartDate))
