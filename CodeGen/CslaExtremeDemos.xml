@@ -81,6 +81,7 @@
     <GenerateQueriesWithSchema>true</GenerateQueriesWithSchema>
     <GenerateDatabaseClass>true</GenerateDatabaseClass>
     <DalName />
+    <UsesLazyGetProperty>true</UsesLazyGetProperty>
     <UsesCslaAuthorizationProvider>false</UsesCslaAuthorizationProvider>
     <GenerateWinForms>true</GenerateWinForms>
     <GenerateWPF>false</GenerateWPF>
@@ -92,6 +93,7 @@
     <GenerateDalObject>false</GenerateDalObject>
     <GenerateSynchronous>true</GenerateSynchronous>
     <GenerateAsynchronous>false</GenerateAsynchronous>
+    <GenerationDbProviderCollection />
   </GenerationParams>
   <CslaObjects>
     <CslaObjectInfo>
@@ -185,40 +187,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -353,40 +375,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -416,7 +458,7 @@
       <ClassRemarks />
       <Namespaces>
         <string>Csla.Rules.CommonRules</string>
-        <string>CslaGenFork.Rules.CollectionRules</string>
+        <string>CslaContrib.Rules.CommonRules</string>
       </Namespaces>
       <Attributes />
       <Interfaces />
@@ -484,20 +526,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -552,10 +604,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>Required</Name>
               <ObjectName />
               <AssemblyFile>C:\VS GitHub\CslaExtremeDemos\Source\Dependencies\Csla.dll</AssemblyFile>
               <Type>Required</Type>
+              <Name>Required</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1</Name>
@@ -645,10 +702,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>MaxLength</Name>
               <ObjectName />
               <AssemblyFile>C:\VS GitHub\CslaExtremeDemos\Source\Dependencies\Csla.dll</AssemblyFile>
               <Type>MaxLength</Type>
+              <Name>MaxLength</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1 (Active)</Name>
@@ -764,10 +826,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>NoDuplicates</Name>
               <ObjectName />
-              <AssemblyFile>C:\VS GitHub\CslaExtremeDemos\Source\Dependencies\CslaGenFork.Rules.dll</AssemblyFile>
-              <Type>NoDuplicates</Type>
+              <AssemblyFile>C:\VS_GitHub\CslaExtremeDemos\Source\Dependencies\CslaContrib.dll</AssemblyFile>
+              <Type>NoDuplicates&lt;T,C&gt;</Type>
+              <Name>NoDuplicates&lt;T,C&gt;</Name>
+              <NumberGenericParameters>2</NumberGenericParameters>
+              <OriginalGenericParameter1>T</OriginalGenericParameter1>
+              <OriginalGenericParameter2>C</OriginalGenericParameter2>
+              <GenericParameter1>CountryCollection</GenericParameter1>
+              <GenericParameter2>CountryItem</GenericParameter2>
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1</Name>
@@ -798,37 +865,13 @@
                       <Value xsi:type="xsd:string">Name</Value>
                     </BusinessRuleConstructorParameter>
                     <BusinessRuleConstructorParameter>
-                      <Name>message</Name>
+                      <Name>errorMessageDelegate</Name>
                       <Type>String</Type>
                       <IsParams>false</IsParams>
                       <IsGenericType>false</IsGenericType>
                       <IsGenericParameter>false</IsGenericParameter>
                       <GenericType>Empty</GenericType>
                       <Value xsi:type="xsd:string">Country names can't be repeated.</Value>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #3</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">Name</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>messageDelegate</Name>
-                      <Type>Func&lt;String&gt;</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>true</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string" />
                     </BusinessRuleConstructorParameter>
                   </ConstructorParameters>
                 </BusinessRuleConstructor>
@@ -851,20 +894,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -951,40 +1004,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -1079,20 +1152,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -1140,20 +1223,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -1240,40 +1333,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -1370,40 +1483,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -1556,10 +1689,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>MaxLength</Name>
               <ObjectName />
               <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
               <Type>MaxLength</Type>
+              <Name>MaxLength</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1 (Active)</Name>
@@ -1669,20 +1807,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -1722,40 +1870,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -1786,7 +1954,7 @@
       <Namespaces>
         <string>System.ComponentModel.DataAnnotations</string>
         <string>Csla.Rules.CommonRules</string>
-        <string>CslaGenFork.Rules.CollectionRules</string>
+        <string>CslaContrib.Rules.CommonRules</string>
       </Namespaces>
       <Attributes />
       <Interfaces />
@@ -1854,20 +2022,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -1924,10 +2102,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>MaxLength</Name>
               <ObjectName />
               <AssemblyFile>C:\VS GitHub\CslaExtremeDemos\Source\Dependencies\Csla.dll</AssemblyFile>
               <Type>MaxLength</Type>
+              <Name>MaxLength</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1 (Active)</Name>
@@ -2043,10 +2226,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>NoDuplicates</Name>
               <ObjectName />
-              <AssemblyFile>C:\VS GitHub\CslaExtremeDemos\Source\Dependencies\CslaGenFork.Rules.dll</AssemblyFile>
-              <Type>NoDuplicates</Type>
+              <AssemblyFile>C:\VS_GitHub\CslaExtremeDemos\Source\Dependencies\CslaContrib.dll</AssemblyFile>
+              <Type>NoDuplicates&lt;T,C&gt;</Type>
+              <Name>NoDuplicates&lt;T,C&gt;</Name>
+              <NumberGenericParameters>2</NumberGenericParameters>
+              <OriginalGenericParameter1>T</OriginalGenericParameter1>
+              <OriginalGenericParameter2>C</OriginalGenericParameter2>
+              <GenericParameter1>DeptCollection</GenericParameter1>
+              <GenericParameter2>DeptItem</GenericParameter2>
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1</Name>
@@ -2077,37 +2265,13 @@
                       <Value xsi:type="xsd:string">DeptName</Value>
                     </BusinessRuleConstructorParameter>
                     <BusinessRuleConstructorParameter>
-                      <Name>message</Name>
+                      <Name>errorMessageDelegate</Name>
                       <Type>String</Type>
                       <IsParams>false</IsParams>
                       <IsGenericType>false</IsGenericType>
                       <IsGenericParameter>false</IsGenericParameter>
                       <GenericType>Empty</GenericType>
                       <Value xsi:type="xsd:string">Department names can't be repeated.</Value>
-                    </BusinessRuleConstructorParameter>
-                  </ConstructorParameters>
-                </BusinessRuleConstructor>
-                <BusinessRuleConstructor>
-                  <Name>Constructor #3</Name>
-                  <IsActive>false</IsActive>
-                  <ConstructorParameters>
-                    <BusinessRuleConstructorParameter>
-                      <Name>primaryProperty</Name>
-                      <Type>IPropertyInfo</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>false</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string">DeptName</Value>
-                    </BusinessRuleConstructorParameter>
-                    <BusinessRuleConstructorParameter>
-                      <Name>messageDelegate</Name>
-                      <Type>Func&lt;String&gt;</Type>
-                      <IsParams>false</IsParams>
-                      <IsGenericType>false</IsGenericType>
-                      <IsGenericParameter>true</IsGenericParameter>
-                      <GenericType>Empty</GenericType>
-                      <Value xsi:type="xsd:string" />
                     </BusinessRuleConstructorParameter>
                   </ConstructorParameters>
                 </BusinessRuleConstructor>
@@ -2130,20 +2294,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -2191,20 +2365,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -2353,40 +2537,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -2481,20 +2685,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -2542,20 +2756,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -2642,40 +2866,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -2772,40 +3016,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -2938,40 +3202,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -3122,20 +3406,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3183,20 +3477,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3244,20 +3548,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3305,20 +3619,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3366,20 +3690,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3430,40 +3764,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -3532,20 +3886,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3555,94 +3919,8 @@
           <ParentLoadProperties />
           <LoadParameters>
             <Parameter>
-              <Criteria>
-                <Name>Criteria</Name>
-                <CriteriaClassMode>Simple</CriteriaClassMode>
-                <NestedClass>true</NestedClass>
-                <Properties>
-                  <Property>
-                    <ParameterName>PersonId</ParameterName>
-                    <Name>PersonId</Name>
-                    <PropertyType>Int32</PropertyType>
-                    <ReadOnly>false</ReadOnly>
-                    <Nullable>false</Nullable>
-                    <Summary />
-                    <Remarks />
-                    <DbBindColumn>
-                      <ColumnOriginType>Table</ColumnOriginType>
-                      <DataType>Int32</DataType>
-                      <NativeType>int</NativeType>
-                      <Size>10</Size>
-                      <SpResultIndex>0</SpResultIndex>
-                      <ColumnName>PersonId</ColumnName>
-                      <IsPrimaryKey>true</IsPrimaryKey>
-                      <ObjectName>Persons</ObjectName>
-                      <CatalogName>CslaExtremeDemos</CatalogName>
-                      <SchemaName>dbo</SchemaName>
-                      <IsNullable>false</IsNullable>
-                      <IsIdentity>true</IsIdentity>
-                    </DbBindColumn>
-                    <CustomPropertyType />
-                    <ParameterValue />
-                    <InlineQueryParameter>Plain</InlineQueryParameter>
-                  </Property>
-                </Properties>
-                <CreateOptions>
-                  <Factory>false</Factory>
-                  <AddRemove>false</AddRemove>
-                  <DataPortal>false</DataPortal>
-                  <RunLocal>false</RunLocal>
-                  <Procedure>false</Procedure>
-                  <ProcedureName />
-                  <FactorySuffix />
-                </CreateOptions>
-                <GetOptions>
-                  <Factory>true</Factory>
-                  <AddRemove>false</AddRemove>
-                  <DataPortal>true</DataPortal>
-                  <RunLocal>false</RunLocal>
-                  <Procedure>true</Procedure>
-                  <ProcedureName>GetPerson</ProcedureName>
-                  <FactorySuffix />
-                </GetOptions>
-                <DeleteOptions>
-                  <Factory>false</Factory>
-                  <AddRemove>false</AddRemove>
-                  <DataPortal>false</DataPortal>
-                  <RunLocal>false</RunLocal>
-                  <Procedure>false</Procedure>
-                  <ProcedureName />
-                  <FactorySuffix />
-                </DeleteOptions>
-                <Summary />
-                <Remarks />
-              </Criteria>
-              <Property xsi:type="CriteriaProperty">
-                <ParameterName>PersonId</ParameterName>
-                <Name>PersonId</Name>
-                <PropertyType>Int32</PropertyType>
-                <ReadOnly>false</ReadOnly>
-                <Nullable>false</Nullable>
-                <Summary />
-                <Remarks />
-                <DbBindColumn>
-                  <ColumnOriginType>Table</ColumnOriginType>
-                  <DataType>Int32</DataType>
-                  <NativeType>int</NativeType>
-                  <Size>10</Size>
-                  <SpResultIndex>0</SpResultIndex>
-                  <ColumnName>PersonId</ColumnName>
-                  <IsPrimaryKey>true</IsPrimaryKey>
-                  <ObjectName>Persons</ObjectName>
-                  <CatalogName>CslaExtremeDemos</CatalogName>
-                  <SchemaName>dbo</SchemaName>
-                  <IsNullable>false</IsNullable>
-                  <IsIdentity>true</IsIdentity>
-                </DbBindColumn>
-                <CustomPropertyType />
-                <ParameterValue />
-                <InlineQueryParameter>Plain</InlineQueryParameter>
-              </Property>
+              <CriteriaName>Criteria</CriteriaName>
+              <PropertyName>PersonId</PropertyName>
             </Parameter>
           </LoadParameters>
           <Access>IsPublic</Access>
@@ -3695,20 +3973,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3756,20 +4044,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3817,20 +4115,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3878,20 +4186,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -3939,20 +4257,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4000,20 +4328,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4061,20 +4399,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4122,20 +4470,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4183,20 +4541,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4347,40 +4715,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -4477,40 +4865,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -4605,20 +5013,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4666,20 +5084,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4771,20 +5199,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -4828,40 +5266,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -4958,40 +5416,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -5124,40 +5602,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -5297,20 +5795,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -5358,20 +5866,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -5419,20 +5937,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -5480,20 +6008,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -5544,40 +6082,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -5676,20 +6234,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -5746,10 +6314,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>MaxLength</Name>
               <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <AssemblyFile>C:\VS_GitHub\CslaExtremeDemos\Source\Dependencies\Csla.dll</AssemblyFile>
               <Type>MaxLength</Type>
+              <Name>MaxLength</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1 (Active)</Name>
@@ -5859,20 +6432,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -5927,10 +6510,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>MaxLength</Name>
               <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <AssemblyFile>C:\VS_GitHub\CslaExtremeDemos\Source\Dependencies\Csla.dll</AssemblyFile>
               <Type>MaxLength</Type>
+              <Name>MaxLength</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1 (Active)</Name>
@@ -6040,20 +6628,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -6110,10 +6708,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>MaxLength</Name>
               <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <AssemblyFile>C:\VS_GitHub\CslaExtremeDemos\Source\Dependencies\Csla.dll</AssemblyFile>
               <Type>MaxLength</Type>
+              <Name>MaxLength</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1 (Active)</Name>
@@ -6223,20 +6826,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -6291,10 +6904,15 @@
                 <string>Priority</string>
                 <string>RunMode</string>
               </BaseRuleProperties>
-              <Name>EnumNotZero</Name>
               <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\CslaExtremeDemos.Rules.dll</AssemblyFile>
-              <Type>CslaExtremeDemos.Rules.EnumNotZero</Type>
+              <AssemblyFile>C:\VS_GitHub\CslaExtremeDemos\Source\Dependencies\CslaExtremeDemos.Rules.dll</AssemblyFile>
+              <Type>EnumNotZero</Type>
+              <Name>EnumNotZero</Name>
+              <NumberGenericParameters>0</NumberGenericParameters>
+              <OriginalGenericParameter1 />
+              <OriginalGenericParameter2 />
+              <GenericParameter1 />
+              <GenericParameter2 />
               <Constructors>
                 <BusinessRuleConstructor>
                   <Name>Constructor #1 (Active)</Name>
@@ -6355,20 +6973,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -6416,20 +7044,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -6477,20 +7115,30 @@
           <WriteRoles />
           <ReadAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
           </ReadAuthzRuleType>
           <WriteAuthzRuleType>
             <BaseRuleProperties />
-            <Name />
             <ObjectName />
             <AssemblyFile />
             <Type />
+            <Name />
+            <NumberGenericParameters>0</NumberGenericParameters>
+            <OriginalGenericParameter1 />
+            <OriginalGenericParameter2 />
+            <GenericParameter1 />
+            <GenericParameter2 />
             <Constructors />
             <RuleProperties />
             <CacheResult>false</CacheResult>
@@ -6641,40 +7289,60 @@
       <DeleteRoles />
       <NewAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </NewAuthzRuleType>
       <GetAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </GetAuthzRuleType>
       <UpdateAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
       </UpdateAuthzRuleType>
       <DeleteAuthzRuleType>
         <BaseRuleProperties />
-        <Name />
         <ObjectName />
         <AssemblyFile />
         <Type />
+        <Name />
+        <NumberGenericParameters>0</NumberGenericParameters>
+        <OriginalGenericParameter1 />
+        <OriginalGenericParameter2 />
+        <GenericParameter1 />
+        <GenericParameter2 />
         <Constructors />
         <RuleProperties />
         <CacheResult>false</CacheResult>
@@ -6685,5 +7353,5 @@
   <ConnectionString>Server=(local);Database=CslaExtremeDemos;persist security info=False;user id=sa;password=password_1234;packet size=4096</ConnectionString>
   <ProjectName>CslaExtremeDemos</ProjectName>
   <TargetDirectory>..\Source</TargetDirectory>
-  <FileVersion>4.0.5</FileVersion>
+  <FileVersion>4.0.6</FileVersion>
 </CslaGeneratorUnit>
