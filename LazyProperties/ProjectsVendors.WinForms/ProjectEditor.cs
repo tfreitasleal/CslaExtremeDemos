@@ -91,5 +91,10 @@ namespace ProjectsVendors.WinForms
                 LazyLoadVendors();
             }
         }
+
+        private void vendorsDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }

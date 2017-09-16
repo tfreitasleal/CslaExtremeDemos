@@ -191,6 +191,7 @@
             this.vendorsDataGridView.Name = "vendorsDataGridView";
             this.vendorsDataGridView.Size = new System.Drawing.Size(855, 225);
             this.vendorsDataGridView.TabIndex = 1;
+            this.vendorsDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.vendorsDataGridView_DataError);
             // 
             // vendorIdDataGridViewTextBoxColumn
             // 

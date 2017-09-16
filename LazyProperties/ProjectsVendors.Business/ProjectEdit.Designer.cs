@@ -94,11 +94,9 @@ namespace ProjectsVendors.Business
             get
             {
 #if ASYNC
-                return LazyGetPropertyAsync(VendorsProperty,
-                    DataPortal.FetchAsync<VendorCollection>(ReadProperty(ProjectIdProperty)));
+                return LazyGetPropertyAsync(VendorsProperty, DataPortal.FetchAsync<VendorCollection>(ReadProperty(ProjectIdProperty)));
 #else
-                return LazyGetProperty(VendorsProperty,
-                    () => DataPortal.Fetch<VendorCollection>(ReadProperty(ProjectIdProperty)));
+                return LazyGetProperty(VendorsProperty, () => DataPortal.Fetch<VendorCollection>(ReadProperty(ProjectIdProperty)));
 #endif
             }
             private set { LoadProperty(VendorsProperty, value); }
