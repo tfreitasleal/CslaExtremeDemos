@@ -15,10 +15,10 @@ namespace ProjectsVendors.DataAccess
         public int ProjectId { get; set; }
 
         /// <summary>
-        /// Gets or sets the Projec Name.
+        /// Gets or sets the Project Name.
         /// </summary>
-        /// <value>The Projec Name.</value>
-        public string ProjecName { get; set; }
+        /// <value>The Project Name.</value>
+        public string ProjectName { get; set; }
 
         /// <summary>
         /// Gets or sets the Start Date.

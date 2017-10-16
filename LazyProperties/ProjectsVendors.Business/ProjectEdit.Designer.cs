@@ -40,17 +40,17 @@ namespace ProjectsVendors.Business
         }
 
         /// <summary>
-        /// Maintains metadata about <see cref="ProjecName"/> property.
+        /// Maintains metadata about <see cref="ProjectName"/> property.
         /// </summary>
-        public static readonly PropertyInfo<string> ProjecNameProperty = RegisterProperty<string>(p => p.ProjecName, "Projec Name");
+        public static readonly PropertyInfo<string> ProjectNameProperty = RegisterProperty<string>(p => p.ProjectName, "Project Name");
         /// <summary>
-        /// Gets or sets the Projec Name.
+        /// Gets or sets the Project Name.
         /// </summary>
-        /// <value>The Projec Name.</value>
-        public string ProjecName
+        /// <value>The Project Name.</value>
+        public string ProjectName
         {
-            get { return GetProperty(ProjecNameProperty); }
-            set { SetProperty(ProjecNameProperty, value); }
+            get { return GetProperty(ProjectNameProperty); }
+            set { SetProperty(ProjectNameProperty, value); }
         }
 
         /// <summary>
@@ -220,7 +220,7 @@ namespace ProjectsVendors.Business
         {
             // Value properties
             LoadProperty(ProjectIdProperty, data.ProjectId);
-            LoadProperty(ProjecNameProperty, data.ProjecName);
+            LoadProperty(ProjectNameProperty, data.ProjectName);
             LoadProperty(StartDateProperty, data.StartDate);
             LoadProperty(DeliveryDateProperty, data.DeliveryDate);
             var args = new DataPortalHookArgs(data);
@@ -234,7 +234,7 @@ namespace ProjectsVendors.Business
         protected override void DataPortal_Insert()
         {
             var dto = new ProjectEditDto();
-            dto.ProjecName = ProjecName;
+            dto.ProjectName = ProjectName;
             dto.StartDate = ReadProperty(StartDateProperty);
             dto.DeliveryDate = ReadProperty(DeliveryDateProperty);
             using (var dalManager = DalFactoryProjectsVendors.GetManager())
@@ -262,7 +262,7 @@ namespace ProjectsVendors.Business
         {
             var dto = new ProjectEditDto();
             dto.ProjectId = ProjectId;
-            dto.ProjecName = ProjecName;
+            dto.ProjectName = ProjectName;
             dto.StartDate = ReadProperty(StartDateProperty);
             dto.DeliveryDate = ReadProperty(DeliveryDateProperty);
             using (var dalManager = DalFactoryProjectsVendors.GetManager())

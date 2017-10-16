@@ -43,7 +43,7 @@ namespace ProjectsVendors.DataAccess.Sql
                 if (dr.Read())
                 {
                     projectEdit.ProjectId = dr.GetInt32("ProjectId");
-                    projectEdit.ProjecName = dr.GetString("ProjecName");
+                    projectEdit.ProjectName = dr.GetString("ProjectName");
                     projectEdit.StartDate = dr.GetSmartDate("StartDate", true);
                     projectEdit.DeliveryDate = dr.GetSmartDate("DeliveryDate", true);
                 }
@@ -64,7 +64,7 @@ namespace ProjectsVendors.DataAccess.Sql
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ProjectId", projectEdit.ProjectId).Direction = ParameterDirection.Output;
-                    cmd.Parameters.AddWithValue("@ProjecName", projectEdit.ProjecName).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@ProjectName", projectEdit.ProjectName).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@StartDate", projectEdit.StartDate.DBValue).DbType = DbType.DateTime2;
                     cmd.Parameters.AddWithValue("@DeliveryDate", projectEdit.DeliveryDate.DBValue).DbType = DbType.DateTime2;
                     cmd.ExecuteNonQuery();
@@ -87,7 +87,7 @@ namespace ProjectsVendors.DataAccess.Sql
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ProjectId", projectEdit.ProjectId).DbType = DbType.Int32;
-                    cmd.Parameters.AddWithValue("@ProjecName", projectEdit.ProjecName).DbType = DbType.String;
+                    cmd.Parameters.AddWithValue("@ProjectName", projectEdit.ProjectName).DbType = DbType.String;
                     cmd.Parameters.AddWithValue("@StartDate", projectEdit.StartDate.DBValue).DbType = DbType.DateTime2;
                     cmd.Parameters.AddWithValue("@DeliveryDate", projectEdit.DeliveryDate.DBValue).DbType = DbType.DateTime2;
                     var rowsAffected = cmd.ExecuteNonQuery();
