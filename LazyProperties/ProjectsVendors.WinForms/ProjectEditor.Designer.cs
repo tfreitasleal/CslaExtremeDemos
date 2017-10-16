@@ -1,4 +1,6 @@
-﻿namespace ProjectsVendors.WinForms
+﻿using System.Windows.Forms;
+
+namespace ProjectsVendors.WinForms
 {
     partial class ProjectEditor
     {
@@ -51,6 +53,8 @@
             this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
+            this.isLazyloadedLabel = new System.Windows.Forms.Label();
+            this.isLazyloaded = new System.Windows.Forms.Label();
             projectIdLabel = new System.Windows.Forms.Label();
             deliveryDateLabel = new System.Windows.Forms.Label();
             projecNameLabel = new System.Windows.Forms.Label();
@@ -168,7 +172,7 @@
             this.vendorsTabPage.Controls.Add(this.vendorsDataGridView);
             this.vendorsTabPage.Location = new System.Drawing.Point(4, 22);
             this.vendorsTabPage.Name = "vendorsTabPage";
-            this.vendorsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.vendorsTabPage.Padding = new System.Windows.Forms.Padding(10);
             this.vendorsTabPage.Size = new System.Drawing.Size(898, 248);
             this.vendorsTabPage.TabIndex = 1;
             this.vendorsTabPage.Text = "Vendors";
@@ -187,6 +191,7 @@
             this.isPrimaryVendorDataGridViewCheckBoxColumn,
             this.lastUpdatedDataGridViewTextBoxColumn});
             this.vendorsDataGridView.DataSource = this.projectEditBindingSource;
+            this.vendorsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vendorsDataGridView.Location = new System.Drawing.Point(23, 18);
             this.vendorsDataGridView.Name = "vendorsDataGridView";
             this.vendorsDataGridView.Size = new System.Drawing.Size(855, 225);
@@ -267,10 +272,31 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
+            // isLazyloadedLabel
+            // 
+            this.isLazyloadedLabel.AutoSize = true;
+            this.isLazyloadedLabel.Location = new System.Drawing.Point(8, 311);
+            this.isLazyloadedLabel.Name = "isLazyloadedLabel";
+            this.isLazyloadedLabel.Size = new System.Drawing.Size(83, 13);
+            this.isLazyloadedLabel.TabIndex = 13;
+            this.isLazyloadedLabel.Text = "Lazyload status:";
+            // 
+            // isLazyloaded
+            // 
+            this.isLazyloaded.AutoSize = true;
+            this.isLazyloaded.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "IsLazyloaded", true));
+            this.isLazyloaded.Location = new System.Drawing.Point(100, 311);
+            this.isLazyloaded.Name = "isLazyloaded";
+            this.isLazyloaded.Size = new System.Drawing.Size(59, 13);
+            this.isLazyloaded.TabIndex = 14;
+            this.isLazyloaded.Text = "Not loaded";
+            // 
             // ProjectEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.isLazyloaded);
+            this.Controls.Add(this.isLazyloadedLabel);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.cancelButton);
@@ -284,6 +310,7 @@
             this.vendorsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.vendorsDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -307,5 +334,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vendorEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isPrimaryVendorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label isLazyloadedLabel;
+        private System.Windows.Forms.Label isLazyloaded;
     }
 }
