@@ -13,7 +13,7 @@ AS
         /* Get ProjectEdit from table */
         SELECT
             [Projects].[ProjectId],
-            [Projects].[ProjecName],
+            [Projects].[ProjectName],
             [Projects].[StartDate],
             [Projects].[DeliveryDate]
         FROM [dbo].[Projects]

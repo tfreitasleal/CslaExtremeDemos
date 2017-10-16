@@ -5,7 +5,7 @@ GO
 
 CREATE PROCEDURE [dbo].[AddProjectEdit]
     @ProjectId int OUTPUT,
-    @ProjecName varchar(50),
+    @ProjectName varchar(50),
     @StartDate datetime2,
     @DeliveryDate datetime2
 AS
@@ -16,13 +16,13 @@ AS
         /* Insert object into dbo.Projects */
         INSERT INTO [dbo].[Projects]
         (
-            [ProjecName],
+            [ProjectName],
             [StartDate],
             [DeliveryDate]
         )
         VALUES
         (
-            @ProjecName,
+            @ProjectName,
             @StartDate,
             @DeliveryDate
         )

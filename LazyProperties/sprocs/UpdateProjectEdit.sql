@@ -5,7 +5,7 @@ GO
 
 CREATE PROCEDURE [dbo].[UpdateProjectEdit]
     @ProjectId int,
-    @ProjecName varchar(50),
+    @ProjectName varchar(50),
     @StartDate datetime2,
     @DeliveryDate datetime2
 AS
@@ -28,7 +28,7 @@ AS
         /* Update object in dbo.Projects */
         UPDATE [dbo].[Projects]
         SET
-            [ProjecName] = @ProjecName,
+            [ProjectName] = @ProjectName,
             [StartDate] = @StartDate,
             [DeliveryDate] = @DeliveryDate
         WHERE
