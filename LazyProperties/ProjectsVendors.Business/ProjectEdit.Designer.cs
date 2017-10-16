@@ -82,6 +82,20 @@ namespace ProjectsVendors.Business
         }
 
         /// <summary>
+        /// Maintains metadata about <see cref="IsLazyloaded"/> property.
+        /// </summary>
+        public static readonly PropertyInfo<string> IsLazyloadedProperty = RegisterProperty<string>(p => p.IsLazyloaded, "Is Lazyloaded");
+        /// <summary>
+        /// Gets or sets the Is Lazyloaded.
+        /// </summary>
+        /// <value>The Is Lazyloaded.</value>
+        public string IsLazyloaded
+        {
+            get { return GetProperty(IsLazyloadedProperty); }
+            set { SetProperty(IsLazyloadedProperty, value); }
+        }
+
+        /// <summary>
         /// Maintains metadata about child <see cref="Vendors"/> property.
         /// </summary>
         public static readonly PropertyInfo<VendorCollection> VendorsProperty = RegisterProperty<VendorCollection>(p => p.Vendors, "Vendors", RelationshipTypes.Child | RelationshipTypes.LazyLoad);
