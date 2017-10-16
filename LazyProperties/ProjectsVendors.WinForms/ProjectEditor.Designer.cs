@@ -33,13 +33,13 @@ namespace ProjectsVendors.WinForms
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label projectIdLabel;
             System.Windows.Forms.Label deliveryDateLabel;
-            System.Windows.Forms.Label projecNameLabel;
+            System.Windows.Forms.Label projectNameLabel;
             System.Windows.Forms.Label startDateLabel;
             this.projectEditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl = new System.Windows.Forms.TabControl();
             this.projectTabPage = new System.Windows.Forms.TabPage();
             this.projectIdTextBox = new System.Windows.Forms.TextBox();
-            this.projecNameTextBox = new System.Windows.Forms.TextBox();
+            this.projectNameTextBox = new System.Windows.Forms.TextBox();
             this.deliveryDateTextBox = new System.Windows.Forms.TextBox();
             this.startDateTextBox = new System.Windows.Forms.TextBox();
             this.vendorsTabPage = new System.Windows.Forms.TabPage();
@@ -57,7 +57,7 @@ namespace ProjectsVendors.WinForms
             this.isLazyloaded = new System.Windows.Forms.Label();
             projectIdLabel = new System.Windows.Forms.Label();
             deliveryDateLabel = new System.Windows.Forms.Label();
-            projecNameLabel = new System.Windows.Forms.Label();
+            projectNameLabel = new System.Windows.Forms.Label();
             startDateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.projectEditBindingSource)).BeginInit();
             this.tabControl.SuspendLayout();
@@ -84,14 +84,14 @@ namespace ProjectsVendors.WinForms
             deliveryDateLabel.TabIndex = 7;
             deliveryDateLabel.Text = "Delivery Date:";
             // 
-            // projecNameLabel
+            // projectNameLabel
             // 
-            projecNameLabel.AutoSize = true;
-            projecNameLabel.Location = new System.Drawing.Point(235, 21);
-            projecNameLabel.Name = "projecNameLabel";
-            projecNameLabel.Size = new System.Drawing.Size(71, 13);
-            projecNameLabel.TabIndex = 3;
-            projecNameLabel.Text = "Projec Name:";
+            projectNameLabel.AutoSize = true;
+            projectNameLabel.Location = new System.Drawing.Point(235, 21);
+            projectNameLabel.Name = "projectNameLabel";
+            projectNameLabel.Size = new System.Drawing.Size(71, 13);
+            projectNameLabel.TabIndex = 3;
+            projectNameLabel.Text = "Project Name:";
             // 
             // startDateLabel
             // 
@@ -121,10 +121,10 @@ namespace ProjectsVendors.WinForms
             // 
             this.projectTabPage.Controls.Add(this.projectIdTextBox);
             this.projectTabPage.Controls.Add(projectIdLabel);
-            this.projectTabPage.Controls.Add(this.projecNameTextBox);
+            this.projectTabPage.Controls.Add(this.projectNameTextBox);
             this.projectTabPage.Controls.Add(deliveryDateLabel);
             this.projectTabPage.Controls.Add(this.deliveryDateTextBox);
-            this.projectTabPage.Controls.Add(projecNameLabel);
+            this.projectTabPage.Controls.Add(projectNameLabel);
             this.projectTabPage.Controls.Add(this.startDateTextBox);
             this.projectTabPage.Controls.Add(startDateLabel);
             this.projectTabPage.Location = new System.Drawing.Point(4, 22);
@@ -143,13 +143,13 @@ namespace ProjectsVendors.WinForms
             this.projectIdTextBox.Size = new System.Drawing.Size(80, 20);
             this.projectIdTextBox.TabIndex = 2;
             // 
-            // projecNameTextBox
+            // projectNameTextBox
             // 
-            this.projecNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "ProjecName", true));
-            this.projecNameTextBox.Location = new System.Drawing.Point(317, 18);
-            this.projecNameTextBox.Name = "projecNameTextBox";
-            this.projecNameTextBox.Size = new System.Drawing.Size(120, 20);
-            this.projecNameTextBox.TabIndex = 4;
+            this.projectNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "ProjectName", true));
+            this.projectNameTextBox.Location = new System.Drawing.Point(317, 18);
+            this.projectNameTextBox.Name = "projectNameTextBox";
+            this.projectNameTextBox.Size = new System.Drawing.Size(120, 20);
+            this.projectNameTextBox.TabIndex = 4;
             // 
             // deliveryDateTextBox
             // 
@@ -289,7 +289,6 @@ namespace ProjectsVendors.WinForms
             this.isLazyloaded.Name = "isLazyloaded";
             this.isLazyloaded.Size = new System.Drawing.Size(59, 13);
             this.isLazyloaded.TabIndex = 14;
-            this.isLazyloaded.Text = "Not loaded";
             // 
             // ProjectEditor
             // 
@@ -321,7 +320,7 @@ namespace ProjectsVendors.WinForms
         private System.Windows.Forms.TabPage projectTabPage;
         private System.Windows.Forms.TabPage vendorsTabPage;
         private System.Windows.Forms.TextBox projectIdTextBox;
-        private System.Windows.Forms.TextBox projecNameTextBox;
+        private System.Windows.Forms.TextBox projectNameTextBox;
         private System.Windows.Forms.TextBox startDateTextBox;
         private System.Windows.Forms.TextBox deliveryDateTextBox;
         private System.Windows.Forms.Button cancelButton;
