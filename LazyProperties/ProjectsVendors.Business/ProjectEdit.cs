@@ -39,10 +39,10 @@ namespace ProjectsVendors.Business
 
         #region Implementation of DataPortal Hooks
 
-        //partial void OnCreate(DataPortalHookArgs args)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        partial void OnCreate(DataPortalHookArgs args)
+        {
+            LoadProperty(IsLazyloadedProperty, "Not Loaded");
+        }
 
         //partial void OnDeletePre(DataPortalHookArgs args)
         //{
@@ -59,10 +59,10 @@ namespace ProjectsVendors.Business
         //    throw new NotImplementedException();
         //}
 
-        //partial void OnFetchPost(DataPortalHookArgs args)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        partial void OnFetchPost(DataPortalHookArgs args)
+        {
+            LoadProperty(IsLazyloadedProperty, "Not Loaded");
+        }
 
         //partial void OnFetchRead(DataPortalHookArgs args)
         //{

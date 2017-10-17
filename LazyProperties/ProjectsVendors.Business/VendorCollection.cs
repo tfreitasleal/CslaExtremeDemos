@@ -1,8 +1,15 @@
+using Csla.Core;
 
 namespace ProjectsVendors.Business
 {
     public partial class VendorCollection
     {
+        protected override void SetParent(IParent parent)
+        {
+            base.SetParent(parent);
+
+            ((ProjectEdit)Parent).IsLazyloaded = "Loaded";
+        }
 
         #region OnDeserialized actions
 
