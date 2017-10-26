@@ -7352,6 +7352,6 @@
   <AssociativeEntities />
   <ConnectionString>Server=(local);Database=CslaExtremeDemos;persist security info=False;user id=sa;password=password_1234;packet size=4096</ConnectionString>
   <ProjectName>CslaExtremeDemos-VB</ProjectName>
-  <TargetDirectory>..\Source</TargetDirectory>
+  <TargetDirectory>..\CslaExtremeDemos</TargetDirectory>
   <FileVersion>4.0.6</FileVersion>
 </CslaGeneratorUnit>
