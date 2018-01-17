@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaExtremeDemos.WindowsFor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaExtremeDemos.Business", "CslaExtremeDemos.Business\CslaExtremeDemos.Business.csproj", "{6E954878-DA34-488E-B517-65E60DF90046}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CslaExtremeDemos.BusinessVB", "CslaExtremeDemos.BusinessVB\CslaExtremeDemos.BusinessVB.vbproj", "{CC3EFF17-E1D4-4477-832F-F8CACA9A66C2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CslaExtremeDemos.Rules", "CslaExtremeDemos.Rules\CslaExtremeDemos.Rules.csproj", "{1E60A009-4AE4-41F1-A03E-3FA0619ED7F1}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{6E954878-DA34-488E-B517-65E60DF90046}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E954878-DA34-488E-B517-65E60DF90046}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E954878-DA34-488E-B517-65E60DF90046}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC3EFF17-E1D4-4477-832F-F8CACA9A66C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC3EFF17-E1D4-4477-832F-F8CACA9A66C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC3EFF17-E1D4-4477-832F-F8CACA9A66C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC3EFF17-E1D4-4477-832F-F8CACA9A66C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E60A009-4AE4-41F1-A03E-3FA0619ED7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E60A009-4AE4-41F1-A03E-3FA0619ED7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E60A009-4AE4-41F1-A03E-3FA0619ED7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
