@@ -61,7 +61,6 @@
     <PropertyMode>Default</PropertyMode>
     <GenerateAuthorization>None</GenerateAuthorization>
     <HeaderVerbosity>None</HeaderVerbosity>
-    <UseSingleCriteria>false</UseSingleCriteria>
     <UsePublicPropertyInfo>true</UsePublicPropertyInfo>
     <UseChildFactory>false</UseChildFactory>
     <ForceReadOnlyProperties>true</ForceReadOnlyProperties>
@@ -1690,7 +1689,7 @@
                 <string>RunMode</string>
               </BaseRuleProperties>
               <ObjectName />
-              <AssemblyFile>C:\VS Projects\CslaGenFork 4.5\TestProject\Dependencies\Csla.dll</AssemblyFile>
+              <AssemblyFile>C:\VS_GitHub\CslaGenFork\trunk\CoverageTest\Dependencies\Csla.dll</AssemblyFile>
               <Type>MaxLength</Type>
               <Name>MaxLength</Name>
               <NumberGenericParameters>0</NumberGenericParameters>
