@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A79C7FED-8A06-4E72-990A-765AB1941CBE}</ProjectGuid>
+    <ProjectGuid>{049508E5-8B68-4B7B-B2AB-6716525EDA74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjectsVendors.Business</RootNamespace>
-    <AssemblyName>ProjectsVendors.Business</AssemblyName>
+    <RootNamespace>ProjectsVendors.DataAccess</RootNamespace>
+    <AssemblyName>ProjectsVendors.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;WINFORMS</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -25,7 +25,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;WINFORMS</DefineConstants>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -35,43 +35,43 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataPortalHookArgs.cs" />
-    <Compile Include="ProjectEdit.cs" />
-    <Compile Include="ProjectEdit.Designer.cs">
-      <DependentUpon>ProjectEdit.cs</DependentUpon>
+    <Compile Include="DalFactoryProjectsVendors.cs" />
+    <Compile Include="DataNotFoundException.cs" />
+    <Compile Include="IDalManagerProjectsVendors.cs" />
+    <Compile Include="IProjectEditDal.cs" />
+    <Compile Include="IProjectEditDal.Designer.cs">
+      <DependentUpon>IProjectEditDal.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProjectInfo.cs" />
-    <Compile Include="ProjectInfo.Designer.cs">
-      <DependentUpon>ProjectInfo.cs</DependentUpon>
+    <Compile Include="IProjectListDal.cs" />
+    <Compile Include="IProjectListDal.Designer.cs">
+      <DependentUpon>IProjectListDal.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProjectList.cs" />
-    <Compile Include="ProjectList.Designer.cs">
-      <DependentUpon>ProjectList.cs</DependentUpon>
+    <Compile Include="IVendorCollectionDal.cs" />
+    <Compile Include="IVendorCollectionDal.Designer.cs">
+      <DependentUpon>IVendorCollectionDal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IVendorItemDal.cs" />
+    <Compile Include="IVendorItemDal.Designer.cs">
+      <DependentUpon>IVendorItemDal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectEditDto.cs" />
+    <Compile Include="ProjectEditDto.Designer.cs">
+      <DependentUpon>ProjectEditDto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInfoDto.cs" />
+    <Compile Include="ProjectInfoDto.Designer.cs">
+      <DependentUpon>ProjectInfoDto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VendorCollection.cs" />
-    <Compile Include="VendorCollection.Designer.cs">
-      <DependentUpon>VendorCollection.cs</DependentUpon>
+    <Compile Include="VendorItemDto.cs" />
+    <Compile Include="VendorItemDto.Designer.cs">
+      <DependentUpon>VendorItemDto.cs</DependentUpon>
     </Compile>
-    <Compile Include="VendorItem.cs" />
-    <Compile Include="VendorItem.Designer.cs">
-      <DependentUpon>VendorItem.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ProjectsVendors.DataAccess\ProjectsVendors.DataAccess.csproj">
-      <Project>{049508e5-8b68-4b7b-b2ab-6716525eda74}</Project>
-      <Name>ProjectsVendors.DataAccess</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
