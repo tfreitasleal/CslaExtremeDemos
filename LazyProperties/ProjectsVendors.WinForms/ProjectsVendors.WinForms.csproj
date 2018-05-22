@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjectSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectSelect.Designer.cs">
+      <DependentUpon>ProjectSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
       <DependentUpon>ProjectEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ProjectSelect.resx">
+      <DependentUpon>ProjectSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +94,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjectsVendors.Business.ProjectEdit.datasource" />
+    <None Include="Properties\DataSources\ProjectsVendors.Business.ProjectList.datasource" />
     <None Include="Properties\DataSources\ProjectsVendors.Business.VendorCollection.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

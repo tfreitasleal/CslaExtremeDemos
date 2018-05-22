@@ -17,6 +17,7 @@
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -28,38 +29,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.projectIdLabel = new System.Windows.Forms.Label();
-            this.projectId = new System.Windows.Forms.TextBox();
-            this.editProject = new System.Windows.Forms.Button();
+            this.selectProject = new System.Windows.Forms.Button();
             this.workspace = new System.Windows.Forms.Panel();
             this.newProject = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // projectIdLabel
+            // selectProject
             // 
-            this.projectIdLabel.AutoSize = true;
-            this.projectIdLabel.Location = new System.Drawing.Point(12, 15);
-            this.projectIdLabel.Name = "projectIdLabel";
-            this.projectIdLabel.Size = new System.Drawing.Size(52, 13);
-            this.projectIdLabel.TabIndex = 0;
-            this.projectIdLabel.Text = "Project Id";
-            // 
-            // projectId
-            // 
-            this.projectId.Location = new System.Drawing.Point(73, 12);
-            this.projectId.Name = "projectId";
-            this.projectId.Size = new System.Drawing.Size(100, 20);
-            this.projectId.TabIndex = 1;
-            // 
-            // editProject
-            // 
-            this.editProject.Location = new System.Drawing.Point(195, 10);
-            this.editProject.Name = "editProject";
-            this.editProject.Size = new System.Drawing.Size(116, 23);
-            this.editProject.TabIndex = 2;
-            this.editProject.Text = "Edit Project";
-            this.editProject.UseVisualStyleBackColor = true;
-            this.editProject.Click += new System.EventHandler(this.editProject_Click);
+            this.selectProject.Location = new System.Drawing.Point(10, 10);
+            this.selectProject.Name = "selectProject";
+            this.selectProject.Size = new System.Drawing.Size(116, 23);
+            this.selectProject.TabIndex = 2;
+            this.selectProject.Text = "Select Project";
+            this.selectProject.UseVisualStyleBackColor = true;
+            this.selectProject.Click += new System.EventHandler(this.selectProject_Click);
             // 
             // workspace
             // 
@@ -72,7 +55,7 @@
             // newProject
             // 
             this.newProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.newProject.Location = new System.Drawing.Point(786, 10);
+            this.newProject.Location = new System.Drawing.Point(145, 10);
             this.newProject.Name = "newProject";
             this.newProject.Size = new System.Drawing.Size(116, 23);
             this.newProject.TabIndex = 4;
@@ -82,31 +65,25 @@
             // 
             // MainForm
             // 
-            this.AcceptButton = this.editProject;
+            this.AcceptButton = this.selectProject;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 394);
             this.Controls.Add(this.newProject);
             this.Controls.Add(this.workspace);
-            this.Controls.Add(this.editProject);
-            this.Controls.Add(this.projectId);
-            this.Controls.Add(this.projectIdLabel);
+            this.Controls.Add(this.selectProject);
             this.MaximumSize = new System.Drawing.Size(930, 433);
             this.MinimumSize = new System.Drawing.Size(930, 433);
             this.Name = "MainForm";
             this.Text = "Main Form";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label projectIdLabel;
-        private System.Windows.Forms.TextBox projectId;
-        private System.Windows.Forms.Button editProject;
+        private System.Windows.Forms.Button selectProject;
         private System.Windows.Forms.Panel workspace;
         private System.Windows.Forms.Button newProject;
     }
 }
-

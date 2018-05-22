@@ -52,6 +52,10 @@
     <Compile Include="IProjectEditDal.Designer.cs">
       <DependentUpon>IProjectEditDal.cs</DependentUpon>
     </Compile>
+    <Compile Include="IProjectListDal.cs" />
+    <Compile Include="IProjectListDal.Designer.cs">
+      <DependentUpon>IProjectListDal.cs</DependentUpon>
+    </Compile>
     <Compile Include="IVendorCollectionDal.cs" />
     <Compile Include="IVendorCollectionDal.Designer.cs">
       <DependentUpon>IVendorCollectionDal.cs</DependentUpon>
@@ -63,6 +67,10 @@
     <Compile Include="ProjectEditDto.cs" />
     <Compile Include="ProjectEditDto.Designer.cs">
       <DependentUpon>ProjectEditDto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInfoDto.cs" />
+    <Compile Include="ProjectInfoDto.Designer.cs">
+      <DependentUpon>ProjectInfoDto.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VendorItemDto.cs" />

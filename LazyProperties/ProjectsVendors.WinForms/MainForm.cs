@@ -10,16 +10,20 @@ namespace ProjectsVendors.WinForms
             InitializeComponent();
         }
 
-        private void editProject_Click(object sender, EventArgs e)
+        private void selectProject_Click(object sender, EventArgs e)
         {
-            var project = Convert.ToInt32(projectId.Text);
-            CleanWorkspace();
-            workspace.Controls.Add(new ProjectEditor(project));
+            using (ProjectSelect dlg = new ProjectSelect())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    CleanWorkspace();
+                    workspace.Controls.Add(new ProjectEditor(dlg.ProjectId));
+                }
+            }
         }
 
         private void newProject_Click(object sender, EventArgs e)
         {
-            projectId.Text = string.Empty;
             CleanWorkspace();
             workspace.Controls.Add(new ProjectEditor(-1));
         }
@@ -30,6 +34,7 @@ namespace ProjectsVendors.WinForms
             {
                 workspaceControl.Dispose();
             }
+
             workspace.Controls.Clear();
         }
     }

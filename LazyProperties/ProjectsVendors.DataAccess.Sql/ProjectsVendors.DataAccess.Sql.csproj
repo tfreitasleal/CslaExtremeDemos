@@ -64,6 +64,10 @@
     <Compile Include="ProjectEditDal.Designer.cs">
       <DependentUpon>ProjectEditDal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectListDal.cs" />
+    <Compile Include="ProjectListDal.Designer.cs">
+      <DependentUpon>ProjectListDal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VendorCollectionDal.cs" />
     <Compile Include="VendorCollectionDal.Designer.cs">

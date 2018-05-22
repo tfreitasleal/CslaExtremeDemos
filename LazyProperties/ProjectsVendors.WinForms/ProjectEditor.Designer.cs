@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace ProjectsVendors.WinForms
+﻿namespace ProjectsVendors.WinForms
 {
     partial class ProjectEditor
     {
@@ -35,7 +33,7 @@ namespace ProjectsVendors.WinForms
             System.Windows.Forms.Label deliveryDateLabel;
             System.Windows.Forms.Label projectNameLabel;
             System.Windows.Forms.Label startDateLabel;
-            this.projectEditBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl = new System.Windows.Forms.TabControl();
             this.projectTabPage = new System.Windows.Forms.TabPage();
             this.projectIdTextBox = new System.Windows.Forms.TextBox();
@@ -44,6 +42,12 @@ namespace ProjectsVendors.WinForms
             this.startDateTextBox = new System.Windows.Forms.TextBox();
             this.vendorsTabPage = new System.Windows.Forms.TabPage();
             this.vendorsDataGridView = new System.Windows.Forms.DataGridView();
+            this.VendorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.okButton = new System.Windows.Forms.Button();
+            this.isLazyloadedLabel = new System.Windows.Forms.Label();
+            this.isLazyloaded = new System.Windows.Forms.Label();
+            this.bindingSourceRefresh = new Csla.Windows.BindingSourceRefresh(this.components);
             this.vendorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vendorContactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,19 +55,17 @@ namespace ProjectsVendors.WinForms
             this.vendorEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isPrimaryVendorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lastUpdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.okButton = new System.Windows.Forms.Button();
-            this.isLazyloadedLabel = new System.Windows.Forms.Label();
-            this.isLazyloaded = new System.Windows.Forms.Label();
             projectIdLabel = new System.Windows.Forms.Label();
             deliveryDateLabel = new System.Windows.Forms.Label();
             projectNameLabel = new System.Windows.Forms.Label();
             startDateLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.projectEditBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).BeginInit();
             this.tabControl.SuspendLayout();
             this.projectTabPage.SuspendLayout();
             this.vendorsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vendorsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VendorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // projectIdLabel
@@ -89,7 +91,7 @@ namespace ProjectsVendors.WinForms
             projectNameLabel.AutoSize = true;
             projectNameLabel.Location = new System.Drawing.Point(235, 21);
             projectNameLabel.Name = "projectNameLabel";
-            projectNameLabel.Size = new System.Drawing.Size(71, 13);
+            projectNameLabel.Size = new System.Drawing.Size(74, 13);
             projectNameLabel.TabIndex = 3;
             projectNameLabel.Text = "Project Name:";
             // 
@@ -102,9 +104,10 @@ namespace ProjectsVendors.WinForms
             startDateLabel.TabIndex = 5;
             startDateLabel.Text = "Start Date:";
             // 
-            // projectEditBindingSource
+            // ProjectBindingSource
             // 
-            this.projectEditBindingSource.DataSource = typeof(ProjectsVendors.Business.ProjectEdit);
+            this.ProjectBindingSource.DataSource = typeof(ProjectsVendors.Business.ProjectEdit);
+            this.bindingSourceRefresh.SetReadValuesOnChange(this.ProjectBindingSource, true);
             // 
             // tabControl
             // 
@@ -137,7 +140,7 @@ namespace ProjectsVendors.WinForms
             // 
             // projectIdTextBox
             // 
-            this.projectIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "ProjectId", true));
+            this.projectIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProjectBindingSource, "ProjectId", true));
             this.projectIdTextBox.Location = new System.Drawing.Point(92, 18);
             this.projectIdTextBox.Name = "projectIdTextBox";
             this.projectIdTextBox.Size = new System.Drawing.Size(80, 20);
@@ -145,7 +148,7 @@ namespace ProjectsVendors.WinForms
             // 
             // projectNameTextBox
             // 
-            this.projectNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "ProjectName", true));
+            this.projectNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProjectBindingSource, "ProjectName", true));
             this.projectNameTextBox.Location = new System.Drawing.Point(317, 18);
             this.projectNameTextBox.Name = "projectNameTextBox";
             this.projectNameTextBox.Size = new System.Drawing.Size(120, 20);
@@ -153,7 +156,7 @@ namespace ProjectsVendors.WinForms
             // 
             // deliveryDateTextBox
             // 
-            this.deliveryDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "DeliveryDate", true));
+            this.deliveryDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProjectBindingSource, "DeliveryDate", true));
             this.deliveryDateTextBox.Location = new System.Drawing.Point(317, 66);
             this.deliveryDateTextBox.Name = "deliveryDateTextBox";
             this.deliveryDateTextBox.Size = new System.Drawing.Size(100, 20);
@@ -161,7 +164,7 @@ namespace ProjectsVendors.WinForms
             // 
             // startDateTextBox
             // 
-            this.startDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "StartDate", true));
+            this.startDateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProjectBindingSource, "StartDate", true));
             this.startDateTextBox.Location = new System.Drawing.Point(92, 66);
             this.startDateTextBox.Name = "startDateTextBox";
             this.startDateTextBox.Size = new System.Drawing.Size(100, 20);
@@ -190,67 +193,19 @@ namespace ProjectsVendors.WinForms
             this.vendorEmailDataGridViewTextBoxColumn,
             this.isPrimaryVendorDataGridViewCheckBoxColumn,
             this.lastUpdatedDataGridViewTextBoxColumn});
-            this.vendorsDataGridView.DataSource = this.projectEditBindingSource;
+            this.vendorsDataGridView.DataSource = this.VendorsBindingSource;
             this.vendorsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vendorsDataGridView.Location = new System.Drawing.Point(23, 18);
+            this.vendorsDataGridView.Location = new System.Drawing.Point(10, 10);
             this.vendorsDataGridView.Name = "vendorsDataGridView";
-            this.vendorsDataGridView.Size = new System.Drawing.Size(855, 225);
+            this.vendorsDataGridView.Size = new System.Drawing.Size(878, 228);
             this.vendorsDataGridView.TabIndex = 1;
             this.vendorsDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.vendorsDataGridView_DataError);
             // 
-            // vendorIdDataGridViewTextBoxColumn
+            // VendorsBindingSource
             // 
-            this.vendorIdDataGridViewTextBoxColumn.DataPropertyName = "VendorId";
-            this.vendorIdDataGridViewTextBoxColumn.HeaderText = "Vendor Id";
-            this.vendorIdDataGridViewTextBoxColumn.Name = "vendorIdDataGridViewTextBoxColumn";
-            this.vendorIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vendorNameDataGridViewTextBoxColumn
-            // 
-            this.vendorNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.vendorNameDataGridViewTextBoxColumn.DataPropertyName = "VendorName";
-            this.vendorNameDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.vendorNameDataGridViewTextBoxColumn.HeaderText = "Vendor Name";
-            this.vendorNameDataGridViewTextBoxColumn.Name = "vendorNameDataGridViewTextBoxColumn";
-            this.vendorNameDataGridViewTextBoxColumn.Width = 89;
-            // 
-            // vendorContactDataGridViewTextBoxColumn
-            // 
-            this.vendorContactDataGridViewTextBoxColumn.DataPropertyName = "VendorContact";
-            this.vendorContactDataGridViewTextBoxColumn.HeaderText = "Vendor Contact";
-            this.vendorContactDataGridViewTextBoxColumn.Name = "vendorContactDataGridViewTextBoxColumn";
-            // 
-            // vendorPhoneDataGridViewTextBoxColumn
-            // 
-            this.vendorPhoneDataGridViewTextBoxColumn.DataPropertyName = "VendorPhone";
-            this.vendorPhoneDataGridViewTextBoxColumn.HeaderText = "Vendor Phone";
-            this.vendorPhoneDataGridViewTextBoxColumn.Name = "vendorPhoneDataGridViewTextBoxColumn";
-            // 
-            // vendorEmailDataGridViewTextBoxColumn
-            // 
-            this.vendorEmailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.vendorEmailDataGridViewTextBoxColumn.DataPropertyName = "VendorEmail";
-            this.vendorEmailDataGridViewTextBoxColumn.FillWeight = 200F;
-            this.vendorEmailDataGridViewTextBoxColumn.HeaderText = "Vendor Email";
-            this.vendorEmailDataGridViewTextBoxColumn.Name = "vendorEmailDataGridViewTextBoxColumn";
-            this.vendorEmailDataGridViewTextBoxColumn.Width = 87;
-            // 
-            // isPrimaryVendorDataGridViewCheckBoxColumn
-            // 
-            this.isPrimaryVendorDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.isPrimaryVendorDataGridViewCheckBoxColumn.DataPropertyName = "IsPrimaryVendor";
-            this.isPrimaryVendorDataGridViewCheckBoxColumn.HeaderText = "Is Primary Vendor";
-            this.isPrimaryVendorDataGridViewCheckBoxColumn.Name = "isPrimaryVendorDataGridViewCheckBoxColumn";
-            this.isPrimaryVendorDataGridViewCheckBoxColumn.Width = 86;
-            // 
-            // lastUpdatedDataGridViewTextBoxColumn
-            // 
-            this.lastUpdatedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "LastUpdated";
-            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "Last Updated";
-            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
-            this.lastUpdatedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastUpdatedDataGridViewTextBoxColumn.Width = 88;
+            this.VendorsBindingSource.DataMember = "Vendors";
+            this.VendorsBindingSource.DataSource = this.ProjectBindingSource;
+            this.bindingSourceRefresh.SetReadValuesOnChange(this.VendorsBindingSource, false);
             // 
             // cancelButton
             // 
@@ -284,11 +239,59 @@ namespace ProjectsVendors.WinForms
             // isLazyloaded
             // 
             this.isLazyloaded.AutoSize = true;
-            this.isLazyloaded.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectEditBindingSource, "IsLazyloaded", true));
+            this.isLazyloaded.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProjectBindingSource, "IsLazyloaded", true));
             this.isLazyloaded.Location = new System.Drawing.Point(100, 311);
             this.isLazyloaded.Name = "isLazyloaded";
-            this.isLazyloaded.Size = new System.Drawing.Size(59, 13);
+            this.isLazyloaded.Size = new System.Drawing.Size(0, 13);
             this.isLazyloaded.TabIndex = 14;
+            // 
+            // bindingSourceRefresh
+            // 
+            this.bindingSourceRefresh.Host = this;
+            // 
+            // vendorIdDataGridViewTextBoxColumn
+            // 
+            this.vendorIdDataGridViewTextBoxColumn.DataPropertyName = "VendorId";
+            this.vendorIdDataGridViewTextBoxColumn.HeaderText = "VendorId";
+            this.vendorIdDataGridViewTextBoxColumn.Name = "vendorIdDataGridViewTextBoxColumn";
+            this.vendorIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vendorNameDataGridViewTextBoxColumn
+            // 
+            this.vendorNameDataGridViewTextBoxColumn.DataPropertyName = "VendorName";
+            this.vendorNameDataGridViewTextBoxColumn.HeaderText = "VendorName";
+            this.vendorNameDataGridViewTextBoxColumn.Name = "vendorNameDataGridViewTextBoxColumn";
+            // 
+            // vendorContactDataGridViewTextBoxColumn
+            // 
+            this.vendorContactDataGridViewTextBoxColumn.DataPropertyName = "VendorContact";
+            this.vendorContactDataGridViewTextBoxColumn.HeaderText = "VendorContact";
+            this.vendorContactDataGridViewTextBoxColumn.Name = "vendorContactDataGridViewTextBoxColumn";
+            // 
+            // vendorPhoneDataGridViewTextBoxColumn
+            // 
+            this.vendorPhoneDataGridViewTextBoxColumn.DataPropertyName = "VendorPhone";
+            this.vendorPhoneDataGridViewTextBoxColumn.HeaderText = "VendorPhone";
+            this.vendorPhoneDataGridViewTextBoxColumn.Name = "vendorPhoneDataGridViewTextBoxColumn";
+            // 
+            // vendorEmailDataGridViewTextBoxColumn
+            // 
+            this.vendorEmailDataGridViewTextBoxColumn.DataPropertyName = "VendorEmail";
+            this.vendorEmailDataGridViewTextBoxColumn.HeaderText = "VendorEmail";
+            this.vendorEmailDataGridViewTextBoxColumn.Name = "vendorEmailDataGridViewTextBoxColumn";
+            // 
+            // isPrimaryVendorDataGridViewCheckBoxColumn
+            // 
+            this.isPrimaryVendorDataGridViewCheckBoxColumn.DataPropertyName = "IsPrimaryVendor";
+            this.isPrimaryVendorDataGridViewCheckBoxColumn.HeaderText = "IsPrimaryVendor";
+            this.isPrimaryVendorDataGridViewCheckBoxColumn.Name = "isPrimaryVendorDataGridViewCheckBoxColumn";
+            // 
+            // lastUpdatedDataGridViewTextBoxColumn
+            // 
+            this.lastUpdatedDataGridViewTextBoxColumn.DataPropertyName = "LastUpdated";
+            this.lastUpdatedDataGridViewTextBoxColumn.HeaderText = "LastUpdated";
+            this.lastUpdatedDataGridViewTextBoxColumn.Name = "lastUpdatedDataGridViewTextBoxColumn";
+            this.lastUpdatedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ProjectEditor
             // 
@@ -302,12 +305,14 @@ namespace ProjectsVendors.WinForms
             this.Name = "ProjectEditor";
             this.Size = new System.Drawing.Size(910, 340);
             this.Load += new System.EventHandler(this.ProjectEdit_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.projectEditBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectBindingSource)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.projectTabPage.ResumeLayout(false);
             this.projectTabPage.PerformLayout();
             this.vendorsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.vendorsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VendorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,7 +320,8 @@ namespace ProjectsVendors.WinForms
 
         #endregion
 
-        private System.Windows.Forms.BindingSource projectEditBindingSource;
+        private Csla.Windows.BindingSourceRefresh bindingSourceRefresh;
+        private System.Windows.Forms.BindingSource ProjectBindingSource;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage projectTabPage;
         private System.Windows.Forms.TabPage vendorsTabPage;
@@ -326,6 +332,9 @@ namespace ProjectsVendors.WinForms
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.DataGridView vendorsDataGridView;        
+        private System.Windows.Forms.Label isLazyloadedLabel;
+        private System.Windows.Forms.Label isLazyloaded;
+        private System.Windows.Forms.BindingSource VendorsBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendorIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendorNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vendorContactDataGridViewTextBoxColumn;
@@ -333,7 +342,5 @@ namespace ProjectsVendors.WinForms
         private System.Windows.Forms.DataGridViewTextBoxColumn vendorEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isPrimaryVendorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastUpdatedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label isLazyloadedLabel;
-        private System.Windows.Forms.Label isLazyloaded;
     }
 }

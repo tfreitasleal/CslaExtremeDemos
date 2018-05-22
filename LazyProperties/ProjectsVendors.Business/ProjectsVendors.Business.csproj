@@ -49,6 +49,14 @@
     <Compile Include="ProjectEdit.Designer.cs">
       <DependentUpon>ProjectEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectInfo.cs" />
+    <Compile Include="ProjectInfo.Designer.cs">
+      <DependentUpon>ProjectInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectList.cs" />
+    <Compile Include="ProjectList.Designer.cs">
+      <DependentUpon>ProjectList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VendorCollection.cs" />
     <Compile Include="VendorCollection.Designer.cs">
