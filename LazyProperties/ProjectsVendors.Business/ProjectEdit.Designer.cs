@@ -7,7 +7,7 @@ namespace ProjectsVendors.Business
 
     /// <summary>
     /// ProjectEdit (editable root object).<br/>
-    /// This is a generated base class of <see cref="ProjectEdit"/> business object.
+    /// This is a generated <see cref="ProjectEdit"/> business object.
     /// </summary>
     /// <remarks>
     /// This class contains one child collection:<br/>

@@ -8,7 +8,7 @@ namespace ProjectsVendors.Business
 
     /// <summary>
     /// VendorCollection (editable child list).<br/>
-    /// This is a generated base class of <see cref="VendorCollection"/> business object.
+    /// This is a generated <see cref="VendorCollection"/> business object.
     /// </summary>
     /// <remarks>
     /// This class is child of <see cref="ProjectEdit"/> editable root object.<br/>
