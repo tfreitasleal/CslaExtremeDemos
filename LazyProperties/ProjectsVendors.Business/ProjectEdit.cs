@@ -1,4 +1,3 @@
-
 namespace ProjectsVendors.Business
 {
     public partial class ProjectEdit
