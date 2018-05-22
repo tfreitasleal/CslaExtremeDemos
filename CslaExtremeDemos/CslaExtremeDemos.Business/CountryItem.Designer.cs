@@ -11,7 +11,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// CountryItem (editable child object).<br/>
-    /// This is a generated base class of <see cref="CountryItem"/> business object.
+    /// This is a generated <see cref="CountryItem"/> business object.
     /// </summary>
     /// <remarks>
     /// This class is an item of <see cref="CountryCollection"/> collection.

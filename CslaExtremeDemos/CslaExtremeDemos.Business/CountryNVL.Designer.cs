@@ -9,7 +9,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// CountryNVL (name value list).<br/>
-    /// This is a generated base class of <see cref="CountryNVL"/> business object.
+    /// This is a generated <see cref="CountryNVL"/> business object.
     /// </summary>
     [Serializable]
     public partial class CountryNVL : NameValueListBase<short, string>

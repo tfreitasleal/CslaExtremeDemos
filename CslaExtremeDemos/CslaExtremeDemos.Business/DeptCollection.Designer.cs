@@ -9,7 +9,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// DeptCollection (dynamic root list).<br/>
-    /// This is a generated base class of <see cref="DeptCollection"/> business object.
+    /// This is a generated <see cref="DeptCollection"/> business object.
     /// </summary>
     /// <remarks>
     /// The items of the collection are <see cref="DeptItem"/> objects.

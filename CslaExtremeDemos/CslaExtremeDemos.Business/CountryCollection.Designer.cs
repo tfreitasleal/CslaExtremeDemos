@@ -9,7 +9,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// CountryCollection (editable root list).<br/>
-    /// This is a generated base class of <see cref="CountryCollection"/> business object.
+    /// This is a generated <see cref="CountryCollection"/> business object.
     /// </summary>
     /// <remarks>
     /// The items of the collection are <see cref="CountryItem"/> objects.

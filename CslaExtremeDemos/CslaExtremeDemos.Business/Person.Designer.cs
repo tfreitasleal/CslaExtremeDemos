@@ -9,7 +9,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// Person (editable root object).<br/>
-    /// This is a generated base class of <see cref="Person"/> business object.
+    /// This is a generated <see cref="Person"/> business object.
     /// </summary>
     /// <remarks>
     /// This class contains one child collection:<br/>

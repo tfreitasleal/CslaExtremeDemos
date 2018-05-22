@@ -9,7 +9,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// PersonInfo (read only object).<br/>
-    /// This is a generated base class of <see cref="PersonInfo"/> business object.
+    /// This is a generated <see cref="PersonInfo"/> business object.
     /// </summary>
     /// <remarks>
     /// This class is an item of <see cref="PersonList"/> collection.

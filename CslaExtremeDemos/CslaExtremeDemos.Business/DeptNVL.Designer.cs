@@ -9,7 +9,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// DeptNVL (name value list).<br/>
-    /// This is a generated base class of <see cref="DeptNVL"/> business object.
+    /// This is a generated <see cref="DeptNVL"/> business object.
     /// </summary>
     [Serializable]
     public partial class DeptNVL : NameValueListBase<short, string>

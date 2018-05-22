@@ -9,7 +9,7 @@ namespace CslaExtremeDemos.Business
 
     /// <summary>
     /// JobItem (editable child object).<br/>
-    /// This is a generated base class of <see cref="JobItem"/> business object.
+    /// This is a generated <see cref="JobItem"/> business object.
     /// </summary>
     /// <remarks>
     /// This class is an item of <see cref="JobCollection"/> collection.
