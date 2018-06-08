@@ -40,13 +40,78 @@ namespace CslaExtremeDemos.WindowsForms
         {
             return (from object item in Enum.GetValues(enumType)
                 select
-                (Attribute.GetCustomAttribute(item.GetType().GetField(item.ToString()), typeof(DescriptionAttribute)) as
-                    DescriptionAttribute).Description).ToArray();
+                    (Attribute.GetCustomAttribute(item.GetType().GetField(item.ToString()),
+                            typeof(DescriptionAttribute)) as
+                        DescriptionAttribute).Description).ToArray();
         }
 
         public static string[] NvlToArray(NameValueListBase<short, string> nameValueList)
         {
             return nameValueList.Select(nameValuePair => nameValuePair.Value).ToArray();
         }
+
+        #region Suspend Bindings And Set DataSource by @michaelcsikos
+
+        public static void SuspendBindingsAndSetDataSource(this ComboBox comboBox, object dataSource)
+        {
+            comboBox.SuspendBindingsAndSetDataSource(null, dataSource);
+        }
+
+        public static void SuspendBindingsAndSetDataSource(this ComboBox comboBox, BindingSource bindingSource,
+            object dataSource)
+        {
+            var bindText = comboBox.DataBindings["Text"];
+            var bindSelectedValue = comboBox.DataBindings["SelectedValue"];
+
+            var oldTextUpdateMode = DataSourceUpdateMode.Never;
+            var oldSelectedValueUpdateMode = DataSourceUpdateMode.Never;
+
+            if (bindText != null)
+            {
+                oldTextUpdateMode = bindText.DataSourceUpdateMode;
+
+                bindText.DataSourceUpdateMode = DataSourceUpdateMode.Never;
+            }
+
+            if (bindSelectedValue != null)
+            {
+                oldSelectedValueUpdateMode = bindSelectedValue.DataSourceUpdateMode;
+
+                bindSelectedValue.DataSourceUpdateMode = DataSourceUpdateMode.Never;
+            }
+
+            if (bindingSource != null)
+            {
+                bindingSource.RaiseListChangedEvents = false;
+                bindingSource.DataSource = dataSource;
+                bindingSource.RaiseListChangedEvents = true;
+
+                if (comboBox.DataSource != bindingSource)
+                    comboBox.DataSource = bindingSource;
+                else
+                    bindingSource.ResetBindings(false);
+            }
+            else
+            {
+                comboBox.DataSource = dataSource;
+                comboBox.SelectedIndex = -1;
+            }
+
+            if (bindText != null)
+            {
+                bindText.DataSourceUpdateMode = oldTextUpdateMode;
+
+                bindText.ReadValue();
+            }
+
+            if (bindSelectedValue != null)
+            {
+                bindSelectedValue.DataSourceUpdateMode = oldSelectedValueUpdateMode;
+
+                bindSelectedValue.ReadValue();
+            }
+        }
+
+        #endregion
     }
 }
